@@ -12,11 +12,38 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var viewController : UIViewController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        self.viewController = storyboard.instantiateInitialViewController();
+        
+        self.window?.rootViewController = UINavigationController.init(rootViewController: self.viewController!);
+        
+        // (self.window?.rootViewController as! UINavigationController).navigationBarHidden = true;
+        
+        self.window?.makeKeyAndVisible();
+        
         return true
+        
+        
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//        // Override point for customization after application launch.
+//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//            self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
+//        } else {
+//            self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+//        }
+//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+//        [self.window makeKeyAndVisible];
+//        return YES;
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

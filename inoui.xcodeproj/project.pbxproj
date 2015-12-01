@@ -17,6 +17,11 @@
 		026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AAE021BF4DDBC00FF9E21 /* OpenSans-Regular.ttf */; };
 		026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AAE031BF4DDBC00FF9E21 /* OpenSans-Semibold.ttf */; };
 		026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AAE041BF4DDBC00FF9E21 /* OpenSans-SemiboldItalic.ttf */; };
+		026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8B41C0DD6D200601876 /* Tutorial.swift */; };
+		026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8B61C0DD6E100601876 /* TutorialView.swift */; };
+		026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8BB1C0DD73400601876 /* TutorialViewController.swift */; };
+		026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */; };
+		026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */; };
 		02C5B0681BF4DB9200DA3CD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */; };
 		02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0691BF4DB9200DA3CD1 /* ViewController.swift */; };
 		02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C5B06B1BF4DB9200DA3CD1 /* Main.storyboard */; };
@@ -54,6 +59,11 @@
 		026AAE021BF4DDBC00FF9E21 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		026AAE031BF4DDBC00FF9E21 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		026AAE041BF4DDBC00FF9E21 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		026BF8B41C0DD6D200601876 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial.swift; sourceTree = "<group>"; };
+		026BF8B61C0DD6E100601876 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		026BF8BB1C0DD73400601876 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnblurAnimationSegue.swift; sourceTree = "<group>"; };
 		02C5B0641BF4DB9200DA3CD1 /* inoui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inoui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C5B0691BF4DB9200DA3CD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +122,49 @@
 			path = inoui;
 			sourceTree = "<group>";
 		};
+		026BF8B81C0DD70A00601876 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */,
+				026BF8B91C0DD71300601876 /* Model */,
+				026BF8BA1C0DD71700601876 /* View */,
+				026BF8BD1C0DD73D00601876 /* Controller */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		026BF8B91C0DD71300601876 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				026BF8B41C0DD6D200601876 /* Tutorial.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		026BF8BA1C0DD71700601876 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				026BF8B61C0DD6E100601876 /* TutorialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		026BF8BD1C0DD73D00601876 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				026BF8BB1C0DD73400601876 /* TutorialViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		026BF8C31C0DF41100601876 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
 		02C5B05B1BF4DB9200DA3CD1 = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +189,10 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				026BF8C31C0DF41100601876 /* Transitions */,
 				02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */,
 				02C5B0691BF4DB9200DA3CD1 /* ViewController.swift */,
+				026BF8B81C0DD70A00601876 /* Tutorial */,
 				02C5B06B1BF4DB9200DA3CD1 /* Main.storyboard */,
 				02C5B06E1BF4DB9200DA3CD1 /* Assets.xcassets */,
 				02C5B0701BF4DB9200DA3CD1 /* LaunchScreen.storyboard */,
@@ -279,6 +334,7 @@
 				026AAE0A1BF4DE1400FF9E21 /* OpenSans-Light.ttf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
+				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
@@ -308,7 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
+				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
+				026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */,
+				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
 				02C5B0681BF4DB9200DA3CD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
