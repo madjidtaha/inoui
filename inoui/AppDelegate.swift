@@ -13,20 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var viewController : UIViewController?
+    var navigationController: UINavigationController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
+//        let beginTutorial = NSUserDefaults.standardUserDefaults().stringForKey("beginTutorial");
+//        
+//        print("beginTutorial");
+//        print(beginTutorial);
+        
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         self.viewController = storyboard.instantiateInitialViewController();
         
-        self.window?.rootViewController = UINavigationController.init(rootViewController: self.viewController!);
+        self.navigationController =  UINavigationController.init(rootViewController: self.viewController!);
+        self.window?.rootViewController = self.navigationController;
         
-        // (self.window?.rootViewController as! UINavigationController).navigationBarHidden = true;
+        (self.window?.rootViewController as! UINavigationController).navigationBarHidden = true;
         
         self.window?.makeKeyAndVisible();
         

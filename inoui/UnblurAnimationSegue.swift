@@ -34,7 +34,11 @@ class UnblurAnimationSegue: UIStoryboardSegue {
             print(finished);
             
             dst.view.removeFromSuperview(); // remove from temp super view
-            src.presentViewController(dst, animated: false, completion: nil);
+//            src.presentViewController(dst, animated: false, completion: nil);
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.navigationController?.pushViewController(dst, animated: false);
+            
             //        [sourceViewController presentViewController:destinationViewController animated:NO completion:NULL]; // present
         });
     

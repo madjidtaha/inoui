@@ -8,12 +8,16 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, FingerprintViewControllerDelegate {
 
+    @IBOutlet weak var fingerprintView: UIView!
+    var nextStep : String?;
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         // Do any additional setup after loading the view.
-        print("AAAAA");
+        // (fingerprintView. as! FingerprintViewController).delegate = self;
+        // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
 
     }
 
@@ -23,7 +27,22 @@ class TutorialViewController: UIViewController {
         print("ReceiveMemoryWarning");
 
     }
-    
+
+    func onButtonTouch(sender: AnyObject) {
+        print("FingerPrint from parent");
+        print(self.nextStep);
+        if self.nextStep != nil {
+            let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
+            let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+            self.presentViewController(vc, animated: true, completion: { () -> Void in
+                // callback here
+            })
+     
+        }
+        
+        
+        
+    }
 
     /*
     // MARK: - Navigation

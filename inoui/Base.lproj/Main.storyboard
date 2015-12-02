@@ -41,7 +41,7 @@ vos écouteurs.</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="6hq-ZL-0J9" kind="show" id="CJh-fv-WiL"/>
+                                    <segue destination="6hq-ZL-0J9" kind="show" customClass="UnblurAnimationSegue" id="CJh-fv-WiL"/>
                                 </connections>
                             </button>
                         </subviews>

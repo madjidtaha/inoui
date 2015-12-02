@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tutorial View Controller-->
         <scene sceneID="2GN-1Q-z7a">
             <objects>
-                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scT-3j-oRi" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialStep1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="scT-3j-oRi" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="itM-Hc-CPs"/>
                         <viewControllerLayoutGuide type="bottom" id="pzx-9g-1JY"/>
@@ -32,19 +33,40 @@
                                     <segue destination="GKB-Z3-V2c" kind="show" id="cJF-KA-hc1"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-zY-CYV">
+                                <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fbz-zY-CYV" secondAttribute="height" multiplier="1:1" id="37W-OU-bxu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="T61-lE-wLC" kind="embed" id="lGa-Wi-6Cm"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fbz-zY-CYV" firstAttribute="leading" secondItem="zt6-qq-w7x" secondAttribute="leading" id="AQP-gu-wSL"/>
+                            <constraint firstAttribute="trailing" secondItem="fbz-zY-CYV" secondAttribute="trailing" id="Lje-ne-RRu"/>
+                            <constraint firstItem="pzx-9g-1JY" firstAttribute="top" secondItem="fbz-zY-CYV" secondAttribute="bottom" id="zKA-se-Bwy"/>
+                        </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="2"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="fingerprintView" destination="fbz-zY-CYV" id="6tc-RQ-JfX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-kz-Gqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1233" y="661"/>
+            <point key="canvasLocation" x="-1233" y="627"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="FSI-5n-46O">
             <objects>
-                <viewController id="GKB-Z3-V2c" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialStep2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GKB-Z3-V2c" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PPd-zq-5SC"/>
                         <viewControllerLayoutGuide type="bottom" id="dDA-Rj-baV"/>
@@ -65,14 +87,51 @@
                                 <animations/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txu-rp-6Dh" customClass="FingerprintView" customModule="inoui" customModuleProvider="target">
+                                <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="txu-rp-6Dh" secondAttribute="height" multiplier="1:1" id="ga6-pi-wiw"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="T61-lE-wLC" kind="embed" id="7VP-gO-hzd"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" id="QQT-Nd-QA2"/>
+                            <constraint firstItem="dDA-Rj-baV" firstAttribute="top" secondItem="txu-rp-6Dh" secondAttribute="bottom" id="Td1-aN-CRB"/>
+                            <constraint firstItem="txu-rp-6Dh" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" id="fr9-mq-FrY"/>
+                        </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="3"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YrR-JT-ubQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-412" y="661"/>
+            <point key="canvasLocation" x="-410" y="627"/>
+        </scene>
+        <!--Fingerprint View Controller-->
+        <scene sceneID="yWJ-Ko-Bto">
+            <objects>
+                <viewController id="T61-lE-wLC" customClass="FingerprintViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Q-uV-Lqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <containerView opaque="NO" contentMode="scaleToFill" id="Lhb-2A-xz7">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Lhb-2A-xz7" secondAttribute="height" multiplier="1:1" id="gE0-BT-Wq5"/>
+                    </constraints>
+                </containerView>
+            </objects>
+            <point key="canvasLocation" x="-432" y="1434"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7VP-gO-hzd"/>
+    </inferredMetricsTieBreakers>
 </document>
