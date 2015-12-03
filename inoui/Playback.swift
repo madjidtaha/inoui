@@ -28,7 +28,6 @@ let WATER: NSInteger = 0
 let NUMBERSIZE: ALsizei = 50
 let NUMBER: NSInteger = 50
 
-
 @objc(oalPlayback)
 class Playback: NSObject {
     @IBOutlet var musicSwitch: UISwitch!
@@ -55,7 +54,7 @@ class Playback: NSObject {
     var bgPlayer: AVAudioPlayer?
     // Whether the iPod is playing
     var iPodIsPlaying: Bool = false
-    
+
     
     //MARK: AVAudioSession
     func handleInterruption(notification: NSNotification) {
@@ -334,6 +333,7 @@ class Playback: NSObject {
         //Close device
         alcCloseDevice(device)
     }
+    
     
     //MARK: Play / Pause
     

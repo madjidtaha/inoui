@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import AVFoundation
 
 class TutorialViewController: UIViewController, FingerprintViewControllerDelegate, CLLocationManagerDelegate {
 
@@ -30,6 +31,13 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         locationManager = CLLocationManager();
         locationManager.delegate = self;
         locationManager.startUpdatingHeading();
+        
+        let sessionInstance = AVAudioSession.sharedInstance();
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "handleRouteChange:",
+            name: AVAudioSessionRouteChangeNotification,
+            object: sessionInstance)
 
     }
 
@@ -38,6 +46,19 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // Dispose of any resources that can be recreated.
         print("ReceiveMemoryWarning");
 
+    }
+    
+    func handleRouteChange(notification: NSNotification) {
+//        print(notification)
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
+       
+        for description in currentRoute.outputs {
+            if description.portType == AVAudioSessionPortHeadphones {
+                print("headphone plugged in")
+            } else {
+                print("headphone pulled out")
+            }
+        }
     }
     
     func toggleGyro() {
