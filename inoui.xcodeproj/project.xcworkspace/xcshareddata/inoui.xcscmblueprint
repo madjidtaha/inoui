@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7E2FECAB78B21EE1ED86FC8F606773885FE31552",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7F2DA640AE7F69281294304136D869221B7B6633" : 0,
+    "7E2FECAB78B21EE1ED86FC8F606773885FE31552" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10CD98C2-1CC6-420F-81C7-DC3AE07C584E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7F2DA640AE7F69281294304136D869221B7B6633" : "inouitest\/oalTouch-Swift\/",
+    "7E2FECAB78B21EE1ED86FC8F606773885FE31552" : "inoui\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "inoui",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "inoui.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/madjidtaha\/inoui.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E2FECAB78B21EE1ED86FC8F606773885FE31552"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ooper-shlab\/oalTouch-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F2DA640AE7F69281294304136D869221B7B6633"
+    }
+  ]
+}

@@ -33,6 +33,12 @@
 		02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C5B0701BF4DB9200DA3CD1 /* LaunchScreen.storyboard */; };
 		02C5B07D1BF4DB9200DA3CD1 /* inouiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B07C1BF4DB9200DA3CD1 /* inouiTests.swift */; };
 		02C5B0881BF4DB9200DA3CD1 /* inouiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0871BF4DB9200DA3CD1 /* inouiUITests.swift */; };
+		8920EA6A1C103899001D7A33 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA691C103899001D7A33 /* Playback.swift */; };
+		8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */; };
+		8920EA6E1C1039D4001D7A33 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8920EA6D1C1039D4001D7A33 /* OpenAL.framework */; };
+		8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA701C103E6F001D7A33 /* NumTypes+Conversion.swift */; };
+		8920EA761C104299001D7A33 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA751C104299001D7A33 /* sound.caf */; };
+		8920EA781C105C26001D7A33 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA771C105C26001D7A33 /* test.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,12 @@
 		02C5B0831BF4DB9200DA3CD1 /* inouiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inouiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C5B0871BF4DB9200DA3CD1 /* inouiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inouiUITests.swift; sourceTree = "<group>"; };
 		02C5B0891BF4DB9200DA3CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8920EA691C103899001D7A33 /* Playback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
+		8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOpenALSupport.swift; sourceTree = "<group>"; };
+		8920EA6D1C1039D4001D7A33 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		8920EA701C103E6F001D7A33 /* NumTypes+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumTypes+Conversion.swift"; sourceTree = "<group>"; };
+		8920EA751C104299001D7A33 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		8920EA771C105C26001D7A33 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8920EA6E1C1039D4001D7A33 /* OpenAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +232,7 @@
 		02C5B05B1BF4DB9200DA3CD1 = {
 			isa = PBXGroup;
 			children = (
+				8920EA6D1C1039D4001D7A33 /* OpenAL.framework */,
 				02C5B0661BF4DB9200DA3CD1 /* inoui */,
 				02C5B07B1BF4DB9200DA3CD1 /* inouiTests */,
 				02C5B0861BF4DB9200DA3CD1 /* inouiUITests */,
@@ -240,6 +254,9 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				8920EA731C103EA7001D7A33 /* audio */,
+				8920EA6F1C103E5B001D7A33 /* Utils */,
+				8920EA671C10381D001D7A33 /* OAL */,
 				0246229B1C0F3460000175DD /* Components */,
 				026BF8C31C0DF41100601876 /* Transitions */,
 				02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */,
@@ -269,6 +286,32 @@
 				02C5B0891BF4DB9200DA3CD1 /* Info.plist */,
 			);
 			path = inouiUITests;
+			sourceTree = "<group>";
+		};
+		8920EA671C10381D001D7A33 /* OAL */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA691C103899001D7A33 /* Playback.swift */,
+				8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */,
+			);
+			name = OAL;
+			sourceTree = "<group>";
+		};
+		8920EA6F1C103E5B001D7A33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA701C103E6F001D7A33 /* NumTypes+Conversion.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		8920EA731C103EA7001D7A33 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA751C104299001D7A33 /* sound.caf */,
+				8920EA771C105C26001D7A33 /* test.wav */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +382,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4797R522FN;
+						DevelopmentTeam = P3BJ8UE9HH;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -388,9 +431,11 @@
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
+				8920EA761C104299001D7A33 /* sound.caf in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
+				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
 			);
@@ -417,7 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
+				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
 				024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
@@ -425,6 +472,7 @@
 				024622A31C0F3763000175DD /* Fingerprint.swift in Sources */,
 				026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */,
 				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
+				8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */,
 				02C5B0681BF4DB9200DA3CD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,10 +613,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.biatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -576,10 +627,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.biatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

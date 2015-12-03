@@ -9,7 +9,8 @@
 import UIKit
 
 protocol FingerprintViewControllerDelegate {
-    func onButtonTouch(sender: AnyObject)
+    func onButtonUp(sender: AnyObject)
+    func onButtonDown(sender: AnyObject)
 }
 
 class FingerprintViewController: UIViewController {
@@ -35,9 +36,14 @@ class FingerprintViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onButtonTouch(sender: AnyObject) {
-        self.delegate?.onButtonTouch(sender);
+    @IBAction func onButtonUp(sender: AnyObject) {
+        self.delegate?.onButtonUp(sender);
         print("WOUHOU FINGERPRINT");
+        
+    }
+    @IBAction func onButtonDown(sender: AnyObject) {
+        self.delegate?.onButtonDown(sender);
+        print("Fingerprint down.");
         
     }
 

@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var viewController : UIViewController?
     var navigationController: UINavigationController?
+    var playback: Playback?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -36,6 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         (self.window?.rootViewController as! UINavigationController).navigationBarHidden = true;
         
         self.window?.makeKeyAndVisible();
+        
+        self.playback = Playback();
+        print("Playback");
+        print(self.playback);
+        
         
         return true
         
