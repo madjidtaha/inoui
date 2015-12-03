@@ -14,6 +14,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var locationManager: CLLocationManager!;
     var tilt: Bool = false;
     var startPos: CGFloat = 0.0;
+    var choice: NSInteger = 0;
+    var choiceNumber: NSInteger = 30;
     
     override init() {
         super.init();
@@ -39,6 +41,17 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             radians = -((radians - self.startPos) % (M_PI.g * 2));
             appDelegate.playback?.listenerRotation = radians;
             //            print("orientation \(radians)");
+            
+            let sections = M_PI.g / self.choiceNumber.g;
+            
+            for var index = 1; index < self.choiceNumber + 1; index++ {
+                if (-radians % M_PI.g < index.g * sections) {
+                    print("choice")
+                    print(index);
+                    self.choice = index;
+                    break;
+                }
+            }
         }
     }
 
