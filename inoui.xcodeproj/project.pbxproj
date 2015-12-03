@@ -39,6 +39,7 @@
 		8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA701C103E6F001D7A33 /* NumTypes+Conversion.swift */; };
 		8920EA761C104299001D7A33 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA751C104299001D7A33 /* sound.caf */; };
 		8920EA781C105C26001D7A33 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA771C105C26001D7A33 /* test.wav */; };
+		8920EA7B1C10A0CD001D7A33 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		8920EA701C103E6F001D7A33 /* NumTypes+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumTypes+Conversion.swift"; sourceTree = "<group>"; };
 		8920EA751C104299001D7A33 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		8920EA771C105C26001D7A33 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
+		8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				8920EA791C10A0BF001D7A33 /* Gyro */,
 				8920EA731C103EA7001D7A33 /* audio */,
 				8920EA6F1C103E5B001D7A33 /* Utils */,
 				8920EA671C10381D001D7A33 /* OAL */,
@@ -312,6 +315,14 @@
 				8920EA771C105C26001D7A33 /* test.wav */,
 			);
 			name = audio;
+			sourceTree = "<group>";
+		};
+		8920EA791C10A0BF001D7A33 /* Gyro */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */,
+			);
+			name = Gyro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +393,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4797R522FN;
+						DevelopmentTeam = P3BJ8UE9HH;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -474,6 +485,7 @@
 				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
 				8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */,
 				02C5B0681BF4DB9200DA3CD1 /* AppDelegate.swift in Sources */,
+				8920EA7B1C10A0CD001D7A33 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +629,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.biatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -631,7 +643,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.biatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

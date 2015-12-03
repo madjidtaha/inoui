@@ -7,16 +7,13 @@
 //
 
 import UIKit
-import CoreLocation
 import AVFoundation
 
-class TutorialViewController: UIViewController, FingerprintViewControllerDelegate, CLLocationManagerDelegate {
+class TutorialViewController: UIViewController, FingerprintViewControllerDelegate {
 
     @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
-    var tilt: Bool = false;
-    var startPos: CGFloat = 0.0;
-    private var locationManager: CLLocationManager!;
+    var locationManager: LocationManager?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -24,13 +21,10 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // (fingerprintView. as! FingerprintViewController).delegate = self;
         // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
         
+        self.locationManager = LocationManager();
+        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.addSource("sound", ext: "caf");
-        
-        
-        locationManager = CLLocationManager();
-        locationManager.delegate = self;
-        locationManager.startUpdatingHeading();
         
         let sessionInstance = AVAudioSession.sharedInstance();
         
@@ -61,15 +55,11 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         }
     }
     
-    func toggleGyro() {
-            tilt = !tilt;
-    }
-    
     
     // MARK: - FingerprintViewControllerDelegate
     
     func onButtonDown(sender: AnyObject) {
-        self.toggleGyro();
+        self.locationManager?.toggleGyro();
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.playSound("SOUND");
@@ -77,7 +67,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 
     func onButtonUp(sender: AnyObject) {
         print("FingerPrint from parent");
-        self.toggleGyro();
+        self.locationManager?.toggleGyro();
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.stopSound("SOUND");
@@ -93,23 +83,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         }
     }
     
-    // MARK: - CLLocationManagerDelegate
-
-    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        if tilt {
-            var radians = CGFloat(newHeading.magneticHeading) * CGFloat(M_PI) / 180.0;
-            if (self.startPos == 0.0) {
-                self.startPos = radians;
-            }
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-            radians = -((radians - self.startPos) % (M_PI.g * 2));
-            appDelegate.playback?.listenerRotation = radians;
-//            print("orientation \(radians)");
-        }
-        
-    }
-
-
+   
     /*
     // MARK: - Navigation
 
