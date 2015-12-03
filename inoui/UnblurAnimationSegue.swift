@@ -39,7 +39,7 @@ class UnblurAnimationSegue: UIStoryboardSegue {
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.navigationController?.pushViewController(dst, animated: false);
             
-            //        [sourceViewController presentViewController:destinationViewController animated:NO completion:NULL]; // present
+            //        [sourceViewController presentViewController:destinationViewController animated:NO completion:NULL]; // presentm
         });
     
     }
