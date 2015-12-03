@@ -41,11 +41,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     }
     
     func toggleGyro() {
-        if (tilt == false) {
-            tilt = true;
-        } else {
-            tilt = false;
-        }
+            tilt = !tilt;
     }
     
     
@@ -69,7 +65,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         if self.nextStep != nil {
             let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
             let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
-            self.presentViewController(vc, animated: true, completion: { () -> Void in
+            self.presentViewController(vc, animated: false, completion: { () -> Void in
                 // callback here
             })
      
