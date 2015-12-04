@@ -11,6 +11,7 @@ import AVFoundation
 
 class TutorialViewController: UIViewController, FingerprintViewControllerDelegate {
 
+    @IBOutlet weak var ageView: UITextView?
     @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
     var locationManager: LocationManager?;
@@ -67,6 +68,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.playSound("SOUND");
+        
+        if self.restorationIdentifier == "tutorialStep3" {
+            print("age tuto");
+            print(self.locationManager?.choiceNumber);
+            self.ageView?.text = "\(String(self.locationManager?.choiceNumber))";
+        }
     }
 
     func onButtonUp(sender: AnyObject) {

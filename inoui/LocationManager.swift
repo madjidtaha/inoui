@@ -17,6 +17,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     var choice: AnyObject = 0;
     var choices: NSMutableArray = [];
     var choiceNumber: NSInteger = 30;
+    var radians: CGFloat = 0.0;
     
     override init() {
         super.init();
@@ -37,6 +38,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         for var index = 1; index < self.choiceNumber + 2; index++ {
             if (angle % M_PI.g < index.g * sections) {
+                print(self.radians);
                 print(self.choices[index - 1]);
                 self.choice = self.choices[index - 1];
                 break;
@@ -48,19 +50,19 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if tilt {
-            var radians = CGFloat(newHeading.magneticHeading) * CGFloat(M_PI) / 180.0;
+            self.radians = CGFloat(newHeading.magneticHeading) * CGFloat(M_PI) / 180.0;
             if (self.startPos == 0.0) {
-                self.startPos = radians;
+                self.startPos = self.radians;
             }
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-            radians = ((radians - self.startPos) % (M_PI.g * 2));
-            if (radians < 0) {
-                radians =  M_PI.g * 2 + radians;
+            self.radians = ((self.radians - self.startPos) % (M_PI.g * 2));
+            if (self.radians < 0) {
+                self.radians =  M_PI.g * 2 + self.radians;
             }
-            appDelegate.playback?.listenerRotation = -radians;
+            appDelegate.playback?.listenerRotation = -self.radians;
 //                        print("orientation \(radians)");
             
-            self.makeChoices(radians);
+            self.makeChoices(self.radians);
         }
     }
 
