@@ -45,6 +45,8 @@
 		8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA8E1C11CEFC001D7A33 /* PauseView.swift */; };
 		8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA901C11CF05001D7A33 /* PauseController.swift */; };
 		8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA921C11CF54001D7A33 /* Pause.storyboard */; };
+		8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA981C11E4A0001D7A33 /* Choice.storyboard */; };
+		8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		8920EA8E1C11CEFC001D7A33 /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		8920EA901C11CF05001D7A33 /* PauseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseController.swift; sourceTree = "<group>"; };
 		8920EA921C11CF54001D7A33 /* Pause.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
+		8920EA981C11E4A0001D7A33 /* Choice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Choice.storyboard; sourceTree = "<group>"; };
+		8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,7 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				8920EA941C11E46A001D7A33 /* Choices */,
 				8920EA8A1C11CED5001D7A33 /* Pause */,
 				8920EA821C11CDF4001D7A33 /* Intro */,
 				8920EA791C10A0BF001D7A33 /* Gyro */,
@@ -404,6 +409,39 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		8920EA941C11E46A001D7A33 /* Choices */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA971C11E485001D7A33 /* Controller */,
+				8920EA961C11E47F001D7A33 /* View */,
+				8920EA951C11E47A001D7A33 /* Model */,
+			);
+			name = Choices;
+			sourceTree = "<group>";
+		};
+		8920EA951C11E47A001D7A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8920EA961C11E47F001D7A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8920EA971C11E485001D7A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA981C11E4A0001D7A33 /* Choice.storyboard */,
+				8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +563,7 @@
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
+				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
@@ -559,6 +598,7 @@
 				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
 				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
 				024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */,
+				8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
 				8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */,

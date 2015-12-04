@@ -27,10 +27,8 @@ class IntroController: UIViewController {
         
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
-                print("headphone plugged in")
                 button.enabled = true;
             } else {
-                print("headphone pulled out")
                 button.enabled = false;
             }
         }
@@ -46,10 +44,8 @@ class IntroController: UIViewController {
         
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
-                print("headphone plugged in")
                 button.enabled = true;
             } else {
-                print("headphone pulled out")
                 button.enabled = false;
             }
         }

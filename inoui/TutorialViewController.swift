@@ -45,7 +45,6 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         print("ReceiveMemoryWarning");
-
     }
     
     func handleRouteChange(notification: NSNotification) {        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
@@ -92,7 +91,6 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             self.presentViewController(vc, animated: false, completion: { () -> Void in
                 // callback here
             })
-     
         }
     }
     
