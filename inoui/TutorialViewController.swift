@@ -11,6 +11,7 @@ import AVFoundation
 
 class TutorialViewController: UIViewController, FingerprintViewControllerDelegate {
 
+    @IBOutlet weak var ageView: UITextView?
     @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
     var locationManager: LocationManager?;
@@ -47,13 +48,27 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         print("ReceiveMemoryWarning");
     }
     
-    func handleRouteChange(notification: NSNotification) {        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
+    func handleRouteChange(notification: NSNotification) {
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
        
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
                 print("headphone plugged in")
             } else {
                 print("headphone pulled out")
+                
+                if let topController = (UIApplication.sharedApplication().delegate as! AppDelegate).navigationController {
+ 
+                    let pauseStoryboard = UIStoryboard(name: "Pause", bundle: nil)
+                    let pauseViewController = pauseStoryboard.instantiateInitialViewController();
+
+                    pauseViewController!.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
+                    pauseViewController!.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+                    
+                    topController.presentViewController(pauseViewController!, animated: true, completion: nil);
+
+                }
+                
             }
         }
     }
@@ -66,6 +81,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.playSound("SOUND");
+        
+        if self.restorationIdentifier == "tutorialStep3" {
+            print("age tuto");
+            print(self.locationManager?.choiceNumber);
+            self.ageView?.text = "\(String(self.locationManager?.choiceNumber))";
+        }
     }
 
     func onButtonUp(sender: AnyObject) {
