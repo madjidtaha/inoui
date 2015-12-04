@@ -32,6 +32,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             selector: "handleRouteChange:",
             name: AVAudioSessionRouteChangeNotification,
             object: sessionInstance)
+        
+        let ages = NSMutableArray();
+        for var index = 15; index < 56; index++ {
+            ages[index - 15] = index;
+        }
+        self.locationManager?.choices.addObjectsFromArray(ages as [AnyObject]);
 
     }
 
@@ -42,9 +48,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 
     }
     
-    func handleRouteChange(notification: NSNotification) {
-//        print(notification)
-        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
+    func handleRouteChange(notification: NSNotification) {        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
        
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
@@ -77,7 +81,14 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             print("You choose");
             print(self.locationManager?.choice);
             let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
-            let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+            var vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep1");
+
+            if ((self.locationManager?.choice)! as! NSInteger == 22) {
+                let string = (self.locationManager?.choice.stringValue)! as String;
+                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
+            } else {
+                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+            }
             self.presentViewController(vc, animated: false, completion: { () -> Void in
                 // callback here
             })
