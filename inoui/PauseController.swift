@@ -13,6 +13,9 @@ class PauseController: UIViewController {
     @IBOutlet var button: UIButton!;
     
     override func viewDidLoad() {
+        
+        print("PauseController");
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let sessionInstance = AVAudioSession.sharedInstance();
