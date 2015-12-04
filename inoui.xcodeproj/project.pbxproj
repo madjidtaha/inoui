@@ -40,6 +40,11 @@
 		8920EA761C104299001D7A33 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA751C104299001D7A33 /* sound.caf */; };
 		8920EA781C105C26001D7A33 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA771C105C26001D7A33 /* test.wav */; };
 		8920EA7B1C10A0CD001D7A33 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */; };
+		8920EA871C11CE45001D7A33 /* IntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA861C11CE44001D7A33 /* IntroController.swift */; };
+		8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA881C11CE73001D7A33 /* IntroView.swift */; };
+		8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA8E1C11CEFC001D7A33 /* PauseView.swift */; };
+		8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA901C11CF05001D7A33 /* PauseController.swift */; };
+		8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA921C11CF54001D7A33 /* Pause.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,11 @@
 		8920EA751C104299001D7A33 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		8920EA771C105C26001D7A33 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
 		8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		8920EA861C11CE44001D7A33 /* IntroController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroController.swift; sourceTree = "<group>"; };
+		8920EA881C11CE73001D7A33 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		8920EA8E1C11CEFC001D7A33 /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
+		8920EA901C11CF05001D7A33 /* PauseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseController.swift; sourceTree = "<group>"; };
+		8920EA921C11CF54001D7A33 /* Pause.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +266,8 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				8920EA8A1C11CED5001D7A33 /* Pause */,
+				8920EA821C11CDF4001D7A33 /* Intro */,
 				8920EA791C10A0BF001D7A33 /* Gyro */,
 				8920EA731C103EA7001D7A33 /* audio */,
 				8920EA6F1C103E5B001D7A33 /* Utils */,
@@ -323,6 +335,73 @@
 				8920EA7A1C10A0CD001D7A33 /* LocationManager.swift */,
 			);
 			name = Gyro;
+			sourceTree = "<group>";
+		};
+		8920EA821C11CDF4001D7A33 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA851C11CE27001D7A33 /* Controller */,
+				8920EA841C11CE22001D7A33 /* View */,
+				8920EA831C11CE12001D7A33 /* Model */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		8920EA831C11CE12001D7A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8920EA841C11CE22001D7A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA881C11CE73001D7A33 /* IntroView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8920EA851C11CE27001D7A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA861C11CE44001D7A33 /* IntroController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8920EA8A1C11CED5001D7A33 /* Pause */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA8D1C11CEF2001D7A33 /* Controller */,
+				8920EA8C1C11CEED001D7A33 /* View */,
+				8920EA8B1C11CEE9001D7A33 /* Model */,
+			);
+			name = Pause;
+			sourceTree = "<group>";
+		};
+		8920EA8B1C11CEE9001D7A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8920EA8C1C11CEED001D7A33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA8E1C11CEFC001D7A33 /* PauseView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8920EA8D1C11CEF2001D7A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8920EA901C11CF05001D7A33 /* PauseController.swift */,
+				8920EA921C11CF54001D7A33 /* Pause.storyboard */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +526,7 @@
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
+				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
 			);
@@ -475,12 +555,16 @@
 			files = (
 				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
+				8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */,
+				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
 				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
 				024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
+				8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */,
 				024622A01C0F36FE000175DD /* FingerprintView.swift in Sources */,
 				024622A31C0F3763000175DD /* Fingerprint.swift in Sources */,
+				8920EA871C11CE45001D7A33 /* IntroController.swift in Sources */,
 				026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */,
 				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
 				8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */,
