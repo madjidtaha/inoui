@@ -85,7 +85,8 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         if self.restorationIdentifier == "tutorialStep3" {
             print("age tuto");
             print(self.locationManager?.choiceNumber);
-            self.ageView?.text = "\(String(self.locationManager?.choiceNumber))";
+            self.locationManager?.label = self.ageView!;
+            self.ageView?.text = (self.locationManager?.choice.stringValue)! as String;
         }
     }
 

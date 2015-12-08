@@ -18,6 +18,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     var choices: NSMutableArray = [];
     var choiceNumber: NSInteger = 30;
     var radians: CGFloat = 0.0;
+    var label: UITextView = UITextView();
     
     override init() {
         super.init();
@@ -38,9 +39,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         
         for var index = 1; index < self.choiceNumber + 2; index++ {
             if (angle % M_PI.g < index.g * sections) {
-                print(self.radians);
+                // print(self.radians);
                 print(self.choices[index - 1]);
                 self.choice = self.choices[index - 1];
+                self.label.text = (self.choice.stringValue)! as String;
                 break;
             }
         }

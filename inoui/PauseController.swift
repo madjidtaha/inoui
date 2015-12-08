@@ -34,7 +34,6 @@ class PauseController: UIViewController {
                 button.enabled = false;
             }
         }
-
     }
     
     override func didReceiveMemoryWarning() {
