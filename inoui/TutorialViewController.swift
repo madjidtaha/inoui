@@ -66,6 +66,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                     pauseViewController!.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
                     
                     topController.presentViewController(pauseViewController!, animated: true, completion: nil);
+                    
 
                 }
                 

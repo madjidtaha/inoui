@@ -23,15 +23,7 @@ class IntroController: UIViewController {
             name: AVAudioSessionRouteChangeNotification,
             object: sessionInstance)
         
-        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
-        
-        for description in currentRoute.outputs {
-            if description.portType == AVAudioSessionPortHeadphones {
-                button.enabled = true;
-            } else {
-                button.enabled = false;
-            }
-        }
+        self.handleRouteChange(nil);
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,13 +31,14 @@ class IntroController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func handleRouteChange(notification: NSNotification) {
+    func handleRouteChange(notification: NSNotification?) {
         let currentRoute = AVAudioSession.sharedInstance().currentRoute;
         
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
                 button.enabled = true;
             } else {
+                // TODO While debug, keep the button enabled
                 button.enabled = false;
             }
         }
