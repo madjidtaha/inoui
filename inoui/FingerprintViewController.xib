@@ -20,6 +20,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLm-jX-2No">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLO-ql-AlQ" customClass="FingerprintView" customModule="inoui" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qLO-ql-AlQ" secondAttribute="height" multiplier="1:1" id="bft-ZG-8LN"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qus-Dc-vla">
                             <rect key="frame" x="242" y="218" width="116" height="164"/>
                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
@@ -33,9 +39,13 @@
                         </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="Qus-Dc-vla" firstAttribute="centerY" secondItem="gLm-jX-2No" secondAttribute="centerY" id="VVF-mo-4wi"/>
+                        <constraint firstItem="Qus-Dc-vla" firstAttribute="centerY" secondItem="gLm-jX-2No" secondAttribute="centerY" id="2X1-4l-nyV"/>
+                        <constraint firstItem="Qus-Dc-vla" firstAttribute="centerX" secondItem="gLm-jX-2No" secondAttribute="centerX" id="Czg-q3-1KI"/>
+                        <constraint firstAttribute="trailing" secondItem="qLO-ql-AlQ" secondAttribute="trailing" id="Jj9-tU-tQl"/>
                         <constraint firstAttribute="width" secondItem="gLm-jX-2No" secondAttribute="height" multiplier="1:1" id="XG1-j1-gep"/>
-                        <constraint firstItem="Qus-Dc-vla" firstAttribute="centerX" secondItem="gLm-jX-2No" secondAttribute="centerX" id="pj2-MX-PZX"/>
+                        <constraint firstItem="qLO-ql-AlQ" firstAttribute="top" secondItem="gLm-jX-2No" secondAttribute="top" id="ekW-Rz-Jl2"/>
+                        <constraint firstItem="qLO-ql-AlQ" firstAttribute="leading" secondItem="gLm-jX-2No" secondAttribute="leading" id="hHd-2y-ofm"/>
+                        <constraint firstAttribute="bottom" secondItem="qLO-ql-AlQ" secondAttribute="bottom" id="k1D-jY-PXP"/>
                     </constraints>
                 </view>
             </subviews>
