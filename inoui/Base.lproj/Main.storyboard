@@ -39,7 +39,7 @@ vos écouteurs.</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="6hq-ZL-0J9" kind="show" customClass="UnblurAnimationSegue" id="CJh-fv-WiL"/>
+                                    <action selector="onButtonUp:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHP-yc-axj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,14 +65,6 @@ vos écouteurs.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="-425"/>
-        </scene>
-        <!--Tutorial-->
-        <scene sceneID="eb5-in-piw">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="tutorial" storyboardName="Tutorial" id="6hq-ZL-0J9" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gJM-2R-fwy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="827.5" y="-425"/>
         </scene>
     </scenes>
 </document>

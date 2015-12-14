@@ -38,12 +38,56 @@ class IntroController: UIViewController {
             if description.portType == AVAudioSessionPortHeadphones {
                 button.enabled = true;
             } else {
-                // TODO While debug, keep the button enabled
                 button.enabled = false;
             }
         }
     }
     
+    
+    @IBAction func onButtonUp(sender: UIButton, forEvent event: UIEvent) {
+        
+        print("onButtonUp");
+        
+        // TODO Read the value from persistant storage
+        let tutorialDone = false;
+        var storyboard = "Choice";
+        
+        if !tutorialDone {
+            storyboard = "Tutorial";
+        }
+        print("Storyboard \(storyboard)")
+        
+            let src = self;
+            let dst = UIStoryboard(name: storyboard, bundle: nil).instantiateInitialViewController();
+
+            src.view.addSubview(dst!.view);
+            src.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+            dst!.view.transform = CGAffineTransformMakeTranslation(dst!.view.bounds.size.width * 1.0, 0.0);
+            
+            let originalCenter : CGPoint = src.view.center;
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                
+                print("ANIMATE");
+                
+                src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
+                //                dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+                dst!.view.center = originalCenter;
+                
+                }, completion: { (finished) -> Void in
+                    print("Complete");
+                    dst!.view.removeFromSuperview();
+                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    appDelegate.navigationController?.pushViewController(dst!, animated: false);
+            });
+            
+
+    
+        
+        
+        
+    }
+
     
 }
 
