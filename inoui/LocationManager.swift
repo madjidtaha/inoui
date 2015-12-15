@@ -10,6 +10,11 @@ import Foundation
 import CoreLocation
 import UIKit
 
+protocol LocationManagerDelegate {
+    func onLocationChange(angle: CGFloat)
+}
+
+
 class LocationManager: NSObject, CLLocationManagerDelegate {
     private var locationManager: CLLocationManager!;
     var tilt: Bool = false;
@@ -18,7 +23,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     var choices: NSMutableArray = [];
     var choiceNumber: NSInteger = 30;
     var radians: CGFloat = 0.0;
-    var label: UITextView = UITextView();
+//    var label: UITextView = UITextView();
+    var delegate: LocationManagerDelegate?;
     
     override init() {
         super.init();
@@ -42,7 +48,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                 // print(self.radians);
                 print(self.choices[index - 1]);
                 self.choice = self.choices[index - 1];
-                self.label.text = (self.choice.stringValue)! as String;
+//                self.label.text = (self.choice.stringValue)! as String;
                 break;
             }
         }
@@ -63,9 +69,16 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             }
             appDelegate.playback?.listenerRotation = -self.radians;
 //                        print("orientation \(radians)");
-            
+            self.onLocationChange(self.radians);
             self.makeChoices(self.radians);
         }
+    }
+    
+    // MARK: - LocationManagerDelegate 
+    
+    func onLocationChange(angle: CGFloat) {
+        print("location, changed ! \(angle)");
+        self.delegate?.onLocationChange(angle);
     }
 
 }

@@ -23,11 +23,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // (fingerprintView. as! FingerprintViewController).delegate = self;
         // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
         
-        self.locationManager = LocationManager();
-        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.addSource("sound", ext: "caf");
         
+//        self.locationManager = appDelegate.locationManager;
+        self.locationManager = LocationManager();
+
         let sessionInstance = AVAudioSession.sharedInstance();
         
         NSNotificationCenter.defaultCenter().addObserver(self,
@@ -87,7 +88,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         if self.restorationIdentifier == "tutorialStep3" {
             print("age tuto");
             print(self.locationManager?.choiceNumber);
-            self.locationManager?.label = self.ageView!;
+//            self.locationManager?.label = self.ageView!;
             self.ageView?.text = (self.locationManager?.choice.stringValue)! as String;
         }
     }
@@ -111,7 +112,6 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 //                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
 //            } else {
 //            }
-            
             
             vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
 
