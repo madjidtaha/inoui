@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FingerprintView: UIView {
+class FingerprintView: UIView, LocationManagerDelegate {
 
     var angle : CGFloat = 0;
     var locationManager: LocationManager?;
@@ -25,14 +25,16 @@ class FingerprintView: UIView {
         displayLink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         
         self.locationManager = LocationManager();
-        self.locationManager?.toggleGyro()
+        self.locationManager?.delegate = self;
         self.locationManager?.choiceNumber = 360;
         
         let angle = NSMutableArray();
-        for var index = 0; index < 360; index++ {
+        for var index = 0; index < self.locationManager?.choiceNumber; index++ {
             angle[index] = index;
         }
         self.locationManager?.choices.addObjectsFromArray(angle as [AnyObject]);
+        self.locationManager?.toggleGyro();
+        
 //        self.locationManager = (UIApplication.sharedApplication().delegate as! AppDelegate).locationManager;
 
     }
@@ -88,12 +90,21 @@ class FingerprintView: UIView {
 //        print(self.locationManager?.radians);
         
 //        angle += 0.1;
-        angle = (self.locationManager?.radians)!;
+//        angle = (self.locationManager?.radians)!;
         
         self.setNeedsDisplay();
     
     }
     
+    // MARK: - LocationManagerDelegate
+
+    func onLocationChange(newAngle: CGFloat) {
+        print(" Fingerprint \(newAngle)");
+        
+        angle = newAngle;
+        
+        self.setNeedsDisplay();
+    }
     
 
 }

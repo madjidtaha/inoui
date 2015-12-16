@@ -104,16 +104,9 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         if self.nextStep != nil {
             print("You choose");
             print(self.locationManager?.choice);
-            let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
-            var vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep1");
-
-//            if ((self.locationManager?.choice)! as! NSInteger == 22) {
-//                let string = (self.locationManager?.choice.stringValue)! as String;
-//                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
-//            } else {
-//            }
             
-            vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+            let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
+            let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
 
             self.presentViewController(vc, animated: false, completion: { () -> Void in
                 // callback here
