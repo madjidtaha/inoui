@@ -9,10 +9,11 @@
 import UIKit
 import AVFoundation
 
-class TutorialViewController: UIViewController, FingerprintViewControllerDelegate {
+class TutorialViewController: UIViewController, FingerprintViewControllerDelegate, LocationManagerDelegate {
 
     @IBOutlet weak var ageView: UITextView?
     @IBOutlet weak var fingerprintView: UIView!
+    var currentChoice: Int?;
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;
@@ -23,11 +24,14 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // (fingerprintView. as! FingerprintViewController).delegate = self;
         // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
         
-        self.locationManager = LocationManager();
-        
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.addSource("sound", ext: "caf");
         
+//        self.locationManager = appDelegate.locationManager;
+        self.locationManager = LocationManager();
+        self.locationManager?.delegate = self;
+        self.locationManager?.choiceNumber = 40;
+
         let sessionInstance = AVAudioSession.sharedInstance();
         
         NSNotificationCenter.defaultCenter().addObserver(self,
@@ -83,13 +87,13 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.playback?.playSound("SOUND");
-        
-        if self.restorationIdentifier == "tutorialStep3" {
-            print("age tuto");
-            print(self.locationManager?.choiceNumber);
-            self.locationManager?.label = self.ageView!;
-            self.ageView?.text = (self.locationManager?.choice.stringValue)! as String;
-        }
+//        
+//        if self.restorationIdentifier == "tutorialStep3" {
+//            print("age tuto");
+//            print(self.locationManager?.choiceNumber);
+////            self.locationManager?.label = self.ageView!;
+//            self.ageView?.text = (self.locationManager?.choice.stringValue)! as String;
+//        }
     }
 
     func onButtonUp(sender: AnyObject) {
@@ -101,23 +105,19 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         
         print(self.nextStep);
         if self.nextStep != nil {
-            print("You choose");
-            print(self.locationManager?.choice);
+        
             let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
-            var vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep1");
+            let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
 
-//            if ((self.locationManager?.choice)! as! NSInteger == 22) {
-//                let string = (self.locationManager?.choice.stringValue)! as String;
-//                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
-//            } else {
-//            }
-            
-            
-            vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
-
-            self.presentViewController(vc, animated: false, completion: { () -> Void in
+            self.presentViewController(vc, animated: true, completion: { () -> Void in
                 // callback here
-            })
+            });
+            
+            if (self.restorationIdentifier == "tutorialStep3") {
+                
+                NSUserDefaults.standardUserDefaults().setInteger(self.currentChoice!, forKey: "userAge");
+                
+            }
         } else if self.destination != nil {
             print("Last step");
         }
@@ -133,5 +133,29 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - LocationManagerDelegate
+    
+//    func onLocationChange(newAngle: CGFloat) {
+
+//        print("locationChange \(newAngle)");
+//        
+//        if self.restorationIdentifier == "tutorialStep3" {
+//            ageView!.text = "Vous avez \(newAngle) ans";
+//        }
+    
+//    }
+    
+    func onChoiceChange(choice: Int) {
+    
+//        print("onChoiceChange \(choice)");
+   
+        if self.restorationIdentifier == "tutorialStep3" {
+            ageView!.text = "Vous avez \(choice + 15) ans";
+            self.currentChoice = choice + 15;
+        }
+        
+    }
+    
 
 }

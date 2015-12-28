@@ -9,12 +9,13 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LocationManagerDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow?   
     var viewController : UIViewController?
     var navigationController: UINavigationController?
     var playback: Playback?
+    var locationManager : LocationManager?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -38,24 +39,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.makeKeyAndVisible();
         
+        self.locationManager = LocationManager();
+        self.locationManager?.delegate = self;
+        self.locationManager?.choiceNumber = 360;
+        
+        let angle = NSMutableArray();
+        for var index = 0; index < self.locationManager?.choiceNumber; index++ {
+            angle[index] = index;
+        }
+        self.locationManager?.choices.addObjectsFromArray(angle as [AnyObject]);
+        self.locationManager?.toggleGyro();
+        
         self.playback = Playback();
         print("Playback");
         print(self.playback);
         
         
         return true
-        
-        
-//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//        // Override point for customization after application launch.
-//        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//            self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-//        } else {
-//            self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-//        }
-//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-//        [self.window makeKeyAndVisible];
-//        return YES;
         
     }
 
@@ -79,6 +79,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK - Location Manager
+    
+    func onLocationChange(angle: CGFloat) {
+
+        self.playback?.listenerRotation = -angle;
     }
 
 

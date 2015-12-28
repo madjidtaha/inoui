@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P12-Zh-Xkc">
-                                <rect key="frame" x="40" y="40" width="520" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P12-Zh-Xkc">
+                                <rect key="frame" x="40" y="167" width="520" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="mal-mN-aun"/>
                                 </constraints>
@@ -30,11 +30,13 @@ vos écouteurs.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZn-vS-8dm">
-                                <rect key="frame" x="277" y="190" width="46" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeadphoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-xG-MBp">
+                                <rect key="frame" x="273" y="95" width="55" height="44"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZn-vS-8dm">
+                                <rect key="frame" x="277" y="315" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="7B5-DK-S3u"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="dEJ-3M-0BA"/>
                                     <constraint firstAttribute="height" constant="30" id="ulS-X1-eFc"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -45,13 +47,13 @@ vos écouteurs.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZZn-vS-8dm" secondAttribute="trailing" constant="20" id="70w-hC-JD6"/>
-                            <constraint firstItem="P12-Zh-Xkc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8aA-Xd-bXg"/>
-                            <constraint firstItem="ZZn-vS-8dm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="es8-bs-hl5"/>
+                            <constraint firstItem="zqb-xG-MBp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="78H-CQ-AFa"/>
+                            <constraint firstItem="zqb-xG-MBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ecu-8s-WLk"/>
+                            <constraint firstItem="ZZn-vS-8dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y39-zQ-hP7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P12-Zh-Xkc" secondAttribute="trailing" constant="20" id="hZy-t2-jDt"/>
-                            <constraint firstItem="P12-Zh-Xkc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="pQP-0C-5sJ"/>
+                            <constraint firstItem="P12-Zh-Xkc" firstAttribute="top" secondItem="zqb-xG-MBp" secondAttribute="bottom" constant="28" id="opu-0n-DRr"/>
                             <constraint firstItem="ZZn-vS-8dm" firstAttribute="top" secondItem="P12-Zh-Xkc" secondAttribute="bottom" constant="20" id="ppd-Xr-9iK"/>
-                            <constraint firstItem="ZZn-vS-8dm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="307" id="vpz-LD-jsm"/>
+                            <constraint firstItem="P12-Zh-Xkc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="xMD-bJ-hU6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3qd-P3-EXf"/>
@@ -67,4 +69,7 @@ vos écouteurs.</string>
             <point key="canvasLocation" x="243" y="-425"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="HeadphoneIcon" width="55" height="44"/>
+    </resources>
 </document>

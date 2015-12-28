@@ -17,21 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAUSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD3-Xv-vR2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAUSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD3-Xv-vR2">
                                 <rect key="frame" x="274" y="131" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-3j-U0o">
-                                <rect key="frame" x="263" y="285" width="72" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-3j-U0o">
+                                <rect key="frame" x="264" y="285" width="72" height="30"/>
                                 <state key="normal" title="Reprendre"/>
                                 <connections>
                                     <action selector="goBackToExp" destination="lCD-4A-1t4" eventType="touchUpInside" id="ts9-jR-7g9"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tD3-Xv-vR2" firstAttribute="top" secondItem="ed4-Bc-bmh" secondAttribute="bottom" constant="111" id="XWw-FC-zkf"/>
+                            <constraint firstItem="tD3-Xv-vR2" firstAttribute="centerX" secondItem="jhS-25-nZf" secondAttribute="centerX" id="Y3I-19-jrW"/>
+                            <constraint firstItem="9IZ-3j-U0o" firstAttribute="centerX" secondItem="jhS-25-nZf" secondAttribute="centerX" id="mcn-uE-dfj"/>
+                            <constraint firstItem="9IZ-3j-U0o" firstAttribute="top" secondItem="tD3-Xv-vR2" secondAttribute="bottom" constant="133" id="mqR-bx-2RW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="9IZ-3j-U0o" id="0Hk-G0-g7a"/>
