@@ -68,9 +68,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                     topController.presentViewController(pauseViewController!, animated: true, completion: nil);
 
                 }
-                
             }
         }
+    }
+    
+    func disablePause() {
+        //TO DO 
     }
     
     
