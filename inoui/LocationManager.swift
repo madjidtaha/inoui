@@ -12,7 +12,7 @@ import UIKit
 
 @objc protocol LocationManagerDelegate {
     optional func onLocationChange(angle: CGFloat)
-    optional  func onChoiceChange(choice: Int);
+    optional func onChoiceChange(choice: Int);
 }
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
@@ -56,7 +56,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if tilt {
-            print("heading : \(newHeading)");
+//            print("heading : \(newHeading)");
             self.radians = CGFloat(newHeading.magneticHeading) * CGFloat(M_PI) / 180.0;
             if (self.startPos == 0.0) {
                 self.startPos = self.radians;

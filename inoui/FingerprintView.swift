@@ -21,8 +21,8 @@ class FingerprintView: UIView, LocationManagerDelegate {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let displayLink = CADisplayLink(target: self, selector: "update")
-        displayLink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+//        let displayLink = CADisplayLink(target: self, selector: "update")
+//        displayLink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         
         self.locationManager = LocationManager();
         self.locationManager?.delegate = self;
@@ -71,15 +71,43 @@ class FingerprintView: UIView, LocationManagerDelegate {
         CGContextSetLineWidth(context, 1)
         CGContextSetStrokeColorWithColor(context, UIColor.whiteColor().CGColor);
         
-        CGContextMoveToPoint(context, self.bounds.width / 2, 0);
-        CGContextAddLineToPoint(context, self.bounds.width / 2, 40);
+        CGContextMoveToPoint(context, self.bounds.width / 2, 7);
+        CGContextAddLineToPoint(context, self.bounds.width / 2, 32);
         
-        CGContextMoveToPoint(context, self.bounds.width / 2, self.bounds.height - 40);
-        CGContextAddLineToPoint(context, self.bounds.width / 2, self.bounds.height);
+        CGContextMoveToPoint(context, self.bounds.width / 2, self.bounds.height - 32);
+        CGContextAddLineToPoint(context, self.bounds.width / 2, self.bounds.height - 7);
         
         CGContextStrokePath(context);
 
         CGContextRestoreGState(context);
+        
+        for (var i = 0; i < 360; i += 2) {
+            
+            CGContextSaveGState(context);
+            
+            CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMidY(rect));
+            
+//            CGContextRotateCTM(context, angle);
+            CGContextRotateCTM(context, CGFloat((M_PI * i.d) / 180));
+            
+            
+            CGContextTranslateCTM(context, -CGRectGetMidX(rect), -CGRectGetMidY(rect));
+            
+            
+            CGContextSetLineWidth(context, 1)
+            CGContextSetStrokeColorWithColor(context, UIColor.whiteColor().CGColor);
+            
+            CGContextMoveToPoint(context, self.bounds.width / 2, 35);
+            CGContextAddLineToPoint(context, self.bounds.width / 2, 45);
+            
+            CGContextMoveToPoint(context, self.bounds.width / 2, self.bounds.height - 45);
+            CGContextAddLineToPoint(context, self.bounds.width / 2, self.bounds.height - 35);
+            
+            CGContextStrokePath(context);
+            
+            CGContextRestoreGState(context);
+            
+        }
 
 
     }
@@ -92,7 +120,7 @@ class FingerprintView: UIView, LocationManagerDelegate {
 //        angle += 0.1;
 //        angle = (self.locationManager?.radians)!;
         
-        self.setNeedsDisplay();
+//        self.setNeedsDisplay();
     
     }
     

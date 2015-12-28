@@ -84,7 +84,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LocationManagerDelegate {
     // MARK - Location Manager
     
     func onLocationChange(angle: CGFloat) {
-        print(" AppDelegate \(angle)");
 
         self.playback?.listenerRotation = -angle;
     }

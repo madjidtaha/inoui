@@ -154,17 +154,17 @@ l’expérience.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Relâchez pour confirmer" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-0K-KCz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="RELÂCHEZ POUR CONFIRMER" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-0K-KCz">
                                 <rect key="frame" x="180" y="70" width="240" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="MK8-4w-PGq"/>
                                     <constraint firstAttribute="width" constant="240" id="QrO-Bf-mjK"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sélectionnez votre âge" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-aN-iTA">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sélectionnez votre âge" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-aN-iTA">
                                 <rect key="frame" x="180" y="123" width="240" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Nut-CX-nxp"/>
@@ -265,6 +265,6 @@ l’expérience.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="liq-rC-Bg0"/>
+        <segue reference="4lG-EF-5Xa"/>
     </inferredMetricsTieBreakers>
 </document>
