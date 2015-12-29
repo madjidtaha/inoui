@@ -14,6 +14,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     @IBOutlet weak var ageView: UITextView?
     @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
+    var destination : String?;
     var locationManager: LocationManager?;
     
     override func viewDidLoad() {
@@ -66,6 +67,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                     pauseViewController!.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
                     
                     topController.presentViewController(pauseViewController!, animated: true, completion: nil);
+                    
 
                 }
             }
@@ -107,15 +109,20 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
             var vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep1");
 
-            if ((self.locationManager?.choice)! as! NSInteger == 22) {
-                let string = (self.locationManager?.choice.stringValue)! as String;
-                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
-            } else {
-                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
-            }
+//            if ((self.locationManager?.choice)! as! NSInteger == 22) {
+//                let string = (self.locationManager?.choice.stringValue)! as String;
+//                 vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
+//            } else {
+//            }
+            
+            
+            vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+
             self.presentViewController(vc, animated: false, completion: { () -> Void in
                 // callback here
             })
+        } else if self.destination != nil {
+            print("Last step");
         }
     }
     

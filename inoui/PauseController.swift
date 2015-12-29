@@ -25,15 +25,7 @@ class PauseController: UIViewController {
             name: AVAudioSessionRouteChangeNotification,
             object: sessionInstance)
         
-        let currentRoute = AVAudioSession.sharedInstance().currentRoute;
-        
-        for description in currentRoute.outputs {
-            if description.portType == AVAudioSessionPortHeadphones {
-                button.enabled = true;
-            } else {
-                button.enabled = false;
-            }
-        }
+        self.handleRouteChange(nil);
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,10 +34,11 @@ class PauseController: UIViewController {
     }
     
     @IBAction func goBackToExp () {
-        
+        // TODO add a callback to trigger to the parent view to replay
+        self.dismissViewControllerAnimated(true, completion: nil);
     }
     
-    func handleRouteChange(notification: NSNotification) {
+    func handleRouteChange(notification: NSNotification?) {
         let currentRoute = AVAudioSession.sharedInstance().currentRoute;
         
         for description in currentRoute.outputs {
