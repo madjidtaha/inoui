@@ -109,9 +109,54 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
             let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
 
-            self.presentViewController(vc, animated: true, completion: { () -> Void in
-                // callback here
+            
+            let src = self;
+            let dst = vc;
+            
+//            let srcView = UIView();
+//            
+//            srcView.addSubview(src.view.subviews)
+            
+            src.view.addSubview(dst.view);
+//            src.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+            src.view.alpha = 1.0;
+            
+//            dst.view.transform = CGAffineTransformMakeTranslation(dst.view.bounds.size.width * 1.0, 0.0);
+            dst.view.alpha = 0.0;
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                
+                print("ANIMATE");
+                
+//                src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
+                //                dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+//                dst.view.center = originalCenter;
+
+//                src.view.alpha = 0.0;
+                dst.view.alpha = 1.0;
+
+
+                
+                }, completion: { (finished) -> Void in
+                    print("Complete");
+                    src.view.backgroundColor = nil;
+                    dst.view.backgroundColor = nil;
+                    
+                    dst.view.removeFromSuperview();
+//                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+                    
+                    self.presentViewController(dst, animated: false, completion: { () -> Void in
+                        // callback here
+                    });
             });
+            
+            
+            
+//            THIS WORK
+//            self.presentViewController(vc, animated: false, completion: { () -> Void in
+//                // callback here
+//            });
             
             if (self.restorationIdentifier == "tutorialStep3") {
                 
@@ -147,11 +192,11 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 //    }
     
     func onChoiceChange(choice: Int) {
-    
-//        print("onChoiceChange \(choice)");
-   
+       
         if self.restorationIdentifier == "tutorialStep3" {
+            ageView!.selectable = true;
             ageView!.text = "Vous avez \(choice + 15) ans";
+            ageView!.selectable = false;
             self.currentChoice = choice + 15;
         }
         

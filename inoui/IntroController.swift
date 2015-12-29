@@ -11,6 +11,8 @@ import AVFoundation
 
 class IntroController: UIViewController {
     @IBOutlet var button: UIButton!;
+    @IBOutlet weak var inouiLogo: UIImageView!
+    @IBOutlet weak var sisleyLogo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,20 @@ class IntroController: UIViewController {
             object: sessionInstance)
         
         self.handleRouteChange(nil);
+        
+        UIView.animateWithDuration(2, animations: { () -> Void in
+            // animation
+            self.inouiLogo.alpha = 0;
+            self.sisleyLogo.alpha = 0;
+            
+            }, completion: { (finished) -> Void in
+                // complete
+                print("complete");
+                self.inouiLogo.removeFromSuperview();
+                self.sisleyLogo.removeFromSuperview();
+        });
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,7 +87,7 @@ class IntroController: UIViewController {
                 print("ANIMATE");
                 
                 src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
-                //                dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+                // dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
                 dst!.view.center = originalCenter;
                 
                 }, completion: { (finished) -> Void in

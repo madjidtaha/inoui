@@ -4,11 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="OpenSans-ExtraBold.ttf">
-            <string>OpenSans-Extrabold</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,22 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inoui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JC9-7A-9jd">
-                                <rect key="frame" x="245" y="271" width="111" height="58"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Extrabold" family="Open Sans" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SisleyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5ZE-fM-EMG">
                                 <rect key="frame" x="247" y="552" width="107" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="BEh-6j-t0s"/>
+                                    <constraint firstAttribute="width" constant="107" id="BdL-4U-9EG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InouiLogo" highlightedImage="InouiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dVL-LZ-WQ3">
+                                <rect key="frame" x="233" y="273" width="135" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Zdt-NY-SjV"/>
+                                    <constraint firstAttribute="width" constant="135" id="ncX-UN-Mpz"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5ZE-fM-EMG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5X3-wX-SOc"/>
+                            <constraint firstItem="dVL-LZ-WQ3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Gjw-7k-xxH"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5ZE-fM-EMG" secondAttribute="bottom" constant="20" id="sOj-UG-lgy"/>
-                            <constraint firstItem="JC9-7A-9jd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tTz-4i-Giz"/>
-                            <constraint firstItem="JC9-7A-9jd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v1I-Gb-LRn"/>
+                            <constraint firstItem="dVL-LZ-WQ3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="snu-Hr-CjV"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="InouiLogo" width="135" height="54"/>
         <image name="SisleyLogo" width="107" height="28"/>
     </resources>
 </document>

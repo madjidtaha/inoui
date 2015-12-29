@@ -127,7 +127,7 @@ class FingerprintView: UIView, LocationManagerDelegate {
     // MARK: - LocationManagerDelegate
 
     func onLocationChange(newAngle: CGFloat) {
-        print(" Fingerprint \(newAngle)");
+//        print(" Fingerprint \(newAngle)");
         
         angle = newAngle;
         
