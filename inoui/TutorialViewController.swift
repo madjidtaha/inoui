@@ -74,9 +74,12 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                     
 
                 }
-                
             }
         }
+    }
+    
+    func disablePause() {
+        //TO DO 
     }
     
     
