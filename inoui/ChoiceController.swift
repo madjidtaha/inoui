@@ -24,6 +24,10 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate {
     // Dispose of any resources that can be recreated.
     }
     
+    func placeSounds() {
+        
+    }
+    
     // MARK: - FingerprintViewControllerDelegate
     
     func onButtonDown(sender: AnyObject) {
