@@ -45,6 +45,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         }
         self.locationManager?.choices.addObjectsFromArray(ages as [AnyObject]);
 
+        
     }
 
     override func didReceiveMemoryWarning() {

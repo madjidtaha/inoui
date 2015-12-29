@@ -14,6 +14,11 @@ class IntroController: UIViewController {
     @IBOutlet weak var inouiLogo: UIImageView!
     @IBOutlet weak var sisleyLogo: UIImageView!
     
+    @IBOutlet weak var headphoneIcon: UIImageView!
+    @IBOutlet weak var introDescription: UITextView!
+    //TODO Replace with real fingerprintView
+    @IBOutlet weak var fingerprintView: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,6 +42,15 @@ class IntroController: UIViewController {
                 print("complete");
                 self.inouiLogo.removeFromSuperview();
                 self.sisleyLogo.removeFromSuperview();
+                
+                UIView.animateWithDuration(2, animations: { () -> Void in
+
+                    self.headphoneIcon.alpha = 1;
+                    self.introDescription.alpha = 1;
+                    self.fingerprintView.alpha = 1;
+                    
+                    }, completion: nil);
+
         });
         
         
