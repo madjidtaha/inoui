@@ -13,7 +13,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 
     @IBOutlet weak var ageView: UITextView?
     @IBOutlet weak var fingerprintView: UIView!
-    var currentChoice: Int?;
+    var currentChoice: Int = -1;
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;
@@ -143,8 +143,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                 
                 }, completion: { (finished) -> Void in
                     print("Complete");
-                    src.view.backgroundColor = nil;
-                    dst.view.backgroundColor = nil;
+                    src.view.alpha = 0.0;
                     
                     dst.view.removeFromSuperview();
 //                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -162,17 +161,57 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 //                // callback here
 //            });
             
-            if (self.restorationIdentifier == "tutorialStep3") {
+            if (self.restorationIdentifier == "tutorialStep3" && self.currentChoice > -1) {
                 
-                NSUserDefaults.standardUserDefaults().setInteger(self.currentChoice!, forKey: "userAge");
+                NSUserDefaults.standardUserDefaults().setInteger(self.currentChoice, forKey: "userAge");
                 
             }
+            
         } else if self.destination != nil {
-            print("Last step");
+            
+            let destStoryboard = UIStoryboard(name: "Choice", bundle: nil);
+            let dst = destStoryboard.instantiateViewControllerWithIdentifier(self.destination!);
+            
+            
+            let src = self;
+            
+            src.view.alpha = 1.0;
+            
+            // dst.view.alpha = 0.0;
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                
+                print("ANIMATE");
+                src.view.alpha = 0.0;
+                
+                },
+                completion: { (finished) -> Void in
+
+//                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+//                  
+//                    UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+//                        
+//                        print("ANIMATE");
+//                        dst.view.alpha = 1.0;
+//                        
+//                    }, completion: nil);
+                    
+                    
+                    self.presentViewController(dst, animated: false, completion: { () -> Void in
+                        
+                        
+                        
+                    });
+            
+            });
+            
         }
-    }
     
-   
+    }
+
+
+
     /*
     // MARK: - Navigation
 

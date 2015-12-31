@@ -17,6 +17,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Choice Here \(self.view.alpha)");
         // Do any additional setup after loading the view, typically from a nib.
     }
     override func didReceiveMemoryWarning() {

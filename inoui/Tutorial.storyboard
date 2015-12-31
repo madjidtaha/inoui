@@ -256,7 +256,7 @@ l’expérience.</string>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="destination" value="Choice"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="destination" value="Choice1"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuO-Eq-IlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,6 +265,6 @@ l’expérience.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lGa-Wi-6Cm"/>
+        <segue reference="liq-rC-Bg0"/>
     </inferredMetricsTieBreakers>
 </document>
