@@ -17,8 +17,20 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Choice Here \(self.view.alpha)");
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if self.restorationIdentifier == "Choice1" {
+            print("Choice Here \(self.view.alpha)");
+            print("\(self.view.subviews[0].alpha)");
+            
+            self.view.subviews[0].alpha = 0.0;
+            
+            UIView.animateWithDuration(5, animations: { () -> Void in
+                self.view.alpha = 1.0;
+                self.view.subviews[0].alpha = 1.0;
+            });
+            
+        }
     }
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
