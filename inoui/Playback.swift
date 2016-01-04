@@ -162,7 +162,7 @@ class Playback: NSObject {
         self.sounds = NSMutableDictionary();
         
         // Start with our sound source slightly in front of the listener
-        self._sourcePos = CGPointMake(0.0, -70.0)
+        self._sourcePos = CGPointMake(0.0, -15.0)
         
         // Put the listener in the center of the stage
         self._listenerPos = CGPointMake(0.0, 0.0)
@@ -273,7 +273,10 @@ class Playback: NSObject {
         alSourcefv(source[self.counter], AL_POSITION, sourcePosAL)
         
         // Set Source Reference Distance
-        alSourcef(source[self.counter], AL_REFERENCE_DISTANCE, 50.0)
+        alSourcef(source[self.counter], AL_REFERENCE_DISTANCE, 10.0)
+        
+        alSourcef(source[self.counter], AL_MAX_DISTANCE, 20.0);
+        
         
         // attach OpenAL Buffer to OpenAL Source
         alSourcei(source[self.counter], AL_BUFFER, ALint(buffer[self.counter]))
@@ -374,6 +377,12 @@ class Playback: NSObject {
     
     func stopSound(name: String) {
         self.disableSound(self.sounds[name] as! NSInteger);
+    }
+    
+    func changePos(sound:NSInteger, pos:CGPoint){
+        let sourcePosAL: [Float] = [Float(pos.x), kDefaultDistance, Float(pos.y)]
+        // Move our audio source coordinates
+        alSourcefv(source[sound], AL_POSITION, sourcePosAL)
     }
     
     //MARK: Setters / Getters
