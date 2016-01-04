@@ -17,6 +17,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;
+    var playback: Playback?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -24,8 +25,10 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // (fingerprintView. as! FingerprintViewController).delegate = self;
         // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        appDelegate.playback?.addSource("sound", ext: "caf");
+        self.view.backgroundColor = UIColor.clearColor();
+        
+        self.playback = (UIApplication.sharedApplication().delegate as! AppDelegate).playback!;
+        self.playback?.addSource("sound", ext: "caf");
         
 //        self.locationManager = appDelegate.locationManager;
         self.locationManager = LocationManager();
@@ -89,8 +92,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     func onButtonDown(sender: AnyObject) {
         self.locationManager?.toggleGyro();
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        appDelegate.playback?.playSound("SOUND");
+        self.playback?.playSound("SOUND");
 //        
 //        if self.restorationIdentifier == "tutorialStep3" {
 //            print("age tuto");
@@ -104,8 +106,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         print("FingerPrint from parent");
         self.locationManager?.toggleGyro();
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        appDelegate.playback?.stopSound("SOUND");
+        self.playback?.stopSound("SOUND");
         
         print(self.nextStep);
         if self.nextStep != nil {

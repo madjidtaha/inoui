@@ -9,16 +9,20 @@
 import UIKit
 import AVFoundation
 
-class ChoiceController: UIViewController, FingerprintViewControllerDelegate {
+class ChoiceController: UIViewController, FingerprintViewControllerDelegate, LocationManagerDelegate {
     
     @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
+    var destination : String?;
     var locationManager: LocationManager?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Choice Here \(self.view.alpha)");
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.locationManager = LocationManager();
+        self.locationManager?.delegate = self;
+        
     }
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -32,35 +36,96 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate {
     // MARK: - FingerprintViewControllerDelegate
     
     func onButtonDown(sender: AnyObject) {
+
+        print("nextStep \(self.nextStep)")
         self.locationManager?.toggleGyro();
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        appDelegate.playback?.playSound("SOUND");
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
+//        appDelegate.playback?.playSound("SOUND");
     }
     
     func onButtonUp(sender: AnyObject) {
         print("FingerPrint from parent");
         self.locationManager?.toggleGyro();
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
-        appDelegate.playback?.stopSound("SOUND");
+//        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
+//        appDelegate.playback?.stopSound("SOUND");
         
-        print(self.nextStep);
         if self.nextStep != nil {
-            print("You choose");
-            print(self.locationManager?.choice);
-            let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
-            var vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep1");
             
-            if ((self.locationManager?.choice)! as! NSInteger == 22) {
-                let string = (self.locationManager?.choice.stringValue)! as String;
-                vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+(string as String));
-            } else {
-                vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
-            }
-            self.presentViewController(vc, animated: false, completion: { () -> Void in
-                // callback here
-            })
+            let destStoryboard = UIStoryboard(name: "Choice", bundle: nil);
+            let vc = destStoryboard.instantiateViewControllerWithIdentifier("Choice"+self.nextStep!);
+            
+            
+            let src = self;
+            let dst = vc;
+            src.view.addSubview(dst.view);
+            
+            src.view.alpha = 1.0;
+            
+            
+            dst.view.alpha = 0.0;
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                
+                print("ANIMATE");
+                dst.view.alpha = 1.0;
+                
+                
+                
+                }, completion: { (finished) -> Void in
+                    print("Complete");
+                    src.view.alpha = 0.0;
+                    
+                    dst.view.removeFromSuperview();
+                    //                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    //                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+                    
+                    self.presentViewController(dst, animated: false, completion: { () -> Void in
+                        // callback here
+                    });
+            });
+            
+        }
+        else if self.destination != nil {
+            
+            let destStoryboard = UIStoryboard(name: "Results", bundle: nil);
+            let dst = destStoryboard.instantiateViewControllerWithIdentifier(self.destination!);
+            
+            
+            let src = self;
+            
+            src.view.alpha = 1.0;
+            
+            // dst.view.alpha = 0.0;
+            
+            UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                
+                print("ANIMATE");
+                src.view.alpha = 0.0;
+                
+                },
+                completion: { (finished) -> Void in
+                    
+                    //                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    //                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+                    //
+                    //                    UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                    //
+                    //                        print("ANIMATE");
+                    //                        dst.view.alpha = 1.0;
+                    //
+                    //                    }, completion: nil);
+                    
+                    
+                    self.presentViewController(dst, animated: false, completion: { () -> Void in
+                        
+                        
+                        
+                    });
+                    
+            });
+   
         }
     }
     

@@ -79,7 +79,7 @@ class IntroController: UIViewController {
         print("onButtonUp");
         
         // TODO Read the value from persistant storage
-        let tutorialDone = false;
+        let tutorialDone = true;
         var storyboard = "Choice";
         
         if !tutorialDone {

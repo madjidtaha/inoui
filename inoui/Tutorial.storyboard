@@ -50,7 +50,7 @@ de droite à gauche.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fbz-zY-CYV" secondAttribute="trailing" id="FkH-ut-zAw"/>
                             <constraint firstItem="W3T-zO-ake" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="Jo4-KX-sch"/>
@@ -105,7 +105,7 @@ l’expérience.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="8" id="A9i-ee-0Iy"/>
                             <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" id="QQT-Nd-QA2"/>
@@ -265,6 +265,6 @@ l’expérience.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="liq-rC-Bg0"/>
+        <segue reference="7VP-gO-hzd"/>
     </inferredMetricsTieBreakers>
 </document>
