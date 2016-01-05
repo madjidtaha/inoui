@@ -17,49 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-y6-TGp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-y6-TGp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFH-VP-ZTd">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="830"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lU8-fm-g5g">
-                                                <rect key="frame" x="99" y="54" width="402" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="dQW-j3-17p"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKH-gb-afG">
-                                                <rect key="frame" x="249" y="703" width="102" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="8l0-QC-QCd"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="sKH-gb-afG" firstAttribute="top" secondItem="lU8-fm-g5g" secondAttribute="bottom" constant="628" id="7zM-mR-1Dv"/>
-                                            <constraint firstItem="lU8-fm-g5g" firstAttribute="centerX" secondItem="VFH-VP-ZTd" secondAttribute="centerX" id="JZ5-Qf-IPs"/>
-                                            <constraint firstItem="lU8-fm-g5g" firstAttribute="top" secondItem="VFH-VP-ZTd" secondAttribute="top" constant="54" id="QXQ-Xt-UJm"/>
-                                            <constraint firstAttribute="height" constant="830" id="fe6-WE-kv0"/>
-                                            <constraint firstItem="lU8-fm-g5g" firstAttribute="leading" secondItem="VFH-VP-ZTd" secondAttribute="leading" constant="99" id="kTh-T2-dJd"/>
-                                            <constraint firstItem="sKH-gb-afG" firstAttribute="centerX" secondItem="lU8-fm-g5g" secondAttribute="centerX" id="owh-B3-OEH"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="VFH-VP-ZTd" firstAttribute="leading" secondItem="lR8-y6-TGp" secondAttribute="leading" id="W13-9j-req"/>
-                                    <constraint firstAttribute="trailing" secondItem="VFH-VP-ZTd" secondAttribute="trailing" id="ZRt-AE-iX2"/>
-                                    <constraint firstAttribute="bottom" secondItem="VFH-VP-ZTd" secondAttribute="bottom" constant="-230" id="aTu-3r-XPx"/>
-                                    <constraint firstItem="VFH-VP-ZTd" firstAttribute="top" secondItem="lR8-y6-TGp" secondAttribute="top" id="ahc-Ee-JId"/>
-                                    <constraint firstItem="VFH-VP-ZTd" firstAttribute="centerX" secondItem="lR8-y6-TGp" secondAttribute="centerX" id="efs-Mb-btu"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +30,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollView" destination="lR8-y6-TGp" id="HSh-DR-oTk"/>
+                        <outlet property="scrollView" destination="lR8-y6-TGp" id="kGP-n1-hfp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2D-Tu-x4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
