@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LocationManagerDelegate {
 //        print("beginTutorial");
 //        print(beginTutorial);
         
+        UINavigationBar.appearance().barStyle = .Black
+
+        UIApplication.sharedApplication().statusBarStyle = .LightContent;
+        
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -53,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LocationManagerDelegate {
         self.playback = Playback();
         print("Playback");
         print(self.playback);
-        
         
         return true
         
