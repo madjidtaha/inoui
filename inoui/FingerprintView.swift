@@ -36,12 +36,16 @@ class FingerprintView: UIView, LocationManagerDelegate {
         self.locationManager?.toggleGyro();
         
 //        self.locationManager = (UIApplication.sharedApplication().delegate as! AppDelegate).locationManager;
+        
+        self.opaque = false;
 
     }
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
+        
+        super.drawRect(rect);
         
         // Drawing code
         let context = UIGraphicsGetCurrentContext();
