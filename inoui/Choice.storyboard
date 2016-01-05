@@ -29,7 +29,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-Zn-ZEq">
-                                <rect key="frame" x="20" y="103" width="560" height="21"/>
+                                <rect key="frame" x="20" y="103" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -38,13 +38,18 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8vd-SI-wWa" firstAttribute="top" secondItem="Fst-US-5Wh" secondAttribute="bottom" id="0Nm-UB-MYi"/>
-                            <constraint firstAttribute="trailing" secondItem="Fst-US-5Wh" secondAttribute="trailing" id="24i-qV-nI6"/>
+                            <constraint firstAttribute="trailing" secondItem="Fst-US-5Wh" secondAttribute="trailing" constant="20" id="24i-qV-nI6"/>
                             <constraint firstItem="Fst-US-5Wh" firstAttribute="centerX" secondItem="F5u-Nb-Zz2" secondAttribute="centerX" id="3Ma-Wf-Xkp"/>
                             <constraint firstItem="Ekb-Zn-ZEq" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leadingMargin" id="7sJ-jk-OJL"/>
                             <constraint firstItem="Ekb-Zn-ZEq" firstAttribute="top" secondItem="dE5-1L-J3O" secondAttribute="bottom" constant="83" id="pVp-AX-g29"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ekb-Zn-ZEq" secondAttribute="trailing" id="xDz-bd-Mt8"/>
-                            <constraint firstItem="Fst-US-5Wh" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leading" id="xZs-Zz-0My"/>
+                            <constraint firstItem="Fst-US-5Wh" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leading" constant="20" id="xZs-Zz-0My"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Ma-Wf-Xkp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="2"/>
@@ -79,7 +84,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-bj-UUj">
-                                <rect key="frame" x="20" y="100" width="560" height="21"/>
+                                <rect key="frame" x="20" y="100" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -87,8 +92,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="z4b-Dr-xXt" secondAttribute="trailing" id="24Z-2U-Hsn"/>
-                            <constraint firstItem="z4b-Dr-xXt" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leading" id="Ijd-Ud-87H"/>
+                            <constraint firstAttribute="trailing" secondItem="z4b-Dr-xXt" secondAttribute="trailing" constant="20" id="24Z-2U-Hsn"/>
+                            <constraint firstItem="z4b-Dr-xXt" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leading" constant="20" id="Ijd-Ud-87H"/>
                             <constraint firstItem="5r3-bj-UUj" firstAttribute="trailing" secondItem="EeN-ky-cSP" secondAttribute="trailingMargin" id="OTm-7k-zlY"/>
                             <constraint firstItem="5r3-bj-UUj" firstAttribute="top" secondItem="Dai-5k-jpt" secondAttribute="bottom" constant="80" id="dkp-lD-H2f"/>
                             <constraint firstItem="90c-zo-9UM" firstAttribute="top" secondItem="z4b-Dr-xXt" secondAttribute="bottom" id="oPv-D6-4Ff"/>
@@ -125,7 +130,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzr-2D-893">
-                                <rect key="frame" x="20" y="123" width="560" height="21"/>
+                                <rect key="frame" x="20" y="123" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -136,9 +141,9 @@
                             <constraint firstItem="wzr-2D-893" firstAttribute="leading" secondItem="Da6-s5-t2a" secondAttribute="leadingMargin" id="0iX-Pz-6py"/>
                             <constraint firstItem="nBK-no-aDg" firstAttribute="top" secondItem="WkD-62-428" secondAttribute="bottom" id="8ij-KB-a71"/>
                             <constraint firstItem="wzr-2D-893" firstAttribute="trailing" secondItem="Da6-s5-t2a" secondAttribute="trailingMargin" id="Oc8-Jz-xaS"/>
-                            <constraint firstAttribute="trailing" secondItem="WkD-62-428" secondAttribute="trailing" id="djL-XY-hKa"/>
+                            <constraint firstAttribute="trailing" secondItem="WkD-62-428" secondAttribute="trailing" constant="20" id="djL-XY-hKa"/>
                             <constraint firstItem="wzr-2D-893" firstAttribute="top" secondItem="dIH-NO-8QT" secondAttribute="bottom" constant="103" id="h1M-5S-FGe"/>
-                            <constraint firstItem="WkD-62-428" firstAttribute="leading" secondItem="Da6-s5-t2a" secondAttribute="leading" id="iqV-bR-Gwx"/>
+                            <constraint firstItem="WkD-62-428" firstAttribute="leading" secondItem="Da6-s5-t2a" secondAttribute="leading" constant="20" id="iqV-bR-Gwx"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -171,7 +176,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZv-Q4-xGX">
-                                <rect key="frame" x="20" y="102" width="560" height="21"/>
+                                <rect key="frame" x="20" y="102" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -183,8 +188,8 @@
                             <constraint firstItem="HZv-Q4-xGX" firstAttribute="leading" secondItem="iGT-me-Pba" secondAttribute="leadingMargin" id="PkO-3e-pzC"/>
                             <constraint firstItem="HZv-Q4-xGX" firstAttribute="trailing" secondItem="iGT-me-Pba" secondAttribute="trailingMargin" id="eQk-Ph-gpC"/>
                             <constraint firstItem="HZv-Q4-xGX" firstAttribute="top" secondItem="yH8-p9-yKN" secondAttribute="bottom" constant="82" id="f7X-fJ-O0V"/>
-                            <constraint firstItem="ySv-jL-pVG" firstAttribute="leading" secondItem="iGT-me-Pba" secondAttribute="leading" id="l2e-QQ-eAD"/>
-                            <constraint firstAttribute="trailing" secondItem="ySv-jL-pVG" secondAttribute="trailing" id="ytE-gQ-tt7"/>
+                            <constraint firstItem="ySv-jL-pVG" firstAttribute="leading" secondItem="iGT-me-Pba" secondAttribute="leading" constant="20" id="l2e-QQ-eAD"/>
+                            <constraint firstAttribute="trailing" secondItem="ySv-jL-pVG" secondAttribute="trailing" constant="20" id="ytE-gQ-tt7"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
