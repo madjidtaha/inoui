@@ -12,6 +12,8 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -67,18 +69,15 @@ de droite à gauche.</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="2"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="fingerprintView" destination="fbz-zY-CYV" id="6tc-RQ-JfX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-kz-Gqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1233" y="627"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tutorial Gender View Controller-->
         <scene sceneID="FSI-5n-46O">
             <objects>
-                <viewController storyboardIdentifier="tutorialStep2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GKB-Z3-V2c" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialStep2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GKB-Z3-V2c" customClass="TutorialGenderViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PPd-zq-5SC"/>
                         <viewControllerLayoutGuide type="bottom" id="dDA-Rj-baV"/>
@@ -109,12 +108,41 @@ l’expérience.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-ZO-iwD">
+                                <rect key="frame" x="180" y="41" width="240" height="147"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 / 2 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piF-OV-3IN">
+                                        <rect key="frame" x="99" y="0.0" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="RELÂCHEZ POUR CONFIRMER" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym2-9B-RX3">
+                                        <rect key="frame" x="0.0" y="29" width="240" height="68"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Vous êtes une femme" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-Rm-uk3">
+                                        <rect key="frame" x="0.0" y="82" width="240" height="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="Hhq-O1-YIG"/>
+                                    <constraint firstAttribute="width" constant="240" id="mN5-RT-mvf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="8" id="A9i-ee-0Iy"/>
                             <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" constant="20" id="QQT-Nd-QA2"/>
                             <constraint firstItem="dDA-Rj-baV" firstAttribute="top" secondItem="txu-rp-6Dh" secondAttribute="bottom" id="Td1-aN-CRB"/>
+                            <constraint firstItem="d9N-ZO-iwD" firstAttribute="centerX" secondItem="GXZ-Yl-Y0Y" secondAttribute="centerX" id="YZo-jp-JTt"/>
+                            <constraint firstItem="d9N-ZO-iwD" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="21" id="b6u-QB-8gx"/>
                             <constraint firstItem="txu-rp-6Dh" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" constant="20" id="fr9-mq-FrY"/>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="centerX" secondItem="GXZ-Yl-Y0Y" secondAttribute="centerX" id="nk7-4y-0FM"/>
                         </constraints>
@@ -123,6 +151,10 @@ l’expérience.</string>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="3"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="choice"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="instructionView" destination="oLB-3J-9TO" id="kd8-91-Fv9"/>
+                        <outlet property="questionView" destination="d9N-ZO-iwD" id="C5k-fK-Xmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YrR-JT-ubQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

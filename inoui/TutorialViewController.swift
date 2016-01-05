@@ -12,7 +12,6 @@ import AVFoundation
 class TutorialViewController: UIViewController, FingerprintViewControllerDelegate, LocationManagerDelegate {
 
     @IBOutlet weak var ageView: UITextView?
-    @IBOutlet weak var fingerprintView: UIView!
     var currentChoice: Int = -1;
     var nextStep : String?;
     var destination : String?;
@@ -83,23 +82,18 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     }
     
     func disablePause() {
-        //TO DO 
+        //TODO
     }
     
     
     // MARK: - FingerprintViewControllerDelegate
     
     func onButtonDown(sender: AnyObject) {
+        
         self.locationManager?.toggleGyro();
         
         self.playback?.playSound("SOUND");
-//        
-//        if self.restorationIdentifier == "tutorialStep3" {
-//            print("age tuto");
-//            print(self.locationManager?.choiceNumber);
-////            self.locationManager?.label = self.ageView!;
-//            self.ageView?.text = (self.locationManager?.choice.stringValue)! as String;
-//        }
+
     }
 
     func onButtonUp(sender: AnyObject) {
@@ -118,26 +112,16 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             let src = self;
             let dst = vc;
             
-//            let srcView = UIView();
-//            
-//            srcView.addSubview(src.view.subviews)
-            
+
             src.view.addSubview(dst.view);
-//            src.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
             src.view.alpha = 1.0;
             
-//            dst.view.transform = CGAffineTransformMakeTranslation(dst.view.bounds.size.width * 1.0, 0.0);
             dst.view.alpha = 0.0;
             
             UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 
                 print("ANIMATE");
                 
-//                src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
-                //                dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
-//                dst.view.center = originalCenter;
-
-//                src.view.alpha = 0.0;
                 dst.view.alpha = 1.0;
 
 
@@ -147,20 +131,13 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
                     src.view.alpha = 0.0;
                     
                     dst.view.removeFromSuperview();
-//                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//                    appDelegate.navigationController?.pushViewController(dst, animated: false);
-                    
+
                     self.presentViewController(dst, animated: false, completion: { () -> Void in
                         // callback here
                     });
             });
             
-            
-            
-//            THIS WORK
-//            self.presentViewController(vc, animated: false, completion: { () -> Void in
-//                // callback here
-//            });
+
             
             if (self.restorationIdentifier == "tutorialStep3" && self.currentChoice > -1) {
                 
@@ -178,30 +155,14 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             
             src.view.alpha = 1.0;
             
-            // dst.view.alpha = 0.0;
-            
             UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
                 
-                print("ANIMATE");
                 src.view.alpha = 0.0;
                 
                 },
                 completion: { (finished) -> Void in
-
-//                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//                    appDelegate.navigationController?.pushViewController(dst, animated: false);
-//                  
-//                    UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
-//                        
-//                        print("ANIMATE");
-//                        dst.view.alpha = 1.0;
-//                        
-//                    }, completion: nil);
-                    
                     
                     self.presentViewController(dst, animated: false, completion: { () -> Void in
-                        
-                        
                         
                     });
             

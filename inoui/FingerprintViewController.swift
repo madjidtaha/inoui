@@ -17,6 +17,7 @@ class FingerprintViewController: UIViewController {
 
     @IBOutlet weak var fingerprintButton: UIButton!
     var delegate : FingerprintViewControllerDelegate?;
+    var lastTouch : Double = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -36,17 +37,21 @@ class FingerprintViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func onButtonUp(sender: AnyObject) {
-        self.delegate?.onButtonUp(sender);
-        print("WOUHOU FINGERPRINT");
-        
-    }
+    
     @IBAction func onButtonDown(sender: AnyObject) {
         self.delegate?.onButtonDown(sender);
-        print("Fingerprint down.");
+        print("WOUHOU FINGERPRINT ");
+        // TODO, cancel buttonup if touch too fast
+        self.lastTouch = NSDate().timeIntervalSince1970;
         
     }
-
+    
+    @IBAction func onButtonUp(sender: AnyObject) {
+        self.delegate?.onButtonUp(sender);
+        print("Fingerprint down. \((NSDate().timeIntervalSince1970) - self.lastTouch)");
+       
+    }
+ 
     /*
     // MARK: - Navigation
 
