@@ -14,14 +14,14 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
     var sounds: NSMutableArray = NSMutableArray();
     var pos: CGPoint = CGPoint();
     var endPos: CGPoint = CGPoint();
-    var diameter: CGFloat = 20.0;
+    var diameter: CGFloat = 40.0;
     var index: NSInteger = NSInteger();
     
     override init() {
         super.init();
         
         // COUNT WITH VIEW CONTROLLER
-        self.index = 0;
+        self.index = 3;
     }
     
     func addSound(name: String, ext: String) {
@@ -50,22 +50,50 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
             (self.sounds[index]as! Sound).placeSound(self.pos.x, y: self.pos.y);
         }
         
-        //self.goToEndPos(self.pos.x, y: self.pos.y);
+        self.fadeIn();
     }
     
-    func goToEndPos(x:CGFloat, y:CGFloat){
-        let newX = x + M_PI.g / 10;
-        let newY = y + M_PI.g / 10;
-        let point = CGPointMake(newX, newY);
-        delay(0.05) {
-            print("lol: \(x)");
+    func goToEndPos(x:CGFloat, y:CGFloat, endY:CGFloat, a:CGFloat, b:CGFloat){
+        let listenerPos = appDelegate.playback?.listenerPos;
+        var newY = CGFloat();
+        let delta = abs(self.pos.y - listenerPos!.y) / 100;
+        if(y < endY) {
+            newY = y + delta;
+        } else {
+            newY = y - delta;
+        }
+        let newX = (newY - b) / a;
+        
+        delay(0.1) {
+            print("lol: \(y)");
             for var index = 0; index < self.sounds.count; index++ {
                 (self.sounds[index]as! Sound).placeSound(newX, y: newY);
             }
-            if(point != self.endPos) {
-                self.goToEndPos(newX, y: newY);
+            if(abs(newY) > abs(endY) + 0.1 || abs(newY) < abs(endY) - 0.1) {
+                self.goToEndPos(newX, y: newY, endY: endY, a:a, b:b);
             }
         }
+    }
+    
+    func fadeIn() {
+        let listenerPos = appDelegate.playback?.listenerPos;
+        let a = (self.pos.y - listenerPos!.y) / (self.pos.x - listenerPos!.x);
+        let b = self.pos.y - (a * self.pos.x);
+        
+        let end = (self.pos.y - listenerPos!.y) / 2;
+        
+        self.goToEndPos(self.pos.x, y:self.pos.y, endY: end, a:a, b:b);
+    }
+    
+    func fadeOut() {
+        let listenerPos = appDelegate.playback?.listenerPos;
+        let a = (self.pos.y - listenerPos!.y) / (self.pos.x - listenerPos!.x);
+        let b = self.pos.y - (a * self.pos.x);
+        
+        let startY = (self.pos.y - listenerPos!.y) / 2;
+        let startX = (startY - b) / a;
+        
+        self.goToEndPos(startX, y:startY, endY: self.pos.y, a:a, b:b);
     }
     
     
@@ -83,7 +111,7 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
     func onChoiceChange(choice: Int) {
         print("test");
         
-        self.goToEndPos(self.pos.x, y:self.pos.y);
+        self.fadeIn();
     }
     
 }

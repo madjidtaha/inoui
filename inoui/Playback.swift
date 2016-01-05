@@ -383,6 +383,7 @@ class Playback: NSObject {
         let sourcePosAL: [Float] = [Float(pos.x), kDefaultDistance, Float(pos.y)]
         // Move our audio source coordinates
         alSourcefv(source[sound], AL_POSITION, sourcePosAL)
+        
     }
     
     //MARK: Setters / Getters

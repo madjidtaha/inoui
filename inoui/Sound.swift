@@ -25,12 +25,6 @@ class Sound: NSObject {
         appDelegate.playback?.changePos(self.index, pos: self.pos);
     }
     
-    func fadeIn() {
-        
-    }
     
-    func fadeOut() {
-        
-    }
     
 }
