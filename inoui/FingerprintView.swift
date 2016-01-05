@@ -81,33 +81,33 @@ class FingerprintView: UIView, LocationManagerDelegate {
 
         CGContextRestoreGState(context);
         
-        for (var i = 0; i < 360; i += 2) {
-            
-            CGContextSaveGState(context);
-            
-            CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMidY(rect));
-            
-//            CGContextRotateCTM(context, angle);
-            CGContextRotateCTM(context, CGFloat((M_PI * i.d) / 180));
-            
-            
-            CGContextTranslateCTM(context, -CGRectGetMidX(rect), -CGRectGetMidY(rect));
-            
-            
-            CGContextSetLineWidth(context, 1)
-            CGContextSetStrokeColorWithColor(context, UIColor.whiteColor().CGColor);
-            
-            CGContextMoveToPoint(context, self.bounds.width / 2, 35);
-            CGContextAddLineToPoint(context, self.bounds.width / 2, 45);
-            
-            CGContextMoveToPoint(context, self.bounds.width / 2, self.bounds.height - 45);
-            CGContextAddLineToPoint(context, self.bounds.width / 2, self.bounds.height - 35);
-            
-            CGContextStrokePath(context);
-            
-            CGContextRestoreGState(context);
-            
-        }
+//        for (var i = 0; i < 360; i += 2) {
+//            
+//            CGContextSaveGState(context);
+//            
+//            CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMidY(rect));
+//            
+////            CGContextRotateCTM(context, angle);
+//            CGContextRotateCTM(context, CGFloat((M_PI * i.d) / 180));
+//            
+//            
+//            CGContextTranslateCTM(context, -CGRectGetMidX(rect), -CGRectGetMidY(rect));
+//            
+//            
+//            CGContextSetLineWidth(context, 1)
+//            CGContextSetStrokeColorWithColor(context, UIColor.whiteColor().CGColor);
+//            
+//            CGContextMoveToPoint(context, self.bounds.width / 2, 35);
+//            CGContextAddLineToPoint(context, self.bounds.width / 2, 45);
+//            
+//            CGContextMoveToPoint(context, self.bounds.width / 2, self.bounds.height - 45);
+//            CGContextAddLineToPoint(context, self.bounds.width / 2, self.bounds.height - 35);
+//            
+//            CGContextStrokePath(context);
+//            
+//            CGContextRestoreGState(context);
+//            
+//        }
 
 
     }
@@ -127,7 +127,7 @@ class FingerprintView: UIView, LocationManagerDelegate {
     // MARK: - LocationManagerDelegate
 
     func onLocationChange(newAngle: CGFloat) {
-        print(" Fingerprint \(newAngle)");
+//        print(" Fingerprint \(newAngle)");
         
         angle = newAngle;
         

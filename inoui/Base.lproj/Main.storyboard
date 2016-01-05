@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P12-Zh-Xkc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P12-Zh-Xkc">
                                 <rect key="frame" x="40" y="167" width="520" height="128"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="mal-mN-aun"/>
                                 </constraints>
@@ -31,13 +30,11 @@ vos écouteurs.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeadphoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-xG-MBp">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeadphoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zqb-xG-MBp">
                                 <rect key="frame" x="273" y="95" width="55" height="44"/>
-                                <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZn-vS-8dm">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZn-vS-8dm">
                                 <rect key="frame" x="277" y="315" width="46" height="30"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="7B5-DK-S3u"/>
                                     <constraint firstAttribute="height" constant="30" id="ulS-X1-eFc"/>
@@ -47,16 +44,35 @@ vos écouteurs.</string>
                                     <action selector="onButtonUp:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHP-yc-axj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SisleyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-b0-pXT">
+                                <rect key="frame" x="247" y="552" width="107" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="Frk-15-ymE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="Zaw-et-aQM"/>
+                                    <constraint firstAttribute="height" constant="28" id="bb9-Hc-E3d"/>
+                                    <constraint firstAttribute="width" constant="107" id="krz-Q0-yLv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InouiLogo" highlightedImage="InouiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-m9-RFX">
+                                <rect key="frame" x="233" y="273" width="135" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="CrG-8n-izH"/>
+                                    <constraint firstAttribute="width" constant="135" id="qxh-qx-6cO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zqb-xG-MBp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="78H-CQ-AFa"/>
                             <constraint firstItem="zqb-xG-MBp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ecu-8s-WLk"/>
+                            <constraint firstItem="FhU-m9-RFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rg6-m6-BbD"/>
+                            <constraint firstItem="FhU-m9-RFX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VOQ-No-zsu"/>
                             <constraint firstItem="ZZn-vS-8dm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y39-zQ-hP7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P12-Zh-Xkc" secondAttribute="trailing" constant="20" id="hZy-t2-jDt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BQU-b0-pXT" secondAttribute="bottom" constant="20" id="i8P-6t-u1n"/>
                             <constraint firstItem="P12-Zh-Xkc" firstAttribute="top" secondItem="zqb-xG-MBp" secondAttribute="bottom" constant="28" id="opu-0n-DRr"/>
                             <constraint firstItem="ZZn-vS-8dm" firstAttribute="top" secondItem="P12-Zh-Xkc" secondAttribute="bottom" constant="20" id="ppd-Xr-9iK"/>
+                            <constraint firstItem="BQU-b0-pXT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uV2-lm-I8q"/>
                             <constraint firstItem="P12-Zh-Xkc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="xMD-bJ-hU6"/>
                         </constraints>
                     </view>
@@ -66,6 +82,11 @@ vos écouteurs.</string>
                     </keyCommands>
                     <connections>
                         <outlet property="button" destination="ZZn-vS-8dm" id="cmp-Ha-RLn"/>
+                        <outlet property="fingerprintView" destination="ZZn-vS-8dm" id="VWS-cw-J2Y"/>
+                        <outlet property="headphoneIcon" destination="zqb-xG-MBp" id="mnO-aV-w7R"/>
+                        <outlet property="inouiLogo" destination="FhU-m9-RFX" id="xrL-E3-ujp"/>
+                        <outlet property="introDescription" destination="P12-Zh-Xkc" id="ycy-ft-fnX"/>
+                        <outlet property="sisleyLogo" destination="BQU-b0-pXT" id="g9N-Pg-jsU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,5 +96,7 @@ vos écouteurs.</string>
     </scenes>
     <resources>
         <image name="HeadphoneIcon" width="55" height="44"/>
+        <image name="InouiLogo" width="135" height="54"/>
+        <image name="SisleyLogo" width="107" height="28"/>
     </resources>
 </document>

@@ -11,6 +11,13 @@ import AVFoundation
 
 class IntroController: UIViewController {
     @IBOutlet var button: UIButton!;
+    @IBOutlet weak var inouiLogo: UIImageView!
+    @IBOutlet weak var sisleyLogo: UIImageView!
+    
+    @IBOutlet weak var headphoneIcon: UIImageView!
+    @IBOutlet weak var introDescription: UITextView!
+    //TODO Replace with real fingerprintView
+    @IBOutlet weak var fingerprintView: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +31,29 @@ class IntroController: UIViewController {
             object: sessionInstance)
         
         self.handleRouteChange(nil);
+        
+        UIView.animateWithDuration(2, animations: { () -> Void in
+            // animation
+            self.inouiLogo.alpha = 0;
+            self.sisleyLogo.alpha = 0;
+            
+            }, completion: { (finished) -> Void in
+                // complete
+                print("complete");
+                self.inouiLogo.removeFromSuperview();
+                self.sisleyLogo.removeFromSuperview();
+                
+                UIView.animateWithDuration(2, animations: { () -> Void in
+
+                    self.headphoneIcon.alpha = 1;
+                    self.introDescription.alpha = 1;
+                    self.fingerprintView.alpha = 1;
+                    
+                    }, completion: nil);
+
+        });
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,7 +101,7 @@ class IntroController: UIViewController {
                 print("ANIMATE");
                 
                 src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
-                //                dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+                // dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
                 dst!.view.center = originalCenter;
                 
                 }, completion: { (finished) -> Void in

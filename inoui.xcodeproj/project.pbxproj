@@ -26,6 +26,9 @@
 		026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8BB1C0DD73400601876 /* TutorialViewController.swift */; };
 		026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */; };
 		026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */; };
+		02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCEF371C34B6EA00186654 /* ChoiceView.swift */; };
+		02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */; };
+		02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */; };
 		02C5B0681BF4DB9200DA3CD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */; };
 		02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0691BF4DB9200DA3CD1 /* ViewController.swift */; };
 		02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C5B06B1BF4DB9200DA3CD1 /* Main.storyboard */; };
@@ -94,6 +97,9 @@
 		026BF8BB1C0DD73400601876 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnblurAnimationSegue.swift; sourceTree = "<group>"; };
+		02BCEF371C34B6EA00186654 /* ChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
+		02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
+		02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		02C5B0641BF4DB9200DA3CD1 /* inoui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inoui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C5B0671BF4DB9200DA3CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02C5B0691BF4DB9200DA3CD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +264,39 @@
 			name = Transitions;
 			sourceTree = "<group>";
 		};
+		02C4A4D81C3ABA0B009E0CFA /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				02C4A4DB1C3ABA25009E0CFA /* Model */,
+				02C4A4DA1C3ABA1D009E0CFA /* View */,
+				02C4A4D91C3ABA18009E0CFA /* Controller */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		02C4A4D91C3ABA18009E0CFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */,
+				02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		02C4A4DA1C3ABA1D009E0CFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		02C4A4DB1C3ABA25009E0CFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		02C5B05B1BF4DB9200DA3CD1 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +322,7 @@
 		02C5B0661BF4DB9200DA3CD1 /* inoui */ = {
 			isa = PBXGroup;
 			children = (
+				02C4A4D81C3ABA0B009E0CFA /* Results */,
 				8920EA941C11E46A001D7A33 /* Choices */,
 				8920EA8A1C11CED5001D7A33 /* Pause */,
 				8920EA821C11CDF4001D7A33 /* Intro */,
@@ -447,6 +487,7 @@
 		8920EA961C11E47F001D7A33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02BCEF371C34B6EA00186654 /* ChoiceView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -581,6 +622,7 @@
 				893F6BAC1C3BCE0E007CB1F9 /* test2.caf in Resources */,
 				893F6BAE1C3BCE0E007CB1F9 /* test3.caf in Resources */,
 				8920EA761C104299001D7A33 /* sound.caf in Resources */,
+				02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
@@ -619,9 +661,11 @@
 				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
 				8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */,
+				02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */,
 				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
 				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
 				024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */,
+				02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */,
 				8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
