@@ -36,11 +36,11 @@
                                     <segue destination="T61-lE-wLC" kind="embed" id="lGa-Wi-6Cm"/>
                                 </connections>
                             </containerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3T-zO-ake">
-                                <rect key="frame" x="180" y="20" width="240" height="88"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3T-zO-ake">
+                                <rect key="frame" x="210" y="148" width="180" height="88"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="XYd-hN-gRq"/>
-                                    <constraint firstAttribute="width" constant="240" id="wHn-q0-nKf"/>
+                                    <constraint firstAttribute="width" constant="180" id="4Re-vX-8jD"/>
+                                    <constraint firstAttribute="height" constant="88" id="iVl-pO-Chx"/>
                                 </constraints>
                                 <string key="text">Pour naviguer, déplacez
 votre smartphone
@@ -49,14 +49,19 @@ de droite à gauche.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
+                                <rect key="frame" x="287" y="95" width="26" height="44"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fbz-zY-CYV" secondAttribute="trailing" id="FkH-ut-zAw"/>
-                            <constraint firstItem="W3T-zO-ake" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="Jo4-KX-sch"/>
+                            <constraint firstItem="W3T-zO-ake" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="2eV-M5-VCz"/>
+                            <constraint firstAttribute="trailing" secondItem="fbz-zY-CYV" secondAttribute="trailing" constant="20" id="FkH-ut-zAw"/>
+                            <constraint firstItem="n6K-Af-vBL" firstAttribute="top" secondItem="itM-Hc-CPs" secondAttribute="bottom" constant="75" id="QOL-ft-vTv"/>
                             <constraint firstItem="pzx-9g-1JY" firstAttribute="top" secondItem="fbz-zY-CYV" secondAttribute="bottom" id="USa-3R-10R"/>
-                            <constraint firstItem="fbz-zY-CYV" firstAttribute="leading" secondItem="zt6-qq-w7x" secondAttribute="leading" id="f5j-Pc-iNd"/>
-                            <constraint firstItem="W3T-zO-ake" firstAttribute="top" secondItem="itM-Hc-CPs" secondAttribute="bottom" id="oPZ-fz-8gP"/>
+                            <constraint firstItem="fbz-zY-CYV" firstAttribute="leading" secondItem="zt6-qq-w7x" secondAttribute="leading" constant="20" id="f5j-Pc-iNd"/>
+                            <constraint firstItem="n6K-Af-vBL" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="w8l-3e-Ao9"/>
+                            <constraint firstItem="W3T-zO-ake" firstAttribute="top" secondItem="itM-Hc-CPs" secondAttribute="bottom" constant="128" id="w8s-LU-AHB"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -108,9 +113,9 @@ l’expérience.</string>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="8" id="A9i-ee-0Iy"/>
-                            <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" id="QQT-Nd-QA2"/>
+                            <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" constant="20" id="QQT-Nd-QA2"/>
                             <constraint firstItem="dDA-Rj-baV" firstAttribute="top" secondItem="txu-rp-6Dh" secondAttribute="bottom" id="Td1-aN-CRB"/>
-                            <constraint firstItem="txu-rp-6Dh" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" id="fr9-mq-FrY"/>
+                            <constraint firstItem="txu-rp-6Dh" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" constant="20" id="fr9-mq-FrY"/>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="centerX" secondItem="GXZ-Yl-Y0Y" secondAttribute="centerX" id="nk7-4y-0FM"/>
                         </constraints>
                     </view>
@@ -177,9 +182,9 @@ l’expérience.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NIf-Dt-Q0v" secondAttribute="trailing" id="4ho-Op-Wlc"/>
+                            <constraint firstAttribute="trailing" secondItem="NIf-Dt-Q0v" secondAttribute="trailing" constant="20" id="4ho-Op-Wlc"/>
                             <constraint firstItem="6Cu-sx-5Zc" firstAttribute="centerX" secondItem="hx2-Z6-01X" secondAttribute="centerX" id="9ch-BW-77U"/>
-                            <constraint firstItem="NIf-Dt-Q0v" firstAttribute="leading" secondItem="hx2-Z6-01X" secondAttribute="leading" id="Ccn-ih-nVH"/>
+                            <constraint firstItem="NIf-Dt-Q0v" firstAttribute="leading" secondItem="hx2-Z6-01X" secondAttribute="leading" constant="20" id="Ccn-ih-nVH"/>
                             <constraint firstItem="gBd-0K-KCz" firstAttribute="top" secondItem="6Cu-sx-5Zc" secondAttribute="bottom" constant="8" id="Ot6-Iq-aC2"/>
                             <constraint firstItem="Xeq-aN-iTA" firstAttribute="centerX" secondItem="hx2-Z6-01X" secondAttribute="centerX" id="afB-Nb-7CB"/>
                             <constraint firstItem="gBd-0K-KCz" firstAttribute="centerX" secondItem="hx2-Z6-01X" secondAttribute="centerX" id="cUZ-uh-3oi"/>
@@ -207,6 +212,7 @@ l’expérience.</string>
                 <containerView opaque="NO" contentMode="scaleToFill" id="Lhb-2A-xz7">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Lhb-2A-xz7" secondAttribute="height" multiplier="1:1" id="gE0-BT-Wq5"/>
                     </constraints>
@@ -248,10 +254,10 @@ l’expérience.</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aA9-mu-quf" secondAttribute="trailing" id="5cT-GX-zia"/>
+                            <constraint firstAttribute="trailing" secondItem="aA9-mu-quf" secondAttribute="trailing" constant="20" id="5cT-GX-zia"/>
                             <constraint firstItem="173-6K-efX" firstAttribute="centerX" secondItem="Mzn-zX-Une" secondAttribute="centerX" id="SST-bG-2oH"/>
                             <constraint firstItem="173-6K-efX" firstAttribute="top" secondItem="ijJ-24-o25" secondAttribute="bottom" constant="22" id="XTS-0C-0vZ"/>
-                            <constraint firstItem="aA9-mu-quf" firstAttribute="leading" secondItem="Mzn-zX-Une" secondAttribute="leading" id="b9J-E3-8wh"/>
+                            <constraint firstItem="aA9-mu-quf" firstAttribute="leading" secondItem="Mzn-zX-Une" secondAttribute="leading" constant="20" id="b9J-E3-8wh"/>
                             <constraint firstItem="P9L-Lm-pZR" firstAttribute="top" secondItem="aA9-mu-quf" secondAttribute="bottom" id="ifB-FQ-nnA"/>
                         </constraints>
                     </view>
@@ -264,7 +270,10 @@ l’expérience.</string>
             <point key="canvasLocation" x="1197" y="615"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="phone" width="26" height="44"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7VP-gO-hzd"/>
+        <segue reference="lGa-Wi-6Cm"/>
     </inferredMetricsTieBreakers>
 </document>

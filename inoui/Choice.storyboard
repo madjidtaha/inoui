@@ -10,18 +10,17 @@
         <!--Choice Controller-->
         <scene sceneID="iYl-RC-uph">
             <objects>
-                <viewController storyboardIdentifier="Choice1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BcM-ze-A2o" customClass="ChoiceController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Choice1" storyboardIdentifier="Choice1" id="BcM-ze-A2o" customClass="ChoiceController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dE5-1L-J3O"/>
                         <viewControllerLayoutGuide type="bottom" id="8vd-SI-wWa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="F5u-Nb-Zz2" customClass="ChoiceView" customModule="inoui" customModuleProvider="target">
+                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="F5u-Nb-Zz2" customClass="ChoiceView" customModule="inoui" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fst-US-5Wh">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <color key="backgroundColor" red="1" green="0.071741149341799759" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fst-US-5Wh" secondAttribute="height" multiplier="1:1" id="YMm-F8-6qI"/>
                                 </constraints>
@@ -30,7 +29,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-Zn-ZEq">
-                                <rect key="frame" x="20" y="103" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="103" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -126,7 +125,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzr-2D-893">
-                                <rect key="frame" x="20" y="123" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="123" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +171,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZv-Q4-xGX">
-                                <rect key="frame" x="20" y="102" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="102" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

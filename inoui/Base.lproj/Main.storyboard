@@ -53,7 +53,7 @@ vos écouteurs.</string>
                                     <constraint firstAttribute="width" constant="107" id="krz-Q0-yLv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InouiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-m9-RFX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InouiLogo" highlightedImage="InouiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FhU-m9-RFX">
                                 <rect key="frame" x="233" y="273" width="135" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="CrG-8n-izH"/>

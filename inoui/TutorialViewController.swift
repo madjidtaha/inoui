@@ -25,7 +25,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         // (fingerprintView. as! FingerprintViewController).delegate = self;
         // NSUserDefaults.standardUserDefaults().setObject(true, forKey: "beginTutorial");
         
-        self.view.backgroundColor = UIColor.clearColor();
+//        self.view.backgroundColor = UIColor.clearColor();
         
         self.playback = (UIApplication.sharedApplication().delegate as! AppDelegate).playback!;
         self.playback?.addSource("sound", ext: "caf");
