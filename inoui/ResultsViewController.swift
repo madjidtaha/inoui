@@ -11,6 +11,8 @@ import AVFoundation
 
 class ResultsViewController: UIViewController {
  
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         print("ResultsViewController \(self)");
     }
