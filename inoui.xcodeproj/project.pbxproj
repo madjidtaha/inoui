@@ -51,6 +51,14 @@
 		8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA921C11CF54001D7A33 /* Pause.storyboard */; };
 		8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8920EA981C11E4A0001D7A33 /* Choice.storyboard */; };
 		8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */; };
+		893F6BA41C3A6746007CB1F9 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA31C3A6746007CB1F9 /* Sound.swift */; };
+		893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */; };
+		893F6BAA1C3BCE0E007CB1F9 /* test1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA71C3BCE0E007CB1F9 /* test1.caf */; };
+		893F6BAB1C3BCE0E007CB1F9 /* test1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA71C3BCE0E007CB1F9 /* test1.caf */; };
+		893F6BAC1C3BCE0E007CB1F9 /* test2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA81C3BCE0E007CB1F9 /* test2.caf */; };
+		893F6BAD1C3BCE0E007CB1F9 /* test2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA81C3BCE0E007CB1F9 /* test2.caf */; };
+		893F6BAE1C3BCE0E007CB1F9 /* test3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA91C3BCE0E007CB1F9 /* test3.caf */; };
+		893F6BAF1C3BCE0E007CB1F9 /* test3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA91C3BCE0E007CB1F9 /* test3.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +129,11 @@
 		8920EA921C11CF54001D7A33 /* Pause.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pause.storyboard; sourceTree = "<group>"; };
 		8920EA981C11E4A0001D7A33 /* Choice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Choice.storyboard; sourceTree = "<group>"; };
 		8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
+		893F6BA31C3A6746007CB1F9 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsComposition.swift; sourceTree = "<group>"; };
+		893F6BA71C3BCE0E007CB1F9 /* test1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test1.caf; path = sounds/test1.caf; sourceTree = "<group>"; };
+		893F6BA81C3BCE0E007CB1F9 /* test2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test2.caf; path = sounds/test2.caf; sourceTree = "<group>"; };
+		893F6BA91C3BCE0E007CB1F9 /* test3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test3.caf; path = sounds/test3.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +384,9 @@
 		8920EA731C103EA7001D7A33 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				893F6BA71C3BCE0E007CB1F9 /* test1.caf */,
+				893F6BA81C3BCE0E007CB1F9 /* test2.caf */,
+				893F6BA91C3BCE0E007CB1F9 /* test3.caf */,
 				8920EA751C104299001D7A33 /* sound.caf */,
 				8920EA771C105C26001D7A33 /* test.wav */,
 			);
@@ -465,6 +481,8 @@
 		8920EA951C11E47A001D7A33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				893F6BA31C3A6746007CB1F9 /* Sound.swift */,
+				893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -554,7 +572,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4797R522FN;
+						DevelopmentTeam = P3BJ8UE9HH;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -599,10 +617,13 @@
 				026AAE081BF4DE1400FF9E21 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				024622A71C0F3789000175DD /* FingerprintViewController.xib in Resources */,
 				026AAE091BF4DE1400FF9E21 /* OpenSans-Italic.ttf in Resources */,
+				893F6BAA1C3BCE0E007CB1F9 /* test1.caf in Resources */,
 				026AAE0A1BF4DE1400FF9E21 /* OpenSans-Light.ttf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
+				893F6BAC1C3BCE0E007CB1F9 /* test2.caf in Resources */,
+				893F6BAE1C3BCE0E007CB1F9 /* test3.caf in Resources */,
 				8920EA761C104299001D7A33 /* sound.caf in Resources */,
 				02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
@@ -620,6 +641,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893F6BAB1C3BCE0E007CB1F9 /* test1.caf in Resources */,
+				893F6BAD1C3BCE0E007CB1F9 /* test2.caf in Resources */,
+				893F6BAF1C3BCE0E007CB1F9 /* test3.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,9 +674,11 @@
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
 				8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */,
+				893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */,
 				024622A01C0F36FE000175DD /* FingerprintView.swift in Sources */,
 				024622A31C0F3763000175DD /* Fingerprint.swift in Sources */,
 				8920EA871C11CE45001D7A33 /* IntroController.swift in Sources */,
+				893F6BA41C3A6746007CB1F9 /* Sound.swift in Sources */,
 				026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */,
 				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
 				8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */,
@@ -801,7 +827,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -815,7 +841,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
