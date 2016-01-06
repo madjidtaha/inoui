@@ -16,6 +16,7 @@ class SoundsComposition: NSObject {
     var endPos: CGPoint = CGPoint();
     var diameter: CGFloat = 400.0;
     var index: NSInteger = NSInteger();
+    var isPlaying: Bool = false;
     
     override init() {
         super.init();
@@ -56,7 +57,7 @@ class SoundsComposition: NSObject {
     func goToEndPos(x:CGFloat, y:CGFloat, endY:CGFloat, a:CGFloat, b:CGFloat){
         let listenerPos = appDelegate.playback?.listenerPos;
         var newY = CGFloat();
-        let delta = abs(self.pos.y - listenerPos!.y) / 200;
+        let delta = abs(self.pos.y - listenerPos!.y) / 100;
         if(y < endY) {
             newY = y + delta;
         } else {
@@ -78,6 +79,7 @@ class SoundsComposition: NSObject {
     }
     
     func fadeIn() {
+        self.isPlaying = true;
         let listenerPos = appDelegate.playback?.listenerPos;
         let a = (self.pos.y - listenerPos!.y) / (self.pos.x - listenerPos!.x);
         let b = self.pos.y - (a * self.pos.x);
@@ -88,6 +90,7 @@ class SoundsComposition: NSObject {
     }
     
     func fadeOut() {
+        self.isPlaying = false;
         let listenerPos = appDelegate.playback?.listenerPos;
         let a = (self.pos.y - listenerPos!.y) / (self.pos.x - listenerPos!.x);
         let b = self.pos.y - (a * self.pos.x);
@@ -102,12 +105,14 @@ class SoundsComposition: NSObject {
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).play();
         }
+        
     }
     
     func stop(){
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).stop();
         }
+        
     }
     
     

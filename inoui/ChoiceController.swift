@@ -92,6 +92,13 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
         print("FingerPrint from parent");
         self.locationManager?.toggleGyro();
         
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index] as! SoundsComposition).stop();
         }
@@ -180,7 +187,14 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     //MARK: - LocationManagerDelegate
     
     func onChoiceChange(choice: Int) {
-        print(locationManager?.choiceNumber);
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        let sound = ((self.sounds[choice]) as! SoundsComposition);
+        sound.fadeIn();
     }
 
 }

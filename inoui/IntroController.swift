@@ -90,7 +90,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         print("onButtonUp");
         
         // TODO Read the value from persistant storage
-        let tutorialDone = false;
+        let tutorialDone = true;
         
         var storyboard = "Choice";
         

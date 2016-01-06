@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LocationManagerDelegate {
     
     func onLocationChange(angle: CGFloat) {
 
-        self.playback?.listenerRotation = -angle;
+        self.playback?.listenerRotation = angle;
     }
 
 

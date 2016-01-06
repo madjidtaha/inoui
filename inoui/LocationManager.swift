@@ -19,6 +19,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var _locationManager: CLLocationManager!;
     private var _choiceNumber: Int = 0;
     private var _sections: CGFloat = 0;
+    private var _currentChoice: Int = 0;
     var choiceNumber: NSInteger? {
         get {
             return self._choiceNumber;
@@ -79,9 +80,14 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     func onChoiceChange(angle: CGFloat) {
         if choiceNumber != nil || choiceNumber != 0 {
-            for var i = 1; i < self.choiceNumber! + 2; i++ {
+            for var i = 1; i < self.choiceNumber! + 1; i++ {
                 if (angle % M_PI.g < i.g * self._sections) {
-                    self.delegate?.onChoiceChange?(i - 1);
+                    
+                    if((i-1) != self._currentChoice) {
+                        self._currentChoice = i - 1;
+                        self.delegate?.onChoiceChange?(i - 1);
+                    }
+                    
                     break;
                 }
             }
