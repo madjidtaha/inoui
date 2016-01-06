@@ -34,12 +34,12 @@ class ChoiceFirstViewController: ChoiceController {
             player.controlStyle = .None
             player.repeatMode = MPMovieRepeatMode.One
             
-//            player.backgroundView.backgroundColor = UIColor.clearColor()
-//            player.view.backgroundColor = UIColor.clearColor()
-//
-//            for subView in moviePlayer!.view.subviews {
-//                subView.backgroundColor = UIColor.clearColor()
-//            }
+            player.backgroundView.backgroundColor = UIColor.clearColor()
+            player.view.backgroundColor = UIColor.clearColor()
+
+            for subView in moviePlayer!.view.subviews {
+                subView.backgroundColor = UIColor.clearColor()
+            }
 //
             self.backgroundView.insertSubview(player.view, atIndex: player.view.subviews.count);
             self.player = player;
@@ -48,6 +48,20 @@ class ChoiceFirstViewController: ChoiceController {
     
     override func viewDidAppear(animated: Bool) {
         self.player!.play()
+    }
+    
+    // MARK - FingerPrintViewControllerDelegate
+    
+    override func onButtonDown(sender: AnyObject) {
+        print("down");
+    }
+    
+    override func onButtonUp(sender: AnyObject) {
+        print("up");
+    }
+    
+    override func onChoiceChange(choice: Int) {
+        print("choice \(choice)");
     }
     
 }
