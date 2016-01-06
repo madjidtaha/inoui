@@ -32,10 +32,10 @@ class ChoiceFirstViewController: ChoiceController {
         
         print("first Choice");
         
-        let path = NSBundle.mainBundle().pathForResource( "cascade", ofType: "mp4" )
-        print("\(path)")
-        let url = NSURL.fileURLWithPath( path! )
-        print("\(url)")
+//        let path = NSBundle.mainBundle().pathForResource( "cascade", ofType: "mp4" )
+//        print("\(path)")
+//        let url = NSURL.fileURLWithPath( path! )
+//        print("\(url)")
 //        let moviePlayer = MPMoviePlayerController( contentURL: url )
 //        
 //        if let player = moviePlayer {
@@ -72,8 +72,8 @@ class ChoiceFirstViewController: ChoiceController {
     override func onButtonUp(sender: AnyObject) {
         print("up");
         self.locationManager?.toggleGyro();
-        if lastChoice != 3 {
-            // Do stuff
+        if lastChoice == 3 {
+            // TODO Do your thang
         }
     }
     
