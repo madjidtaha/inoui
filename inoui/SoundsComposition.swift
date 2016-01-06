@@ -112,7 +112,6 @@ class SoundsComposition: NSObject {
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).stop();
         }
-        
     }
     
     
