@@ -17,6 +17,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
     var destination : String?;
     var locationManager: LocationManager?;
     var playback: Playback?;
+    var choices: NSMutableArray?;
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -41,11 +42,10 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             name: AVAudioSessionRouteChangeNotification,
             object: sessionInstance)
         
-        let ages = NSMutableArray();
+        self.choices = NSMutableArray();
         for var index = 15; index < 56; index++ {
-            ages[index - 15] = index;
+            self.choices![index - 15] = index;
         }
-        self.locationManager?.choices.addObjectsFromArray(ages as [AnyObject]);
 
         
     }
@@ -200,9 +200,9 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
        
         if self.restorationIdentifier == "tutorialStep3" {
             ageView!.selectable = true;
-            ageView!.text = "Vous avez \(choice + 15) ans";
+            ageView!.text = "Vous avez \(self.choices![choice]) ans";
             ageView!.selectable = false;
-            self.currentChoice = choice + 15;
+            self.currentChoice = self.choices![choice] as! Int;
         }
         
     }

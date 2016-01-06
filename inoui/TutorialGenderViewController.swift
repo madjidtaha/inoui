@@ -26,7 +26,17 @@ class TutorialGenderViewController: TutorialViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.locationManager = LocationManager();
+        self.locationManager?.delegate = self;
+        self.locationManager?.choiceNumber = 2;
+        
+        let gender = NSMutableArray();
+        for var index = 0; index < 2; index++ {
+            gender[index] = index;
+        }
+        self.locationManager?.choices.removeAllObjects();
+        self.locationManager?.choices.addObjectsFromArray(gender as [AnyObject]);
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +57,7 @@ class TutorialGenderViewController: TutorialViewController {
 
     override func onButtonDown(sender: AnyObject) {
 
-        super.onButtonDown(sender);
+        // super.onButtonDown(sender);
         
         self.locationManager?.toggleGyro();
         
@@ -81,6 +91,24 @@ class TutorialGenderViewController: TutorialViewController {
             }
             
             questionVisible = true;
+        
+    }
+    
+    // MARK - LocationManagerDelegate
+    
+    func onLocationChange(newAngle: CGFloat) {
+        
+//        print("onLocationChange \(__FUNCTION__)");
+        
+//        angle = newAngle;
+//        
+//        self.setNeedsDisplay();
+    }
+    
+    
+    override func onChoiceChange(choice: Int) {
+        
+        print("AAAAA \(choice)");
         
     }
     

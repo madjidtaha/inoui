@@ -572,7 +572,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = P3BJ8UE9HH;
+						DevelopmentTeam = 4797R522FN;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -827,7 +827,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -841,7 +841,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
