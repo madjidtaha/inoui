@@ -13,6 +13,7 @@ class TutorialGenderViewController: TutorialViewController {
     @IBOutlet weak var instructionView: UITextView!
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var answerView: UITextView!
     
     @IBOutlet weak var womanBlurView: UIImageView!
     @IBOutlet weak var manBlurView: UIImageView!
@@ -21,6 +22,7 @@ class TutorialGenderViewController: TutorialViewController {
     @IBOutlet weak var manView: UIImageView!
     
     
+    var lastAnswer : Int = 0;
     var questionVisible = false;
     
     override func viewDidLoad() {
@@ -94,6 +96,85 @@ class TutorialGenderViewController: TutorialViewController {
         
     }
     
+    override func onButtonUp(sender: AnyObject) {
+        
+        self.locationManager?.toggleGyro();
+        
+        self.playback?.stopSound("SOUND");
+        
+        var backgroundUnblured = self.manView;
+        
+        print("\(self.lastAnswer)");
+        
+        if self.lastAnswer == 0 {
+            backgroundUnblured = self.womanView;
+        }
+        
+        print("bgu1 \(backgroundUnblured.alpha)");
+        
+        var i : Double = 0;
+        
+        for view in self.questionView.subviews {
+            
+            view.alpha = 1;
+            
+            UIView.animateWithDuration(0.5, delay: i * 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                view.alpha = 0;
+                view.frame.origin.y -= 10;
+                }, completion: nil);
+            
+            i++;
+            
+        }
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
+            
+            backgroundUnblured.alpha = 1;
+            self.womanBlurView.alpha = 0;
+            self.manBlurView.alpha = 0;
+            
+            }) { (finished) -> Void in
+                
+                print("bgu2 \(backgroundUnblured.alpha)");
+                
+                let destStoryboard = UIStoryboard(name: "Tutorial", bundle: nil);
+                let vc = destStoryboard.instantiateViewControllerWithIdentifier("tutorialStep"+self.nextStep!);
+                
+                
+                let src = self;
+                let dst = vc;
+                
+                src.view.addSubview(dst.view);
+                src.view.alpha = 1.0;
+                
+                dst.view.alpha = 0.0;
+                
+                UIView.animateWithDuration(0.5, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                    
+                    print("ANIMATE");
+                    
+                    dst.view.alpha = 1.0;
+                    
+                    
+                    
+                    }, completion: { (finished) -> Void in
+                        print("Complete");
+                        src.view.alpha = 0.0;
+                        
+                        dst.view.removeFromSuperview();
+                        
+                        self.presentViewController(dst, animated: false, completion: { () -> Void in
+                            // callback here
+                        });
+                });
+        }
+        
+       
+        
+
+        
+    }
+    
     // MARK - LocationManagerDelegate
     
     func onLocationChange(newAngle: CGFloat) {
@@ -107,8 +188,35 @@ class TutorialGenderViewController: TutorialViewController {
     
     
     override func onChoiceChange(choice: Int) {
+
+        self.answerView.selectable = true;
+
+        if choice == 0 {
+            
+            UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                self.manBlurView.alpha = 0;
+                self.womanBlurView.alpha = 1;
+                }, completion: nil);
+            
+
+            
+            self.answerView.text = "Vous êtes une femme";
         
-        print("AAAAA \(choice)");
+        }
+        else {
+            
+            
+            UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+                self.manBlurView.alpha = 1;
+                self.womanBlurView.alpha = 0;
+                }, completion: nil);
+
+            
+            self.answerView.text = "Vous êtes un homme";
+        }
+        
+        self.answerView.selectable = true;
+        self.lastAnswer = choice;
         
     }
     

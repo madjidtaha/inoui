@@ -37,6 +37,10 @@
 		02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C5B0701BF4DB9200DA3CD1 /* LaunchScreen.storyboard */; };
 		02C5B07D1BF4DB9200DA3CD1 /* inouiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B07C1BF4DB9200DA3CD1 /* inouiTests.swift */; };
 		02C5B0881BF4DB9200DA3CD1 /* inouiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5B0871BF4DB9200DA3CD1 /* inouiUITests.swift */; };
+		02D0C6E11C3D7A490060A134 /* TutorialAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0C6E01C3D7A490060A134 /* TutorialAgeViewController.swift */; };
+		02D0C6E31C3D7C240060A134 /* ChoiceFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0C6E21C3D7C240060A134 /* ChoiceFirstViewController.swift */; };
+		02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 02D0C6E41C3D7D120060A134 /* cascade.mp4 */; };
+		02D0C6E71C3D8A2A0060A134 /* ChoiceSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */; };
 		8920EA6A1C103899001D7A33 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA691C103899001D7A33 /* Playback.swift */; };
 		8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */; };
 		8920EA6E1C1039D4001D7A33 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8920EA6D1C1039D4001D7A33 /* OpenAL.framework */; };
@@ -118,6 +122,10 @@
 		02C5B0831BF4DB9200DA3CD1 /* inouiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inouiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02C5B0871BF4DB9200DA3CD1 /* inouiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inouiUITests.swift; sourceTree = "<group>"; };
 		02C5B0891BF4DB9200DA3CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0C6E01C3D7A490060A134 /* TutorialAgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialAgeViewController.swift; sourceTree = "<group>"; };
+		02D0C6E21C3D7C240060A134 /* ChoiceFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceFirstViewController.swift; sourceTree = "<group>"; };
+		02D0C6E41C3D7D120060A134 /* cascade.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cascade.mp4; sourceTree = "<group>"; };
+		02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceSecondController.swift; sourceTree = "<group>"; };
 		8920EA691C103899001D7A33 /* Playback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOpenALSupport.swift; sourceTree = "<group>"; };
 		8920EA6D1C1039D4001D7A33 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -217,6 +225,7 @@
 		026AADFA1BF4DDA800FF9E21 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				02D0C6E41C3D7D120060A134 /* cascade.mp4 */,
 				026AADFB1BF4DDBC00FF9E21 /* OpenSans-Bold.ttf */,
 				026AADFC1BF4DDBC00FF9E21 /* OpenSans-BoldItalic.ttf */,
 				026AADFD1BF4DDBC00FF9E21 /* OpenSans-ExtraBold.ttf */,
@@ -264,6 +273,7 @@
 				026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */,
 				026BF8BB1C0DD73400601876 /* TutorialViewController.swift */,
 				021A19AA1C3C773900EF53CE /* TutorialGenderViewController.swift */,
+				02D0C6E01C3D7A490060A134 /* TutorialAgeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -515,6 +525,8 @@
 			children = (
 				8920EA981C11E4A0001D7A33 /* Choice.storyboard */,
 				8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */,
+				02D0C6E21C3D7C240060A134 /* ChoiceFirstViewController.swift */,
+				02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -587,7 +599,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = P3BJ8UE9HH;
+						DevelopmentTeam = 4797R522FN;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -648,6 +660,7 @@
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
 				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
 				893F6BC91C3D5B41007CB1F9 /* test22.caf in Resources */,
+				02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
@@ -683,6 +696,7 @@
 				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
 				8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */,
+				02D0C6E31C3D7C240060A134 /* ChoiceFirstViewController.swift in Sources */,
 				02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */,
 				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
 				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
@@ -690,6 +704,7 @@
 				02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */,
 				8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
+				02D0C6E71C3D8A2A0060A134 /* ChoiceSecondController.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
 				8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */,
 				893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */,
@@ -697,6 +712,7 @@
 				024622A31C0F3763000175DD /* Fingerprint.swift in Sources */,
 				8920EA871C11CE45001D7A33 /* IntroController.swift in Sources */,
 				893F6BA41C3A6746007CB1F9 /* Sound.swift in Sources */,
+				02D0C6E11C3D7A490060A134 /* TutorialAgeViewController.swift in Sources */,
 				026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */,
 				026BF8B51C0DD6D200601876 /* Tutorial.swift in Sources */,
 				8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */,
@@ -845,7 +861,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -859,7 +875,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

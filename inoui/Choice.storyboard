@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Choice Controller-->
+        <!--Choice First View Controller-->
         <scene sceneID="iYl-RC-uph">
             <objects>
-                <viewController restorationIdentifier="Choice1" storyboardIdentifier="Choice1" id="BcM-ze-A2o" customClass="ChoiceController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Choice1" storyboardIdentifier="Choice1" id="BcM-ze-A2o" customClass="ChoiceFirstViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dE5-1L-J3O"/>
                         <viewControllerLayoutGuide type="bottom" id="8vd-SI-wWa"/>
@@ -19,6 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-Pl-Pu5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-R6-O9F">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fst-US-5Wh">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
                                 <constraints>
@@ -40,7 +47,11 @@
                             <constraint firstItem="8vd-SI-wWa" firstAttribute="top" secondItem="Fst-US-5Wh" secondAttribute="bottom" id="0Nm-UB-MYi"/>
                             <constraint firstAttribute="trailing" secondItem="Fst-US-5Wh" secondAttribute="trailing" constant="20" id="24i-qV-nI6"/>
                             <constraint firstItem="Fst-US-5Wh" firstAttribute="centerX" secondItem="F5u-Nb-Zz2" secondAttribute="centerX" id="3Ma-Wf-Xkp"/>
+                            <constraint firstAttribute="trailing" secondItem="dcO-Pl-Pu5" secondAttribute="trailing" id="68S-XC-57L"/>
                             <constraint firstItem="Ekb-Zn-ZEq" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leadingMargin" id="7sJ-jk-OJL"/>
+                            <constraint firstItem="dcO-Pl-Pu5" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leading" id="Eb8-pO-Zw9"/>
+                            <constraint firstItem="8vd-SI-wWa" firstAttribute="top" secondItem="dcO-Pl-Pu5" secondAttribute="bottom" id="MHG-SF-3CQ"/>
+                            <constraint firstItem="dcO-Pl-Pu5" firstAttribute="top" secondItem="F5u-Nb-Zz2" secondAttribute="top" id="e0h-5Q-cmo"/>
                             <constraint firstItem="Ekb-Zn-ZEq" firstAttribute="top" secondItem="dE5-1L-J3O" secondAttribute="bottom" constant="83" id="pVp-AX-g29"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ekb-Zn-ZEq" secondAttribute="trailing" id="xDz-bd-Mt8"/>
                             <constraint firstItem="Fst-US-5Wh" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leading" constant="20" id="xZs-Zz-0My"/>
@@ -55,7 +66,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="fingerprintView" destination="Fst-US-5Wh" id="1DS-0J-73D"/>
+                        <outlet property="backgroundView" destination="dcO-Pl-Pu5" id="i0m-nS-Riy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="plv-iC-mbH" userLabel="First Responder" sceneMemberID="firstResponder"/>

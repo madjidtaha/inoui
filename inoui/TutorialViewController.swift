@@ -111,7 +111,6 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
             
             let src = self;
             let dst = vc;
-            
 
             src.view.addSubview(dst.view);
             src.view.alpha = 1.0;

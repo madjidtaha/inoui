@@ -11,7 +11,6 @@ import AVFoundation
 
 class ChoiceController: UIViewController, FingerprintViewControllerDelegate, LocationManagerDelegate {
     
-    @IBOutlet weak var fingerprintView: UIView!
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;

@@ -92,13 +92,13 @@ de droite à gauche.</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomanBlur" translatesAutoresizingMaskIntoConstraints="NO" id="bj0-nZ-fBW">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManBlur" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-nY-giC">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManBlur" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-nY-giC">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-99-qIN">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomanComplete" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-99-qIN">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PsW-nw-FaJ">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManComplete" translatesAutoresizingMaskIntoConstraints="NO" id="PsW-nw-FaJ">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
                                 </subviews>
@@ -192,6 +192,7 @@ l’expérience.</string>
                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="choice"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="answerView" destination="C1w-Rm-uk3" id="UV8-eF-VdE"/>
                         <outlet property="backgroundView" destination="ss6-59-QrA" id="ONW-mk-nqV"/>
                         <outlet property="instructionView" destination="oLB-3J-9TO" id="kd8-91-Fv9"/>
                         <outlet property="manBlurView" destination="ixN-nY-giC" id="bN4-l2-HcK"/>
@@ -205,10 +206,10 @@ l’expérience.</string>
             </objects>
             <point key="canvasLocation" x="-432" y="627"/>
         </scene>
-        <!--Tutorial View Controller-->
+        <!--Tutorial Age View Controller-->
         <scene sceneID="2lD-as-T37">
             <objects>
-                <viewController storyboardIdentifier="tutorialStep3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gV2-2D-SBX" customClass="TutorialViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialStep3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gV2-2D-SBX" customClass="TutorialAgeViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="74E-ad-2Z2"/>
                         <viewControllerLayoutGuide type="bottom" id="aEZ-Vz-Gjm"/>
@@ -349,10 +350,12 @@ l’expérience.</string>
     </scenes>
     <resources>
         <image name="ManBlur" width="375" height="667"/>
+        <image name="ManComplete" width="375" height="667"/>
         <image name="WomanBlur" width="375" height="667"/>
+        <image name="WomanComplete" width="375" height="667"/>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7VP-gO-hzd"/>
+        <segue reference="lGa-Wi-6Cm"/>
     </inferredMetricsTieBreakers>
 </document>
