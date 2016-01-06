@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021A19AB1C3C773900EF53CE /* TutorialGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021A19AA1C3C773900EF53CE /* TutorialGenderViewController.swift */; };
 		024622A01C0F36FE000175DD /* FingerprintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246229F1C0F36FE000175DD /* FingerprintView.swift */; };
 		024622A31C0F3763000175DD /* Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024622A21C0F3763000175DD /* Fingerprint.swift */; };
 		024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024622A41C0F3789000175DD /* FingerprintViewController.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021A19AA1C3C773900EF53CE /* TutorialGenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialGenderViewController.swift; sourceTree = "<group>"; };
 		0246229F1C0F36FE000175DD /* FingerprintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintView.swift; sourceTree = "<group>"; };
 		024622A21C0F3763000175DD /* Fingerprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fingerprint.swift; sourceTree = "<group>"; };
 		024622A41C0F3789000175DD /* FingerprintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */,
 				026BF8BB1C0DD73400601876 /* TutorialViewController.swift */,
+				021A19AA1C3C773900EF53CE /* TutorialGenderViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -584,7 +587,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = P3BJ8UE9HH;
+						DevelopmentTeam = 4797R522FN;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -676,6 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021A19AB1C3C773900EF53CE /* TutorialGenderViewController.swift in Sources */,
 				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
 				8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */,
@@ -841,7 +845,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -855,7 +859,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.tg.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

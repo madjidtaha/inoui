@@ -79,9 +79,9 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
 
     func onChoiceChange(angle: CGFloat) {
         if choiceNumber != nil || choiceNumber != 0 {
-            for var i = 0; i < self.choiceNumber; i++ {
+            for var i = 1; i < self.choiceNumber! + 2; i++ {
                 if (angle % M_PI.g < i.g * self._sections) {
-                    self.delegate?.onChoiceChange?(i);
+                    self.delegate?.onChoiceChange?(i - 1);
                     break;
                 }
             }
