@@ -16,13 +16,14 @@ class Sound: NSObject {
     
     func initSound (name: String, ext: String) {
         appDelegate.playback?.addSource(name, ext: ext);
-        self.index = (appDelegate.playback?.counter)!;
+        self.index = (appDelegate.playback?.counter)! - 1;
+        print(self.index);
     }
     
     func placeSound(x:CGFloat, y:CGFloat) {
         self.pos.x = x;
         self.pos.y = y;
-        appDelegate.playback?.changePos(self.index, pos: self.pos);
+        appDelegate.playback?.changePos(self.index, SOURCEPOS: self.pos);
     }
     
     

@@ -14,20 +14,21 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
     var sounds: NSMutableArray = NSMutableArray();
     var pos: CGPoint = CGPoint();
     var endPos: CGPoint = CGPoint();
-    var diameter: CGFloat = 40.0;
+    var diameter: CGFloat = 400.0;
     var index: NSInteger = NSInteger();
     
     override init() {
         super.init();
         
         // COUNT WITH VIEW CONTROLLER
-        self.index = 3;
+        self.index = 1;
     }
     
     func addSound(name: String, ext: String) {
         let sound = Sound();
         sound.initSound(name, ext: ext);
         self.sounds[sounds.count] = sound;
+        print(self.sounds);
     }
     
     func setPos() {
@@ -49,14 +50,12 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).placeSound(self.pos.x, y: self.pos.y);
         }
-        
-        self.fadeIn();
     }
     
     func goToEndPos(x:CGFloat, y:CGFloat, endY:CGFloat, a:CGFloat, b:CGFloat){
         let listenerPos = appDelegate.playback?.listenerPos;
         var newY = CGFloat();
-        let delta = abs(self.pos.y - listenerPos!.y) / 100;
+        let delta = abs(self.pos.y - listenerPos!.y) / 200;
         if(y < endY) {
             newY = y + delta;
         } else {
@@ -64,11 +63,13 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
         }
         let newX = (newY - b) / a;
         
+        print("lol: \(y)");
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index]as! Sound).placeSound(newX, y: newY);
+        }
+        
         delay(0.1) {
-            print("lol: \(y)");
-            for var index = 0; index < self.sounds.count; index++ {
-                (self.sounds[index]as! Sound).placeSound(newX, y: newY);
-            }
+            
             if(abs(newY) > abs(endY) + 0.1 || abs(newY) < abs(endY) - 0.1) {
                 self.goToEndPos(newX, y: newY, endY: endY, a:a, b:b);
             }

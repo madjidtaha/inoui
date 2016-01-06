@@ -21,7 +21,7 @@ import Foundation
 typealias ALCcontext = COpaquePointer
 typealias ALCdevice = COpaquePointer
 
-let kDefaultDistance: Float = 25.0
+let kDefaultDistance: Float = 0.0
 
 let WATER: NSInteger = 0
 
@@ -265,6 +265,8 @@ class Playback: NSObject {
         var error: ALenum = AL_NO_ERROR
         alGetError() // Clear the error
         
+        alDistanceModel(AL_LINEAR_DISTANCE_CLAMPED);
+        
         // Turn Looping ON
         alSourcei(source[self.counter], AL_LOOPING, AL_TRUE)
         
@@ -273,9 +275,9 @@ class Playback: NSObject {
         alSourcefv(source[self.counter], AL_POSITION, sourcePosAL)
         
         // Set Source Reference Distance
-        alSourcef(source[self.counter], AL_REFERENCE_DISTANCE, 10.0)
+        alSourcef(source[self.counter], AL_REFERENCE_DISTANCE, 1.0)
         
-        alSourcef(source[self.counter], AL_MAX_DISTANCE, 20.0);
+        alSourcef(source[self.counter], AL_MAX_DISTANCE, 180.0);
         
         
         // attach OpenAL Buffer to OpenAL Source
@@ -379,8 +381,9 @@ class Playback: NSObject {
         self.disableSound(self.sounds[name] as! NSInteger);
     }
     
-    func changePos(sound:NSInteger, pos:CGPoint){
-        let sourcePosAL: [Float] = [Float(pos.x), kDefaultDistance, Float(pos.y)]
+    func changePos(sound:NSInteger, SOURCEPOS:CGPoint){
+        self._sourcePos = SOURCEPOS;
+        let sourcePosAL: [Float] = [Float(self._sourcePos.x), kDefaultDistance, Float(self._sourcePos.y)]
         // Move our audio source coordinates
         alSourcefv(source[sound], AL_POSITION, sourcePosAL)
         
@@ -438,5 +441,4 @@ class Playback: NSObject {
             alListenerfv(AL_ORIENTATION, ori)
         }
     }
-    
 }
