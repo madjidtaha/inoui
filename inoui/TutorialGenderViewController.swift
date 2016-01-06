@@ -12,6 +12,15 @@ class TutorialGenderViewController: TutorialViewController {
  
     @IBOutlet weak var instructionView: UITextView!
     @IBOutlet weak var questionView: UIView!
+    @IBOutlet weak var backgroundView: UIView!
+    
+    @IBOutlet weak var womanBlurView: UIImageView!
+    @IBOutlet weak var manBlurView: UIImageView!
+    
+    @IBOutlet weak var womanView: UIImageView!
+    @IBOutlet weak var manView: UIImageView!
+    
+    
     var questionVisible = false;
     
     override func viewDidLoad() {

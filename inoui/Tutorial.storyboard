@@ -55,7 +55,7 @@ de droite à gauche.</string>
                                 <rect key="frame" x="287" y="95" width="26" height="44"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W3T-zO-ake" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="2eV-M5-VCz"/>
                             <constraint firstAttribute="trailing" secondItem="fbz-zY-CYV" secondAttribute="trailing" constant="20" id="FkH-ut-zAw"/>
@@ -86,6 +86,42 @@ de droite à gauche.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ss6-59-QrA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomanBlur" translatesAutoresizingMaskIntoConstraints="NO" id="bj0-nZ-fBW">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManBlur" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-nY-giC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-99-qIN">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PsW-nw-FaJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bj0-nZ-fBW" firstAttribute="leading" secondItem="ss6-59-QrA" secondAttribute="leading" id="60F-S3-tcd"/>
+                                    <constraint firstItem="WZo-99-qIN" firstAttribute="leading" secondItem="ss6-59-QrA" secondAttribute="leading" id="EVd-n1-BN1"/>
+                                    <constraint firstItem="PsW-nw-FaJ" firstAttribute="leading" secondItem="ss6-59-QrA" secondAttribute="leading" id="Gy5-CV-z4B"/>
+                                    <constraint firstAttribute="bottom" secondItem="ixN-nY-giC" secondAttribute="bottom" id="Jl7-yu-4yO"/>
+                                    <constraint firstAttribute="trailing" secondItem="ixN-nY-giC" secondAttribute="trailing" id="KYH-m5-KyB"/>
+                                    <constraint firstItem="ixN-nY-giC" firstAttribute="leading" secondItem="ss6-59-QrA" secondAttribute="leading" id="Oi6-w8-xas"/>
+                                    <constraint firstAttribute="trailing" secondItem="bj0-nZ-fBW" secondAttribute="trailing" id="S6C-07-G3T"/>
+                                    <constraint firstAttribute="bottom" secondItem="WZo-99-qIN" secondAttribute="bottom" id="XJ8-sF-SR9"/>
+                                    <constraint firstAttribute="trailing" secondItem="PsW-nw-FaJ" secondAttribute="trailing" id="XVk-mZ-qo8"/>
+                                    <constraint firstItem="PsW-nw-FaJ" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="top" id="agf-vN-pQS"/>
+                                    <constraint firstAttribute="trailing" secondItem="WZo-99-qIN" secondAttribute="trailing" id="gGt-ir-UZg"/>
+                                    <constraint firstItem="ixN-nY-giC" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="top" id="hv1-bx-pwo"/>
+                                    <constraint firstItem="WZo-99-qIN" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="top" id="nD5-5o-IW2"/>
+                                    <constraint firstAttribute="bottom" secondItem="bj0-nZ-fBW" secondAttribute="bottom" id="rVT-PL-Us5"/>
+                                    <constraint firstAttribute="bottom" secondItem="PsW-nw-FaJ" secondAttribute="bottom" id="ukS-9Q-GTU"/>
+                                    <constraint firstItem="bj0-nZ-fBW" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="top" id="vgR-za-EjO"/>
+                                </constraints>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txu-rp-6Dh" customClass="FingerprintView" customModule="inoui" customModuleProvider="target">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
                                 <constraints>
@@ -139,12 +175,16 @@ l’expérience.</string>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="8" id="A9i-ee-0Iy"/>
+                            <constraint firstItem="ss6-59-QrA" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" id="Bfz-FN-Rbd"/>
                             <constraint firstAttribute="trailing" secondItem="txu-rp-6Dh" secondAttribute="trailing" constant="20" id="QQT-Nd-QA2"/>
                             <constraint firstItem="dDA-Rj-baV" firstAttribute="top" secondItem="txu-rp-6Dh" secondAttribute="bottom" id="Td1-aN-CRB"/>
+                            <constraint firstAttribute="trailing" secondItem="ss6-59-QrA" secondAttribute="trailing" id="VXd-sA-RVx"/>
                             <constraint firstItem="d9N-ZO-iwD" firstAttribute="centerX" secondItem="GXZ-Yl-Y0Y" secondAttribute="centerX" id="YZo-jp-JTt"/>
                             <constraint firstItem="d9N-ZO-iwD" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="21" id="b6u-QB-8gx"/>
                             <constraint firstItem="txu-rp-6Dh" firstAttribute="leading" secondItem="GXZ-Yl-Y0Y" secondAttribute="leading" constant="20" id="fr9-mq-FrY"/>
+                            <constraint firstItem="ss6-59-QrA" firstAttribute="top" secondItem="GXZ-Yl-Y0Y" secondAttribute="top" id="jZ5-Ed-dqh"/>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="centerX" secondItem="GXZ-Yl-Y0Y" secondAttribute="centerX" id="nk7-4y-0FM"/>
+                            <constraint firstItem="dDA-Rj-baV" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="bottom" id="xlk-3Z-F6p"/>
                         </constraints>
                     </view>
                     <userDefinedRuntimeAttributes>
@@ -152,8 +192,13 @@ l’expérience.</string>
                         <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="choice"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="backgroundView" destination="ss6-59-QrA" id="ONW-mk-nqV"/>
                         <outlet property="instructionView" destination="oLB-3J-9TO" id="kd8-91-Fv9"/>
+                        <outlet property="manBlurView" destination="ixN-nY-giC" id="bN4-l2-HcK"/>
+                        <outlet property="manView" destination="PsW-nw-FaJ" id="y2H-6r-h4i"/>
                         <outlet property="questionView" destination="d9N-ZO-iwD" id="C5k-fK-Xmb"/>
+                        <outlet property="womanBlurView" destination="bj0-nZ-fBW" id="WJ2-S9-YMT"/>
+                        <outlet property="womanView" destination="WZo-99-qIN" id="Uyj-kk-KOg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YrR-JT-ubQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,9 +348,11 @@ l’expérience.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="ManBlur" width="375" height="667"/>
+        <image name="WomanBlur" width="375" height="667"/>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lGa-Wi-6Cm"/>
+        <segue reference="7VP-gO-hzd"/>
     </inferredMetricsTieBreakers>
 </document>
