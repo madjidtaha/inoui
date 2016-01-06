@@ -21,7 +21,7 @@ class SoundsComposition: NSObject {
         super.init();
         
         // COUNT WITH VIEW CONTROLLER
-        self.index = 1;
+        //self.index = 1;
     }
     
     func addSound(name: String, ext: String) {
@@ -96,6 +96,18 @@ class SoundsComposition: NSObject {
         let startX = (startY - b) / a;
         
         self.goToEndPos(startX, y:startY, endY: self.pos.y, a:a, b:b);
+    }
+    
+    func play(){
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index]as! Sound).play();
+        }
+    }
+    
+    func stop(){
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index]as! Sound).stop();
+        }
     }
     
     

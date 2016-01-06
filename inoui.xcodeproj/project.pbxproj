@@ -52,12 +52,15 @@
 		8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */; };
 		893F6BA41C3A6746007CB1F9 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA31C3A6746007CB1F9 /* Sound.swift */; };
 		893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */; };
-		893F6BAA1C3BCE0E007CB1F9 /* test1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA71C3BCE0E007CB1F9 /* test1.caf */; };
-		893F6BAB1C3BCE0E007CB1F9 /* test1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA71C3BCE0E007CB1F9 /* test1.caf */; };
-		893F6BAC1C3BCE0E007CB1F9 /* test2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA81C3BCE0E007CB1F9 /* test2.caf */; };
-		893F6BAD1C3BCE0E007CB1F9 /* test2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA81C3BCE0E007CB1F9 /* test2.caf */; };
-		893F6BAE1C3BCE0E007CB1F9 /* test3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA91C3BCE0E007CB1F9 /* test3.caf */; };
-		893F6BAF1C3BCE0E007CB1F9 /* test3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BA91C3BCE0E007CB1F9 /* test3.caf */; };
+		893F6BB91C3D4B2D007CB1F9 /* test11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB01C3D4B2D007CB1F9 /* test11.caf */; };
+		893F6BBA1C3D4B2D007CB1F9 /* test12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB11C3D4B2D007CB1F9 /* test12.caf */; };
+		893F6BBB1C3D4B2D007CB1F9 /* test13.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB21C3D4B2D007CB1F9 /* test13.caf */; };
+		893F6BBC1C3D4B2D007CB1F9 /* test21.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB31C3D4B2D007CB1F9 /* test21.caf */; };
+		893F6BBD1C3D4B2D007CB1F9 /* test22.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB41C3D4B2D007CB1F9 /* test22.caf */; };
+		893F6BBE1C3D4B2D007CB1F9 /* test23.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB51C3D4B2D007CB1F9 /* test23.caf */; };
+		893F6BBF1C3D4B2D007CB1F9 /* test31.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB61C3D4B2D007CB1F9 /* test31.caf */; };
+		893F6BC01C3D4B2D007CB1F9 /* test32.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB71C3D4B2D007CB1F9 /* test32.caf */; };
+		893F6BC11C3D4B2D007CB1F9 /* test33.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB81C3D4B2D007CB1F9 /* test33.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,9 +132,15 @@
 		8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		893F6BA31C3A6746007CB1F9 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsComposition.swift; sourceTree = "<group>"; };
-		893F6BA71C3BCE0E007CB1F9 /* test1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test1.caf; path = sounds/test1.caf; sourceTree = "<group>"; };
-		893F6BA81C3BCE0E007CB1F9 /* test2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test2.caf; path = sounds/test2.caf; sourceTree = "<group>"; };
-		893F6BA91C3BCE0E007CB1F9 /* test3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test3.caf; path = sounds/test3.caf; sourceTree = "<group>"; };
+		893F6BB01C3D4B2D007CB1F9 /* test11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test11.caf; path = sounds/test11.caf; sourceTree = "<group>"; };
+		893F6BB11C3D4B2D007CB1F9 /* test12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test12.caf; path = sounds/test12.caf; sourceTree = "<group>"; };
+		893F6BB21C3D4B2D007CB1F9 /* test13.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test13.caf; path = sounds/test13.caf; sourceTree = "<group>"; };
+		893F6BB31C3D4B2D007CB1F9 /* test21.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test21.caf; path = sounds/test21.caf; sourceTree = "<group>"; };
+		893F6BB41C3D4B2D007CB1F9 /* test22.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test22.caf; path = sounds/test22.caf; sourceTree = "<group>"; };
+		893F6BB51C3D4B2D007CB1F9 /* test23.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test23.caf; path = sounds/test23.caf; sourceTree = "<group>"; };
+		893F6BB61C3D4B2D007CB1F9 /* test31.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test31.caf; path = sounds/test31.caf; sourceTree = "<group>"; };
+		893F6BB71C3D4B2D007CB1F9 /* test32.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test32.caf; path = sounds/test32.caf; sourceTree = "<group>"; };
+		893F6BB81C3D4B2D007CB1F9 /* test33.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test33.caf; path = sounds/test33.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,9 +390,15 @@
 		8920EA731C103EA7001D7A33 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				893F6BA71C3BCE0E007CB1F9 /* test1.caf */,
-				893F6BA81C3BCE0E007CB1F9 /* test2.caf */,
-				893F6BA91C3BCE0E007CB1F9 /* test3.caf */,
+				893F6BB01C3D4B2D007CB1F9 /* test11.caf */,
+				893F6BB11C3D4B2D007CB1F9 /* test12.caf */,
+				893F6BB21C3D4B2D007CB1F9 /* test13.caf */,
+				893F6BB31C3D4B2D007CB1F9 /* test21.caf */,
+				893F6BB41C3D4B2D007CB1F9 /* test22.caf */,
+				893F6BB51C3D4B2D007CB1F9 /* test23.caf */,
+				893F6BB61C3D4B2D007CB1F9 /* test31.caf */,
+				893F6BB71C3D4B2D007CB1F9 /* test32.caf */,
+				893F6BB81C3D4B2D007CB1F9 /* test33.caf */,
 				8920EA751C104299001D7A33 /* sound.caf */,
 				8920EA771C105C26001D7A33 /* test.wav */,
 			);
@@ -611,26 +626,32 @@
 				026AAE051BF4DE1400FF9E21 /* OpenSans-Bold.ttf in Resources */,
 				026AAE061BF4DE1400FF9E21 /* OpenSans-BoldItalic.ttf in Resources */,
 				026AAE071BF4DE1400FF9E21 /* OpenSans-ExtraBold.ttf in Resources */,
+				893F6BBE1C3D4B2D007CB1F9 /* test23.caf in Resources */,
+				893F6BB91C3D4B2D007CB1F9 /* test11.caf in Resources */,
+				893F6BC11C3D4B2D007CB1F9 /* test33.caf in Resources */,
+				893F6BBF1C3D4B2D007CB1F9 /* test31.caf in Resources */,
 				026AAE081BF4DE1400FF9E21 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				024622A71C0F3789000175DD /* FingerprintViewController.xib in Resources */,
 				026AAE091BF4DE1400FF9E21 /* OpenSans-Italic.ttf in Resources */,
-				893F6BAA1C3BCE0E007CB1F9 /* test1.caf in Resources */,
 				026AAE0A1BF4DE1400FF9E21 /* OpenSans-Light.ttf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
-				893F6BAC1C3BCE0E007CB1F9 /* test2.caf in Resources */,
-				893F6BAE1C3BCE0E007CB1F9 /* test3.caf in Resources */,
 				8920EA761C104299001D7A33 /* sound.caf in Resources */,
 				02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */,
+				893F6BBC1C3D4B2D007CB1F9 /* test21.caf in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
 				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
+				893F6BBD1C3D4B2D007CB1F9 /* test22.caf in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
+				893F6BBA1C3D4B2D007CB1F9 /* test12.caf in Resources */,
+				893F6BBB1C3D4B2D007CB1F9 /* test13.caf in Resources */,
+				893F6BC01C3D4B2D007CB1F9 /* test32.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,9 +659,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				893F6BAB1C3BCE0E007CB1F9 /* test1.caf in Resources */,
-				893F6BAD1C3BCE0E007CB1F9 /* test2.caf in Resources */,
-				893F6BAF1C3BCE0E007CB1F9 /* test3.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

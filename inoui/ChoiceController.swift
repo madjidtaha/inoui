@@ -15,8 +15,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;
-    var choices: NSMutableArray = NSMutableArray();
-    var sounds: SoundsComposition = SoundsComposition();
+    var sounds: NSMutableArray = NSMutableArray();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +35,11 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
         }
         print("Choice Here \(self.view.alpha)");
         
+        
         self.locationManager = LocationManager();
         self.locationManager?.delegate = self;
+        
+
         
         self.initChoices();
         self.initSounds();
@@ -50,20 +52,34 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     
     func initChoices() {
         for var index = 0; index < 3; index++ {
-            self.choices[index] = index;
+            self.sounds[index] = index;
         }
-        self.locationManager?.choices.addObjectsFromArray(choices as [AnyObject]);
+        self.locationManager?.choiceNumber = self.sounds.count;
+        self.locationManager?.choices.addObjectsFromArray(sounds as [AnyObject]);
     }
     
     func initSounds() {
-        self.sounds.addSound("test1", ext: "caf");
-        self.sounds.addSound("test2", ext: "caf");
-        self.sounds.addSound("test3", ext: "caf");
+        for var i = 0; i < self.sounds.count; i++ {
+            let sound: SoundsComposition = SoundsComposition();
+            self.sounds[i] = sound;
+            sound.index = i;
+            for var j = 0; j < 3; j++ {
+                let string : String = "test" + ((i + 1) as NSNumber).stringValue + ((j + 1) as NSNumber).stringValue;
+                print(string);
+                sound.addSound(string, ext: "caf");
+            }
+            print(sound.index);
+            sound.setPos();
+        }
     }
     
     // MARK: - FingerprintViewControllerDelegate
     
     func onButtonDown(sender: AnyObject) {
+        
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).play();
+        }
 
         print("nextStep \(self.nextStep)")
         self.locationManager?.toggleGyro();
@@ -75,6 +91,10 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     func onButtonUp(sender: AnyObject) {
         print("FingerPrint from parent");
         self.locationManager?.toggleGyro();
+        
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).stop();
+        }
         
 //        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
 //        appDelegate.playback?.stopSound("SOUND");
@@ -157,5 +177,10 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
         }
     }
     
+    //MARK: - LocationManagerDelegate
+    
+    func onChoiceChange(choice: Int) {
+        print(locationManager?.choiceNumber);
+    }
 
 }
