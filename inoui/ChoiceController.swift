@@ -15,6 +15,8 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     var nextStep : String?;
     var destination : String?;
     var locationManager: LocationManager?;
+    var choices: NSMutableArray = NSMutableArray();
+    var sounds: SoundsComposition = SoundsComposition();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +39,26 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
         self.locationManager = LocationManager();
         self.locationManager?.delegate = self;
         
+        self.initChoices();
+        self.initSounds();
+        
     }
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
     }
     
-    func placeSounds() {
-        
+    func initChoices() {
+        for var index = 0; index < 3; index++ {
+            self.choices[index] = index;
+        }
+        self.locationManager?.choices.addObjectsFromArray(choices as [AnyObject]);
+    }
+    
+    func initSounds() {
+        self.sounds.addSound("test1", ext: "caf");
+        self.sounds.addSound("test2", ext: "caf");
+        self.sounds.addSound("test3", ext: "caf");
     }
     
     // MARK: - FingerprintViewControllerDelegate

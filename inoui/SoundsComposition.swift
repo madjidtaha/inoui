@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SoundsComposition: NSObject, LocationManagerDelegate {
+class SoundsComposition: NSObject {
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
     var sounds: NSMutableArray = NSMutableArray();
     var pos: CGPoint = CGPoint();
@@ -50,6 +50,7 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).placeSound(self.pos.x, y: self.pos.y);
         }
+//        self.fadeIn();
     }
     
     func goToEndPos(x:CGFloat, y:CGFloat, endY:CGFloat, a:CGFloat, b:CGFloat){
@@ -109,10 +110,5 @@ class SoundsComposition: NSObject, LocationManagerDelegate {
     
     // MARK: - LocationManagerDelegate
     
-    func onChoiceChange(choice: Int) {
-        print("test");
-        
-        self.fadeIn();
-    }
-    
+  
 }
