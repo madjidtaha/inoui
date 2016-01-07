@@ -69,6 +69,9 @@
 		893F6BCF1C3D93EE007CB1F9 /* wind.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BCE1C3D93EE007CB1F9 /* wind.caf */; };
 		893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */; };
 		893F6BD31C3E65FD007CB1F9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */; };
+		893F6BD71C3E7F5A007CB1F9 /* test41.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD41C3E7F5A007CB1F9 /* test41.caf */; };
+		893F6BD81C3E7F5A007CB1F9 /* test42.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD51C3E7F5A007CB1F9 /* test42.caf */; };
+		893F6BD91C3E7F5A007CB1F9 /* test43.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD61C3E7F5A007CB1F9 /* test43.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +160,9 @@
 		893F6BCE1C3D93EE007CB1F9 /* wind.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wind.caf; path = sounds/wind.caf; sourceTree = "<group>"; };
 		893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = heartbeat.mp3; path = sounds/heartbeat.mp3; sourceTree = "<group>"; };
 		893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		893F6BD41C3E7F5A007CB1F9 /* test41.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test41.caf; path = sounds/test41.caf; sourceTree = "<group>"; };
+		893F6BD51C3E7F5A007CB1F9 /* test42.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test42.caf; path = sounds/test42.caf; sourceTree = "<group>"; };
+		893F6BD61C3E7F5A007CB1F9 /* test43.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test43.caf; path = sounds/test43.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +417,9 @@
 		8920EA731C103EA7001D7A33 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				893F6BD41C3E7F5A007CB1F9 /* test41.caf */,
+				893F6BD51C3E7F5A007CB1F9 /* test42.caf */,
+				893F6BD61C3E7F5A007CB1F9 /* test43.caf */,
 				893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */,
 				893F6BCE1C3D93EE007CB1F9 /* wind.caf */,
 				893F6BC21C3D5B41007CB1F9 /* test21.caf */,
@@ -669,14 +678,17 @@
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
+				893F6BD71C3E7F5A007CB1F9 /* test41.caf in Resources */,
 				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
 				893F6BC91C3D5B41007CB1F9 /* test22.caf in Resources */,
 				02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
+				893F6BD91C3E7F5A007CB1F9 /* test43.caf in Resources */,
 				893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
+				893F6BD81C3E7F5A007CB1F9 /* test42.caf in Resources */,
 				893F6BBA1C3D4B2D007CB1F9 /* test12.caf in Resources */,
 				893F6BBB1C3D4B2D007CB1F9 /* test13.caf in Resources */,
 				893F6BCC1C3D5B41007CB1F9 /* test32.caf in Resources */,

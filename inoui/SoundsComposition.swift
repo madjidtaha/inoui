@@ -17,6 +17,7 @@ class SoundsComposition: NSObject {
     var diameter: CGFloat = 400.0;
     var index: NSInteger = NSInteger();
     var isPlaying: Bool = false;
+    var choiceNumber: NSInteger = 4;
     
     override init() {
         super.init();
@@ -39,7 +40,7 @@ class SoundsComposition: NSObject {
         startPos.y = listenerPos!.y;
         
         //COUNT WITH VIEWCONTROLLER
-        let n = 3;
+        let n = self.choiceNumber;
         let i = self.index.g;
         
         self.pos.x =  cos(((i * M_PI.g) / n.g) + (M_PI.g / (2.0 * n.g))) * -(diameter / 2.0);

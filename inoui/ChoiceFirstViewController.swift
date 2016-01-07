@@ -26,9 +26,9 @@ class ChoiceFirstViewController: ChoiceController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        self.locationManager = LocationManager();
-        self.locationManager?.delegate = self;
-        self.locationManager?.choiceNumber = 4;
+//        self.locationManager = LocationManager();
+//        self.locationManager?.delegate = self;
+        //self.locationManager?.choiceNumber = 4;
         
         print("first Choice");
         
@@ -56,6 +56,9 @@ class ChoiceFirstViewController: ChoiceController {
 //            self.backgroundView.insertSubview(player.view, atIndex: player.view.subviews.count);
 //            self.player = player;
 //        }
+        
+//        self.initChoices();
+//        self.initSounds();
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -66,7 +69,12 @@ class ChoiceFirstViewController: ChoiceController {
     
     override func onButtonDown(sender: AnyObject) {
         self.locationManager?.toggleGyro();
-        print("down");
+        print("down \(self.locationManager?.tilt)");
+        
+       for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).play();
+        }
+
     }
     
     override func onButtonUp(sender: AnyObject) {
@@ -75,9 +83,33 @@ class ChoiceFirstViewController: ChoiceController {
         if lastChoice == 3 {
             // TODO Do your thang
         }
+        
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).stop();
+        }
+
     }
     
     override func onChoiceChange(choice: Int) {
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        let sound = ((self.sounds[choice]) as! SoundsComposition);
+        print(sound.sounds[1].name);
+        //(sound.sounds[1] as! Sound).placeSound(0.0, y: 0.0);
+        sound.fadeIn();
+        
+        
         print("choice \(choice)");
         for view in self.assetsView.subviews {
             UIView.animateWithDuration(0.4, animations: { () -> Void in
