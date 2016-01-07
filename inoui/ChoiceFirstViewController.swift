@@ -72,8 +72,15 @@ class ChoiceFirstViewController: ChoiceController {
     override func onButtonUp(sender: AnyObject) {
         print("up");
         self.locationManager?.toggleGyro();
-        if lastChoice == 3 {
+        if self.lastChoice == 3 {
             // TODO Do your thang
+            print("LASTCHOICE");
+            
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                (self.assetsView.subviews[self.lastChoice] as! TropicalView).unblurView();
+                }, completion: { (finished) -> Void in
+                    print("finished");
+            });
         }
     }
     
@@ -88,7 +95,7 @@ class ChoiceFirstViewController: ChoiceController {
             self.assetsView.subviews[choice].alpha = 1;
             self.backgroundView.backgroundColor = self.color[choice];
         }
-        
+        self.lastChoice = choice;
     }
     
 }

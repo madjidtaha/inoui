@@ -12,6 +12,7 @@
 		024622A31C0F3763000175DD /* Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024622A21C0F3763000175DD /* Fingerprint.swift */; };
 		024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024622A41C0F3789000175DD /* FingerprintViewController.swift */; };
 		024622A71C0F3789000175DD /* FingerprintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024622A51C0F3789000175DD /* FingerprintViewController.xib */; };
+		02593DB71C3E7B7600353989 /* CampagneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02593DB61C3E7B7600353989 /* CampagneView.swift */; };
 		026AAE051BF4DE1400FF9E21 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AADFB1BF4DDBC00FF9E21 /* OpenSans-Bold.ttf */; };
 		026AAE061BF4DE1400FF9E21 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AADFC1BF4DDBC00FF9E21 /* OpenSans-BoldItalic.ttf */; };
 		026AAE071BF4DE1400FF9E21 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 026AADFD1BF4DDBC00FF9E21 /* OpenSans-ExtraBold.ttf */; };
@@ -27,6 +28,7 @@
 		026BF8BC1C0DD73400601876 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8BB1C0DD73400601876 /* TutorialViewController.swift */; };
 		026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */; };
 		026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */; };
+		02B47EC51C3E9675001372B7 /* TropicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B47EC41C3E9675001372B7 /* TropicalView.swift */; };
 		02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCEF371C34B6EA00186654 /* ChoiceView.swift */; };
 		02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */; };
 		02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */; };
@@ -91,6 +93,7 @@
 		024622A21C0F3763000175DD /* Fingerprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fingerprint.swift; sourceTree = "<group>"; };
 		024622A41C0F3789000175DD /* FingerprintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintViewController.swift; sourceTree = "<group>"; };
 		024622A51C0F3789000175DD /* FingerprintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FingerprintViewController.xib; sourceTree = "<group>"; };
+		02593DB61C3E7B7600353989 /* CampagneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampagneView.swift; sourceTree = "<group>"; };
 		026AADFB1BF4DDBC00FF9E21 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		026AADFC1BF4DDBC00FF9E21 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		026AADFD1BF4DDBC00FF9E21 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		026BF8BB1C0DD73400601876 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnblurAnimationSegue.swift; sourceTree = "<group>"; };
+		02B47EC41C3E9675001372B7 /* TropicalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TropicalView.swift; sourceTree = "<group>"; };
 		02BCEF371C34B6EA00186654 /* ChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +520,8 @@
 			isa = PBXGroup;
 			children = (
 				02BCEF371C34B6EA00186654 /* ChoiceView.swift */,
+				02593DB61C3E7B7600353989 /* CampagneView.swift */,
+				02B47EC41C3E9675001372B7 /* TropicalView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -705,6 +711,8 @@
 				8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,
 				02D0C6E71C3D8A2A0060A134 /* ChoiceSecondController.swift in Sources */,
+				02593DB71C3E7B7600353989 /* CampagneView.swift in Sources */,
+				02B47EC51C3E9675001372B7 /* TropicalView.swift in Sources */,
 				02C5B06A1BF4DB9200DA3CD1 /* ViewController.swift in Sources */,
 				8920EA911C11CF05001D7A33 /* PauseController.swift in Sources */,
 				893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */,

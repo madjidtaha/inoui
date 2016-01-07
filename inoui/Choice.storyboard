@@ -30,7 +30,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-R6-O9F">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzg-51-6xm" userLabel="Campagne">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzg-51-6xm" userLabel="Campagne" customClass="CampagneView" customModule="inoui" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaf" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-WI-3HZ">
@@ -82,7 +82,7 @@
                                             <constraint firstAttribute="bottom" secondItem="zLw-aG-zKn" secondAttribute="bottom" constant="-200" id="hR7-Av-zus"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-BB-uzG" userLabel="Mer">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5W-BB-uzG" userLabel="Mer" customClass="CampagneView" customModule="inoui" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palm_lu" translatesAutoresizingMaskIntoConstraints="NO" id="TLp-yq-Ahe">
@@ -254,7 +254,7 @@
                                             </imageView>
                                         </subviews>
                                     </view>
-                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-5r-eWO" userLabel="Tropical">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-5r-eWO" userLabel="Tropical" customClass="TropicalView" customModule="inoui" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="t5F-KI-KDY">
