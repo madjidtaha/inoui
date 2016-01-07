@@ -9,7 +9,6 @@
 
 import UIKit
 import AVFoundation
-import AVKit
 import MediaPlayer
 
 class ChoiceSecondController: ChoiceController {
@@ -18,7 +17,7 @@ class ChoiceSecondController: ChoiceController {
     @IBOutlet weak var assetsView: UIView!
     var lastChoice : Int?;
    
-    var player : AVPlayerViewController?;
+    var player : MPMoviePlayerController?;
     var videos = ["cascade"]
 
     override func viewDidLoad() {
@@ -30,8 +29,7 @@ class ChoiceSecondController: ChoiceController {
         
         let path = NSBundle.mainBundle().pathForResource( "cascade", ofType: "mp4" )
         let url = NSURL.fileURLWithPath( path! )
-        let moviePlayer = AVPlayerViewController(
-//        let moviePlayer = AVMoviePlayerController( contentURL: url );
+        let moviePlayer = MPMoviePlayerController( contentURL: url );
         if let player = moviePlayer {
             player.view.frame = CGRectMake( 0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height)
             player.prepareToPlay()
