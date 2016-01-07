@@ -66,7 +66,7 @@ class SoundsComposition: NSObject {
         }
         let newX = (newY - b) / a;
         
-        print("lol: \(y)");
+//        print("lol: \(y)");
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).placeSound(newX, y: newY);
         }

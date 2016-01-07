@@ -26,7 +26,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
             
             self.view.subviews[0].alpha = 0.0;
             
-            UIView.animateWithDuration(5, animations: { () -> Void in
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.view.alpha = 1.0;
                 self.view.subviews[0].alpha = 1.0;
             });
