@@ -488,8 +488,8 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="WWn-v9-ynL"/>
                                                         <exclude reference="63x-N0-UnY"/>
+                                                        <exclude reference="WWn-v9-ynL"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
@@ -537,14 +537,14 @@
                                                 <exclude reference="30P-TQ-VAY"/>
                                                 <exclude reference="EYa-ot-DLb"/>
                                                 <exclude reference="Swv-Hp-mhn"/>
-                                                <exclude reference="cTt-Pt-IZr"/>
                                                 <exclude reference="1gf-7i-Vsr"/>
                                                 <exclude reference="9Pu-H7-LKL"/>
+                                                <exclude reference="cTt-Pt-IZr"/>
                                                 <exclude reference="gIO-ad-ZNG"/>
-                                                <exclude reference="viX-pG-BpF"/>
-                                                <exclude reference="TUi-JP-Ngw"/>
                                                 <exclude reference="9FM-Ga-u2d"/>
+                                                <exclude reference="TUi-JP-Ngw"/>
                                                 <exclude reference="ttm-jt-7xo"/>
+                                                <exclude reference="viX-pG-BpF"/>
                                             </mask>
                                         </variation>
                                     </view>

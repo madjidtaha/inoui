@@ -28,7 +28,13 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
 //        self.view.backgroundColor = UIColor.clearColor();
         
         self.playback = (UIApplication.sharedApplication().delegate as! AppDelegate).playback!;
-        self.playback?.addSource("sound", ext: "caf");
+        self.playback?.addSource("wind", ext: "caf");
+        
+        var pos = CGPoint();
+        pos.x = -1;
+        pos.y = -100;
+        let index = (self.playback?.counter)! - 1;
+        self.playback?.changePos(index, SOURCEPOS: pos);
         
 //        self.locationManager = appDelegate.locationManager;
         self.locationManager = LocationManager();
@@ -46,6 +52,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         for var index = 15; index < 56; index++ {
             self.choices![index - 15] = index;
         }
+        //self.playback?.playMusic();
 
         
     }
@@ -61,9 +68,11 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
        
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
-                print("headphone plugged in")
+                print("headphone plugged in");
+                self.playback?.playMusic();
             } else {
                 print("headphone pulled out")
+                self.playback?.stopMusic();
                 
                 if let topController = (UIApplication.sharedApplication().delegate as! AppDelegate).navigationController {
  
@@ -92,7 +101,8 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         
         self.locationManager?.toggleGyro();
         
-        self.playback?.playSound("SOUND");
+        self.playback?.playSound("WIND");
+        self.playback?.fadeOutMusic();
 
     }
 
@@ -100,7 +110,8 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         print("FingerPrint from parent");
         self.locationManager?.toggleGyro();
         
-        self.playback?.stopSound("SOUND");
+        self.playback?.stopSound("WIND");
+        self.playback?.playMusic();
         
         print(self.nextStep);
         if self.nextStep != nil {

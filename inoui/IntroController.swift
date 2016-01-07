@@ -17,6 +17,8 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
     @IBOutlet weak var headphoneIcon: UIImageView!
     @IBOutlet weak var introDescription: UITextView!
     @IBOutlet weak var fingerprintView: FingerprintView!
+    
+    var playback: Playback?;
 
     
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         let sessionInstance = AVAudioSession.sharedInstance();
+        self.playback = (UIApplication.sharedApplication().delegate as! AppDelegate).playback!;
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "handleRouteChange:",
@@ -66,11 +69,13 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
+                self.playback?.playMusic();
 
                 // Shame on me... Really need time but release is so close...
                 (fingerprintView.subviews.first?.subviews.first?.subviews.first?.subviews.first as! UIButton).enabled = true;
 //                button.enabled = true;
             } else {
+                self.playback?.stopMusic();
                 (fingerprintView.subviews.first?.subviews.first?.subviews.first?.subviews.first as! UIButton).enabled = false;
             }
         }
@@ -90,7 +95,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         print("onButtonUp");
         
         // TODO Read the value from persistant storage
-        let tutorialDone = true;
+        let tutorialDone = false;
         
         var storyboard = "Choice";
         

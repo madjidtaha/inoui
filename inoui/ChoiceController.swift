@@ -50,10 +50,13 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     }
     
     func initChoices() {
-        for var index = 0; index < 3; index++ {
+        print("INITCHOICE---------");
+        for var index = 0; index < 4; index++ {
             self.sounds[index] = index;
+            
         }
         self.locationManager?.choiceNumber = self.sounds.count;
+        
         self.locationManager?.choices.addObjectsFromArray(sounds as [AnyObject]);
     }
     
@@ -68,6 +71,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
                 sound.addSound(string, ext: "caf");
             }
             print(sound.index);
+            sound.choiceNumber = self.sounds.count;
             sound.setPos();
         }
     }
