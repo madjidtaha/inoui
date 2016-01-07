@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xym-mz-c47">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BcM-ze-A2o">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -21,10 +21,12 @@
                         <subviews>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-of-Rqo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-Pl-Pu5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.91764705882352937" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-R6-O9F">
@@ -35,6 +37,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Leaf" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-WI-3HZ">
                                                 <rect key="frame" x="-70" y="-45" width="241" height="190"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="241" id="Jf6-hQ-DBy"/>
                                                     <constraint firstAttribute="height" constant="190" id="LBX-AS-IG0"/>
@@ -42,6 +45,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coquelicot" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-aG-zKn">
                                                 <rect key="frame" x="-80" y="297" width="230" height="503"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="503" id="Ayg-VI-dMb"/>
                                                     <constraint firstAttribute="width" constant="230" id="juU-kr-QQS"/>
@@ -49,6 +53,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeafUpside" translatesAutoresizingMaskIntoConstraints="NO" id="VXp-nQ-x0h">
                                                 <rect key="frame" x="430" y="456" width="241" height="190"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="241" id="EQo-A6-sVC"/>
                                                     <constraint firstAttribute="height" constant="190" id="fNv-Sc-ags"/>
@@ -56,6 +61,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coquelicot-small" translatesAutoresizingMaskIntoConstraints="NO" id="WDq-CP-kPn">
                                                 <rect key="frame" x="500" y="-70" width="240" height="240"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="BIn-qI-q8R"/>
                                                     <constraint firstAttribute="height" constant="240" id="nK5-iL-8vw"/>
@@ -63,12 +69,14 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coquelicot-small" translatesAutoresizingMaskIntoConstraints="NO" id="gNW-KL-sye">
                                                 <rect key="frame" x="500" y="80" width="240" height="128"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="O0U-4F-P2h"/>
                                                     <constraint firstAttribute="height" constant="128" id="fI5-Jn-3Kv"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="6KS-WI-3HZ" firstAttribute="top" secondItem="Hzg-51-6xm" secondAttribute="top" constant="-45" id="FVE-g2-36y"/>
                                             <constraint firstAttribute="trailing" secondItem="gNW-KL-sye" secondAttribute="trailing" constant="-140" id="GPp-A8-MQn"/>
@@ -87,6 +95,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palm_lu" translatesAutoresizingMaskIntoConstraints="NO" id="TLp-yq-Ahe">
                                                 <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="297" id="NcI-1v-CNg"/>
                                                     <constraint firstAttribute="height" constant="416" id="xHU-cb-RtX"/>
@@ -94,6 +103,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palm_ul" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-XP-zg8">
                                                 <rect key="frame" x="-200" y="-145" width="504" height="376"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="376" id="CH0-uR-vtD"/>
                                                     <constraint firstAttribute="width" constant="504" id="omw-uQ-syZ"/>
@@ -101,6 +111,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palm_rb" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-w1-Oar">
                                                 <rect key="frame" x="369" y="200" width="543" height="462"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="462" id="RdX-0W-X1A"/>
                                                     <constraint firstAttribute="width" constant="543" id="eB2-y6-MIv"/>
@@ -108,12 +119,14 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Palm_br" translatesAutoresizingMaskIntoConstraints="NO" id="ceH-Lg-4b7">
                                                 <rect key="frame" x="400" y="250" width="524" height="227"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="227" id="Bti-ct-CF0"/>
                                                     <constraint firstAttribute="width" constant="524" id="aVN-Qb-7XT"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="ceH-Lg-4b7" secondAttribute="bottom" constant="123" id="82U-gE-Xrx"/>
                                             <constraint firstItem="cpu-XP-zg8" firstAttribute="leading" secondItem="P5W-BB-uzG" secondAttribute="leading" constant="-200" id="CPE-QP-yaZ"/>
@@ -146,119 +159,139 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="d0T-zg-OBc">
                                                 <rect key="frame" x="209" y="254" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="161" y="254" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="n57-GT-hRK">
                                                 <rect key="frame" x="142" y="263" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="94" y="263" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vert" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-F7-tus">
                                                 <rect key="frame" x="242" y="270" width="148" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="94" y="270" width="148" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-K1-VhT">
                                                 <rect key="frame" x="349" y="263" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="301" y="263" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="jsE-fk-P9g">
                                                 <rect key="frame" x="359" y="273" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="311" y="273" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="apP-MY-2dJ">
                                                 <rect key="frame" x="422" y="273" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="374" y="273" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rouge" translatesAutoresizingMaskIntoConstraints="NO" id="acZ-bP-WB9">
                                                 <rect key="frame" x="282" y="121" width="159" height="159"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="234" y="121" width="159" height="159"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="0M5-Wo-tAf">
                                                 <rect key="frame" x="50" y="404" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="2" y="404" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="be1-dK-LDW">
                                                 <rect key="frame" x="150" y="426" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="102" y="426" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="HKf-0p-kbr">
                                                 <rect key="frame" x="242" y="380" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="194" y="380" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="jWj-Ky-PCI">
                                                 <rect key="frame" x="309" y="387" width="132" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="261" y="387" width="132" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vert" translatesAutoresizingMaskIntoConstraints="NO" id="1A6-9o-3bm">
                                                 <rect key="frame" x="18" y="284" width="148" height="148"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="-30" y="284" width="148" height="148"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="i4J-Od-VMT">
                                                 <rect key="frame" x="247" y="436" width="138" height="138"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="199" y="436" width="138" height="138"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="Udg-mZ-8hT">
                                                 <rect key="frame" x="50" y="132" width="138" height="138"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="2" y="132" width="138" height="138"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="W4T-Fe-dCG">
                                                 <rect key="frame" x="144" y="68" width="138" height="138"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="96" y="68" width="138" height="138"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="I9i-Pt-XL9">
                                                 <rect key="frame" x="206" y="22" width="138" height="138"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="158" y="22" width="138" height="138"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="jD4-1y-js7">
                                                 <rect key="frame" x="334" y="419" width="138" height="138"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="286" y="419" width="138" height="138"/>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange_clair" translatesAutoresizingMaskIntoConstraints="NO" id="gAT-wn-wFv">
                                                 <rect key="frame" x="144" y="8" width="158" height="158"/>
+                                                <animations/>
                                                 <variation key="widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="96" y="8" width="158" height="158"/>
                                                 </variation>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                     </view>
                                     <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-5r-eWO" userLabel="Tropical" customClass="TropicalView" customModule="inoui" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="t5F-KI-KDY">
                                                 <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="297" id="7BZ-Bl-okB"/>
                                                     <constraint firstAttribute="height" constant="416" id="jsM-x6-QsG"/>
@@ -266,6 +299,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_behind" translatesAutoresizingMaskIntoConstraints="NO" id="jC4-Wp-FSn">
                                                 <rect key="frame" x="-50" y="397" width="154" height="169"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="154" id="1R4-vD-zpg"/>
                                                     <constraint firstAttribute="height" constant="169" id="cCV-S3-qrk"/>
@@ -281,6 +315,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="N2W-jS-t8f">
                                                 <rect key="frame" x="-73" y="329" width="222" height="210"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="210" id="9BJ-eI-jRc"/>
                                                     <constraint firstAttribute="width" constant="504" id="Ncc-Qi-yu5"/>
@@ -296,6 +331,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera_behind" translatesAutoresizingMaskIntoConstraints="NO" id="8GZ-si-1y9">
                                                 <rect key="frame" x="484" y="279" width="310" height="309"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="309" id="07D-77-27E"/>
                                                     <constraint firstAttribute="width" constant="543" id="Mlh-GN-IL3"/>
@@ -311,6 +347,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera" translatesAutoresizingMaskIntoConstraints="NO" id="uN9-Af-Xjj">
                                                 <rect key="frame" x="411" y="171" width="412" height="368"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="368" id="6N2-te-SfK"/>
                                                     <constraint firstAttribute="width" constant="412" id="xgl-wP-x48"/>
@@ -318,6 +355,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-Lc-baf">
                                                 <rect key="frame" x="502" y="-19" width="169" height="219"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="504" id="Aqs-rh-aM3"/>
                                                     <constraint firstAttribute="width" constant="169" id="VVd-G5-Ed1"/>
@@ -333,6 +371,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1" translatesAutoresizingMaskIntoConstraints="NO" id="Qkm-mz-la0">
                                                 <rect key="frame" x="461" y="-12" width="171" height="168"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="168" id="0Ud-JO-PbW"/>
                                                     <constraint firstAttribute="height" constant="376" id="Nkd-zb-0lJ"/>
@@ -348,12 +387,14 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1" translatesAutoresizingMaskIntoConstraints="NO" id="14Z-qx-QNK">
                                                 <rect key="frame" x="-290" y="-145" width="504" height="376"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="504" id="YAX-Nf-LkA"/>
                                                     <constraint firstAttribute="height" constant="376" id="rIU-iU-6Gg"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="uN9-Af-Xjj" secondAttribute="bottom" constant="61" id="09d-vw-5sd"/>
                                             <constraint firstAttribute="trailing" secondItem="8GZ-si-1y9" secondAttribute="trailing" constant="-194" id="5y7-zY-VBj"/>
@@ -406,6 +447,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-6e-fbt">
                                                 <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="297" id="Udg-rj-O9T"/>
                                                     <constraint firstAttribute="height" constant="416" id="epJ-lP-msE"/>
@@ -413,6 +455,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_behind" translatesAutoresizingMaskIntoConstraints="NO" id="UdQ-57-fAm">
                                                 <rect key="frame" x="-50" y="397" width="154" height="169"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="169" id="FVW-Bv-agp"/>
                                                     <constraint firstAttribute="width" constant="154" id="Yjv-lx-FB4"/>
@@ -420,6 +463,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="HoY-Sb-VYt">
                                                 <rect key="frame" x="-73" y="329" width="222" height="210"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="222" id="FfY-m2-B8u"/>
                                                     <constraint firstAttribute="height" constant="210" id="ijE-h2-OuT"/>
@@ -427,6 +471,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera_behind" translatesAutoresizingMaskIntoConstraints="NO" id="WRg-t6-gz5">
                                                 <rect key="frame" x="484" y="279" width="310" height="309"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="309" id="4vB-sZ-3nO"/>
                                                     <constraint firstAttribute="width" constant="310" id="GcK-we-uxs"/>
@@ -434,6 +479,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera" translatesAutoresizingMaskIntoConstraints="NO" id="AJj-Qs-Yve">
                                                 <rect key="frame" x="411" y="171" width="412" height="368"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="368" id="ErU-jA-3pO"/>
                                                     <constraint firstAttribute="width" constant="412" id="Tax-bL-vv6"/>
@@ -441,6 +487,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="UAe-md-yld">
                                                 <rect key="frame" x="502" y="-19" width="169" height="219"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="219" id="JBY-x9-dnF"/>
                                                     <constraint firstAttribute="width" constant="169" id="nlK-jy-3PA"/>
@@ -448,6 +495,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1" translatesAutoresizingMaskIntoConstraints="NO" id="mUN-Nl-G4M">
                                                 <rect key="frame" x="461" y="-12" width="171" height="168"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="168" id="NPV-NY-rFG"/>
                                                     <constraint firstAttribute="width" constant="171" id="Z9K-Xa-yvA"/>
@@ -455,12 +503,14 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1" translatesAutoresizingMaskIntoConstraints="NO" id="3pQ-cr-l8a">
                                                 <rect key="frame" x="-290" y="-145" width="504" height="376"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="376" id="Odd-7b-JS9"/>
                                                     <constraint firstAttribute="width" constant="504" id="bpl-1E-7B6"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="nv3-6e-fbt" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-100" id="004-tf-FCc"/>
                                             <constraint firstAttribute="bottom" secondItem="AJj-Qs-Yve" secondAttribute="bottom" constant="123" id="1gf-7i-Vsr"/>
@@ -509,6 +559,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Hzg-51-6xm" secondAttribute="trailing" id="1sH-p8-VOa"/>
                                     <constraint firstAttribute="trailing" secondItem="gfM-Jn-Ugq" secondAttribute="trailing" id="ADd-Xt-VxN"/>
@@ -534,12 +585,14 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekb-Zn-ZEq">
                                 <rect key="frame" x="20" y="103" width="560" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fst-US-5Wh">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fst-US-5Wh" secondAttribute="height" multiplier="1:1" id="YMm-F8-6qI"/>
                                 </constraints>
@@ -548,6 +601,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dcO-Pl-Pu5" secondAttribute="trailing" id="68S-XC-57L"/>
@@ -596,6 +650,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0S-Qb-ZwR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F53-wM-N18">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -605,6 +660,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="jyn-nY-s2w">
                                                 <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="416" id="agm-uA-0wO"/>
                                                     <constraint firstAttribute="width" constant="297" id="cEv-Hd-Nan"/>
@@ -612,6 +668,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_behind" translatesAutoresizingMaskIntoConstraints="NO" id="Pze-wz-5x3">
                                                 <rect key="frame" x="-50" y="397" width="154" height="169"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="169" id="9Tk-qW-6Tj"/>
                                                     <constraint firstAttribute="height" constant="376" id="BSw-ew-nwh"/>
@@ -620,13 +677,14 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="q2o-S4-Rxv"/>
                                                         <exclude reference="BSw-ew-nwh"/>
+                                                        <exclude reference="q2o-S4-Rxv"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="NbM-Ez-qKI">
                                                 <rect key="frame" x="-73" y="329" width="222" height="210"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="504" id="Edm-wk-9SL"/>
                                                     <constraint firstAttribute="width" constant="222" id="Ia2-1m-l3k"/>
@@ -642,6 +700,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera_behind" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-ym-vVN">
                                                 <rect key="frame" x="484" y="279" width="310" height="309"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="309" id="c11-FK-xD3"/>
                                                     <constraint firstAttribute="width" constant="310" id="iFx-U8-cbK"/>
@@ -657,6 +716,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-9U-n5R">
                                                 <rect key="frame" x="411" y="171" width="412" height="368"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="368" id="KRt-tQ-wJF"/>
                                                     <constraint firstAttribute="width" constant="412" id="d0K-rf-UGG"/>
@@ -664,6 +724,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="CCU-hQ-xFC">
                                                 <rect key="frame" x="502" y="-19" width="169" height="219"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="169" id="JTG-10-BZy"/>
                                                     <constraint firstAttribute="height" constant="219" id="Yg7-yo-Y4a"/>
@@ -672,13 +733,14 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="kI7-zY-X7r"/>
                                                         <exclude reference="byz-qc-7VX"/>
+                                                        <exclude reference="kI7-zY-X7r"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-fq-bOy">
                                                 <rect key="frame" x="461" y="-12" width="171" height="168"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="171" id="2eG-V2-Vb8"/>
                                                     <constraint firstAttribute="width" constant="504" id="5dV-8Q-Pu6"/>
@@ -687,19 +749,21 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="RxG-ZK-oIa"/>
                                                         <exclude reference="5dV-8Q-Pu6"/>
+                                                        <exclude reference="RxG-ZK-oIa"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1" translatesAutoresizingMaskIntoConstraints="NO" id="h5l-2q-vJT">
                                                 <rect key="frame" x="-290" y="-145" width="504" height="376"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="376" id="DjX-e0-R4Y"/>
                                                     <constraint firstAttribute="width" constant="504" id="O81-ta-4LW"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="nRN-fq-bOy" secondAttribute="trailing" constant="-32" id="4F5-Yl-djB"/>
                                             <constraint firstItem="u1U-9U-n5R" firstAttribute="top" secondItem="bnc-p7-AsN" secondAttribute="top" constant="-70" id="6cr-2Q-rRM"/>
@@ -732,17 +796,17 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="JX1-aS-FHt"/>
                                                 <exclude reference="7JH-aJ-bpJ"/>
+                                                <exclude reference="JX1-aS-FHt"/>
                                                 <exclude reference="WUR-78-L21"/>
                                                 <exclude reference="Ytl-12-wiz"/>
-                                                <exclude reference="MdK-wu-1kI"/>
-                                                <exclude reference="uTg-e7-3EB"/>
                                                 <exclude reference="6cr-2Q-rRM"/>
+                                                <exclude reference="MdK-wu-1kI"/>
                                                 <exclude reference="l2G-j8-uv1"/>
-                                                <exclude reference="aTr-92-QpP"/>
-                                                <exclude reference="ULI-bV-Ubs"/>
+                                                <exclude reference="uTg-e7-3EB"/>
                                                 <exclude reference="ARk-fU-Q24"/>
+                                                <exclude reference="ULI-bV-Ubs"/>
+                                                <exclude reference="aTr-92-QpP"/>
                                                 <exclude reference="vQF-sM-nah"/>
                                             </mask>
                                         </variation>
@@ -752,6 +816,7 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-T4-Ksv">
                                                 <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="416" id="Ofd-Ie-wdE"/>
                                                     <constraint firstAttribute="width" constant="297" id="aGc-Bz-wMl"/>
@@ -759,6 +824,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_behind" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-Iy-LTA">
                                                 <rect key="frame" x="-50" y="397" width="154" height="169"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="376" id="1YT-XH-xpl"/>
                                                     <constraint firstAttribute="width" constant="154" id="Ap8-FE-15h"/>
@@ -767,13 +833,14 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="fQI-x5-c57"/>
                                                         <exclude reference="1YT-XH-xpl"/>
+                                                        <exclude reference="fQI-x5-c57"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="tap-KA-c2J">
                                                 <rect key="frame" x="-73" y="329" width="222" height="210"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="504" id="9dR-RD-ePT"/>
                                                     <constraint firstAttribute="height" constant="210" id="NoY-cM-oJg"/>
@@ -789,6 +856,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera_behind" translatesAutoresizingMaskIntoConstraints="NO" id="lT9-AG-oqQ">
                                                 <rect key="frame" x="484" y="279" width="310" height="309"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="310" id="XsP-4r-6gq"/>
                                                     <constraint firstAttribute="height" constant="462" id="s5X-Ps-9qL"/>
@@ -797,13 +865,14 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="tkb-jx-lZw"/>
                                                         <exclude reference="s5X-Ps-9qL"/>
+                                                        <exclude reference="tkb-jx-lZw"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera" translatesAutoresizingMaskIntoConstraints="NO" id="mj7-ka-TzR">
                                                 <rect key="frame" x="411" y="171" width="412" height="368"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="368" id="1mC-uV-5gy"/>
                                                     <constraint firstAttribute="width" constant="412" id="JAc-Qs-cmU"/>
@@ -811,6 +880,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-7o-j6E">
                                                 <rect key="frame" x="502" y="-19" width="169" height="219"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="376" id="1kD-Wa-0qX"/>
                                                     <constraint firstAttribute="width" constant="504" id="6Sz-SS-DoV"/>
@@ -819,13 +889,14 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="6Sz-SS-DoV"/>
                                                         <exclude reference="1kD-Wa-0qX"/>
+                                                        <exclude reference="6Sz-SS-DoV"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1" translatesAutoresizingMaskIntoConstraints="NO" id="ZmQ-MC-xw1">
                                                 <rect key="frame" x="461" y="-12" width="171" height="168"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="171" id="1gq-eY-xyg"/>
                                                     <constraint firstAttribute="height" constant="168" id="eHa-8t-3Yx"/>
@@ -834,19 +905,21 @@
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="nZv-Nb-Ao8"/>
                                                         <exclude reference="hIb-Md-foT"/>
+                                                        <exclude reference="nZv-Nb-Ao8"/>
                                                     </mask>
                                                 </variation>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1" translatesAutoresizingMaskIntoConstraints="NO" id="R0w-X8-Dax">
                                                 <rect key="frame" x="-290" y="-145" width="504" height="376"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="504" id="SzF-nQ-ukK"/>
                                                     <constraint firstAttribute="height" constant="376" id="uJG-7g-2P0"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="lT9-AG-oqQ" firstAttribute="top" secondItem="JgH-VL-5TF" secondAttribute="top" constant="80" id="0MI-HK-EQb"/>
                                             <constraint firstItem="3tP-Iy-LTA" firstAttribute="leading" secondItem="JgH-VL-5TF" secondAttribute="leading" constant="-50" id="2fQ-rb-naQ"/>
@@ -879,22 +952,23 @@
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="hiH-dl-NaN"/>
-                                                <exclude reference="8xe-55-NQI"/>
                                                 <exclude reference="7mD-Mw-JCl"/>
+                                                <exclude reference="8xe-55-NQI"/>
                                                 <exclude reference="BtQ-bC-LPc"/>
-                                                <exclude reference="zvA-aD-cPY"/>
-                                                <exclude reference="eEF-Gy-IEs"/>
-                                                <exclude reference="Um3-Af-kAk"/>
+                                                <exclude reference="hiH-dl-NaN"/>
                                                 <exclude reference="GzX-Ti-d42"/>
-                                                <exclude reference="rEb-st-5or"/>
+                                                <exclude reference="Um3-Af-kAk"/>
+                                                <exclude reference="eEF-Gy-IEs"/>
+                                                <exclude reference="zvA-aD-cPY"/>
                                                 <exclude reference="0MI-HK-EQb"/>
                                                 <exclude reference="PjZ-h2-0sa"/>
                                                 <exclude reference="kd4-7Y-b8W"/>
+                                                <exclude reference="rEb-st-5or"/>
                                             </mask>
                                         </variation>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="JgH-VL-5TF" secondAttribute="bottom" id="92n-0P-g3B"/>
                                     <constraint firstItem="bnc-p7-AsN" firstAttribute="bottom" secondItem="JgH-VL-5TF" secondAttribute="bottom" id="dpR-7v-UYa"/>
@@ -908,6 +982,7 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4b-Dr-xXt">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z4b-Dr-xXt" secondAttribute="height" multiplier="1:1" id="EcH-qt-nFl"/>
                                 </constraints>
@@ -917,11 +992,13 @@
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-bj-UUj">
                                 <rect key="frame" x="20" y="100" width="560" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="z4b-Dr-xXt" secondAttribute="trailing" constant="20" id="24Z-2U-Hsn"/>
@@ -974,9 +1051,11 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQz-up-3sC">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkD-62-428">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WkD-62-428" secondAttribute="height" multiplier="1:1" id="DNK-ki-wHA"/>
                                 </constraints>
@@ -986,11 +1065,13 @@
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzr-2D-893">
                                 <rect key="frame" x="20" y="123" width="560" height="20.5"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wzr-2D-893" firstAttribute="leading" secondItem="Da6-s5-t2a" secondAttribute="leadingMargin" id="0iX-Pz-6py"/>
@@ -1036,6 +1117,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ySv-jL-pVG">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ySv-jL-pVG" secondAttribute="height" multiplier="1:1" id="qJs-qw-kaK"/>
                                 </constraints>
@@ -1045,11 +1127,13 @@
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZv-Q4-xGX">
                                 <rect key="frame" x="20" y="102" width="560" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UC7-ZW-OS4" firstAttribute="top" secondItem="ySv-jL-pVG" secondAttribute="bottom" id="6aZ-3T-Rlf"/>
@@ -1101,6 +1185,6 @@
         <image name="vert" width="148" height="148"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R2Q-hM-tMq"/>
+        <segue reference="pxz-Ru-a1S"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,19 +29,45 @@ class ChoiceFirstViewController: ChoiceController {
         //self.locationManager?.choiceNumber = 4;
         
         print("first Choice");
+        
 
+
+    }
+    
+    override func initChoices() {
+        self.soundsNames = ["country", "sea", "city", "tropics"];
+        print("INITCHOICE---------");
+        for var index = 0; index < self.soundsNames.count; index++ {
+            self.sounds[index] = index;
+            
+        }
+        self.locationManager?.choiceNumber = self.sounds.count;
+        
+        self.locationManager?.choices.addObjectsFromArray(sounds as [AnyObject]);
+    }
+    
+    override func initSounds() {
+        for var i = 0; i < self.sounds.count; i++ {
+            let sound: SoundsComposition = SoundsComposition();
+            self.sounds[i] = sound;
+            sound.index = i;
+            for var j = 0; j < self.subNames.count; j++ {
+                let string : String = (self.soundsNames[i] as! String) + "_" + self.subNames[j];
+                print(string);
+                sound.addSound(string, ext: "caf");
+//                ((self.sounds[self.sounds.count - 1] as! SoundsComposition).sounds[j] as! Sound).type = self.subNames[j];
+            }
+            print(sound.index);
+            sound.choiceNumber = self.sounds.count;
+            sound.setPos();
+        }
     }
     
     
     // MARK - FingerPrintViewControllerDelegate
     
     override func onButtonDown(sender: AnyObject) {
-        self.locationManager?.toggleGyro();
-        print("down \(self.locationManager?.tilt)");
-        
-       for var index = 0; index < self.sounds.count; index++ {
-            (self.sounds[index] as! SoundsComposition).play();
-        }
+        super.onButtonDown(sender);
 
     }
     
@@ -109,16 +135,7 @@ class ChoiceFirstViewController: ChoiceController {
     }
     
     override func onChoiceChange(choice: Int) {
-        for var i = 0; i < self.sounds.count; i++ {
-            let soundi = ((self.sounds[i]) as! SoundsComposition);
-            if(soundi.isPlaying) {
-                soundi.fadeOut();
-            }
-        }
-        let sound = ((self.sounds[choice]) as! SoundsComposition);
-        print(sound.sounds[1].name);
-        //(sound.sounds[1] as! Sound).placeSound(0.0, y: 0.0);
-        sound.fadeIn();
+        super.onChoiceChange(choice);
         
         
         print("choice \(choice)");
