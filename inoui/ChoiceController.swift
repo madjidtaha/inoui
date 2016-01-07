@@ -15,6 +15,8 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     var destination : String?;
     var locationManager: LocationManager?;
     var sounds: NSMutableArray = NSMutableArray();
+    var subNames = ["background", "voice", "extra"];
+    var soundsNames: NSMutableArray = ["sea"];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     
     func initChoices() {
         print("INITCHOICE---------");
-        for var index = 0; index < 4; index++ {
+        for var index = 0; index < self.soundsNames.count; index++ {
             self.sounds[index] = index;
             
         }
@@ -65,8 +67,8 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
             let sound: SoundsComposition = SoundsComposition();
             self.sounds[i] = sound;
             sound.index = i;
-            for var j = 0; j < 3; j++ {
-                let string : String = "test" + ((i + 1) as NSNumber).stringValue + ((j + 1) as NSNumber).stringValue;
+            for var j = 0; j < self.subNames.count; j++ {
+                let string : String = (self.soundsNames[i] as! String) + "_" + self.subNames[j];
                 print(string);
                 sound.addSound(string, ext: "caf");
             }
@@ -75,6 +77,8 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
             sound.setPos();
         }
     }
+    
+
     
     // MARK: - FingerprintViewControllerDelegate
     

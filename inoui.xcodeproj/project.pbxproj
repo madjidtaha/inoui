@@ -62,21 +62,21 @@
 		8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */; };
 		893F6BA41C3A6746007CB1F9 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA31C3A6746007CB1F9 /* Sound.swift */; };
 		893F6BA61C3A7341007CB1F9 /* SoundsComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */; };
-		893F6BB91C3D4B2D007CB1F9 /* test11.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB01C3D4B2D007CB1F9 /* test11.caf */; };
-		893F6BBA1C3D4B2D007CB1F9 /* test12.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB11C3D4B2D007CB1F9 /* test12.caf */; };
-		893F6BBB1C3D4B2D007CB1F9 /* test13.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BB21C3D4B2D007CB1F9 /* test13.caf */; };
-		893F6BC81C3D5B41007CB1F9 /* test21.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC21C3D5B41007CB1F9 /* test21.caf */; };
-		893F6BC91C3D5B41007CB1F9 /* test22.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC31C3D5B41007CB1F9 /* test22.caf */; };
-		893F6BCA1C3D5B41007CB1F9 /* test23.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC41C3D5B41007CB1F9 /* test23.caf */; };
-		893F6BCB1C3D5B41007CB1F9 /* test31.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC51C3D5B41007CB1F9 /* test31.caf */; };
-		893F6BCC1C3D5B41007CB1F9 /* test32.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC61C3D5B41007CB1F9 /* test32.caf */; };
-		893F6BCD1C3D5B41007CB1F9 /* test33.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BC71C3D5B41007CB1F9 /* test33.caf */; };
 		893F6BCF1C3D93EE007CB1F9 /* wind.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BCE1C3D93EE007CB1F9 /* wind.caf */; };
 		893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */; };
 		893F6BD31C3E65FD007CB1F9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */; };
-		893F6BD71C3E7F5A007CB1F9 /* test41.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD41C3E7F5A007CB1F9 /* test41.caf */; };
-		893F6BD81C3E7F5A007CB1F9 /* test42.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD51C3E7F5A007CB1F9 /* test42.caf */; };
-		893F6BD91C3E7F5A007CB1F9 /* test43.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD61C3E7F5A007CB1F9 /* test43.caf */; };
+		893F6C001C3EE6E5007CB1F9 /* city_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF41C3EE6E5007CB1F9 /* city_background.caf */; };
+		893F6C011C3EE6E5007CB1F9 /* city_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */; };
+		893F6C021C3EE6E5007CB1F9 /* city_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */; };
+		893F6C031C3EE6E5007CB1F9 /* country_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF71C3EE6E5007CB1F9 /* country_background.caf */; };
+		893F6C041C3EE6E5007CB1F9 /* country_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */; };
+		893F6C051C3EE6E5007CB1F9 /* country_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF91C3EE6E5007CB1F9 /* country_voice.caf */; };
+		893F6C061C3EE6E5007CB1F9 /* sea_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */; };
+		893F6C071C3EE6E5007CB1F9 /* sea_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */; };
+		893F6C081C3EE6E5007CB1F9 /* sea_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */; };
+		893F6C091C3EE6E5007CB1F9 /* tropics_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */; };
+		893F6C0A1C3EE6E5007CB1F9 /* tropics_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */; };
+		893F6C0B1C3EE6E5007CB1F9 /* tropics_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,21 +158,21 @@
 		8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceController.swift; sourceTree = "<group>"; };
 		893F6BA31C3A6746007CB1F9 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		893F6BA51C3A7341007CB1F9 /* SoundsComposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsComposition.swift; sourceTree = "<group>"; };
-		893F6BB01C3D4B2D007CB1F9 /* test11.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test11.caf; path = sounds/test11.caf; sourceTree = "<group>"; };
-		893F6BB11C3D4B2D007CB1F9 /* test12.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test12.caf; path = sounds/test12.caf; sourceTree = "<group>"; };
-		893F6BB21C3D4B2D007CB1F9 /* test13.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test13.caf; path = sounds/test13.caf; sourceTree = "<group>"; };
-		893F6BC21C3D5B41007CB1F9 /* test21.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test21.caf; path = sounds/test21.caf; sourceTree = "<group>"; };
-		893F6BC31C3D5B41007CB1F9 /* test22.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test22.caf; path = sounds/test22.caf; sourceTree = "<group>"; };
-		893F6BC41C3D5B41007CB1F9 /* test23.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test23.caf; path = sounds/test23.caf; sourceTree = "<group>"; };
-		893F6BC51C3D5B41007CB1F9 /* test31.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test31.caf; path = sounds/test31.caf; sourceTree = "<group>"; };
-		893F6BC61C3D5B41007CB1F9 /* test32.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test32.caf; path = sounds/test32.caf; sourceTree = "<group>"; };
-		893F6BC71C3D5B41007CB1F9 /* test33.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test33.caf; path = sounds/test33.caf; sourceTree = "<group>"; };
 		893F6BCE1C3D93EE007CB1F9 /* wind.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wind.caf; path = sounds/wind.caf; sourceTree = "<group>"; };
 		893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = heartbeat.mp3; path = sounds/heartbeat.mp3; sourceTree = "<group>"; };
 		893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		893F6BD41C3E7F5A007CB1F9 /* test41.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test41.caf; path = sounds/test41.caf; sourceTree = "<group>"; };
-		893F6BD51C3E7F5A007CB1F9 /* test42.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test42.caf; path = sounds/test42.caf; sourceTree = "<group>"; };
-		893F6BD61C3E7F5A007CB1F9 /* test43.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = test43.caf; path = sounds/test43.caf; sourceTree = "<group>"; };
+		893F6BF41C3EE6E5007CB1F9 /* city_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_background.caf; path = sounds/city_background.caf; sourceTree = "<group>"; };
+		893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_extra.caf; path = sounds/city_extra.caf; sourceTree = "<group>"; };
+		893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_voice.caf; path = sounds/city_voice.caf; sourceTree = "<group>"; };
+		893F6BF71C3EE6E5007CB1F9 /* country_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = country_background.caf; path = sounds/country_background.caf; sourceTree = "<group>"; };
+		893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = country_extra.caf; path = sounds/country_extra.caf; sourceTree = "<group>"; };
+		893F6BF91C3EE6E5007CB1F9 /* country_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = country_voice.caf; path = sounds/country_voice.caf; sourceTree = "<group>"; };
+		893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_background.caf; path = sounds/sea_background.caf; sourceTree = "<group>"; };
+		893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_extra.caf; path = sounds/sea_extra.caf; sourceTree = "<group>"; };
+		893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_voice.caf; path = sounds/sea_voice.caf; sourceTree = "<group>"; };
+		893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_background.caf; path = sounds/tropics_background.caf; sourceTree = "<group>"; };
+		893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_extra.caf; path = sounds/tropics_extra.caf; sourceTree = "<group>"; };
+		893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_voice.caf; path = sounds/tropics_voice.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,20 +429,20 @@
 		8920EA731C103EA7001D7A33 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				893F6BD41C3E7F5A007CB1F9 /* test41.caf */,
-				893F6BD51C3E7F5A007CB1F9 /* test42.caf */,
-				893F6BD61C3E7F5A007CB1F9 /* test43.caf */,
 				893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */,
 				893F6BCE1C3D93EE007CB1F9 /* wind.caf */,
-				893F6BC21C3D5B41007CB1F9 /* test21.caf */,
-				893F6BC31C3D5B41007CB1F9 /* test22.caf */,
-				893F6BC41C3D5B41007CB1F9 /* test23.caf */,
-				893F6BC51C3D5B41007CB1F9 /* test31.caf */,
-				893F6BC61C3D5B41007CB1F9 /* test32.caf */,
-				893F6BC71C3D5B41007CB1F9 /* test33.caf */,
-				893F6BB01C3D4B2D007CB1F9 /* test11.caf */,
-				893F6BB11C3D4B2D007CB1F9 /* test12.caf */,
-				893F6BB21C3D4B2D007CB1F9 /* test13.caf */,
+				893F6BF41C3EE6E5007CB1F9 /* city_background.caf */,
+				893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */,
+				893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */,
+				893F6BF71C3EE6E5007CB1F9 /* country_background.caf */,
+				893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */,
+				893F6BF91C3EE6E5007CB1F9 /* country_voice.caf */,
+				893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */,
+				893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */,
+				893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */,
+				893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */,
+				893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */,
+				893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */,
 				8920EA751C104299001D7A33 /* sound.caf */,
 				8920EA771C105C26001D7A33 /* test.wav */,
 			);
@@ -633,7 +633,7 @@
 				TargetAttributes = {
 					02C5B0631BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4797R522FN;
+						DevelopmentTeam = P3BJ8UE9HH;
 					};
 					02C5B0771BF4DB9200DA3CD1 = {
 						CreatedOnToolsVersion = 7.1;
@@ -673,42 +673,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				026AAE051BF4DE1400FF9E21 /* OpenSans-Bold.ttf in Resources */,
+				893F6C011C3EE6E5007CB1F9 /* city_extra.caf in Resources */,
+				893F6C061C3EE6E5007CB1F9 /* sea_background.caf in Resources */,
 				026AAE061BF4DE1400FF9E21 /* OpenSans-BoldItalic.ttf in Resources */,
 				026AAE071BF4DE1400FF9E21 /* OpenSans-ExtraBold.ttf in Resources */,
+				893F6C051C3EE6E5007CB1F9 /* country_voice.caf in Resources */,
+				893F6C001C3EE6E5007CB1F9 /* city_background.caf in Resources */,
 				893F6BCF1C3D93EE007CB1F9 /* wind.caf in Resources */,
-				893F6BCA1C3D5B41007CB1F9 /* test23.caf in Resources */,
-				893F6BB91C3D4B2D007CB1F9 /* test11.caf in Resources */,
-				893F6BCD1C3D5B41007CB1F9 /* test33.caf in Resources */,
-				893F6BCB1C3D5B41007CB1F9 /* test31.caf in Resources */,
 				026AAE081BF4DE1400FF9E21 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				024622A71C0F3789000175DD /* FingerprintViewController.xib in Resources */,
 				026AAE091BF4DE1400FF9E21 /* OpenSans-Italic.ttf in Resources */,
 				026AAE0A1BF4DE1400FF9E21 /* OpenSans-Light.ttf in Resources */,
+				893F6C0A1C3EE6E5007CB1F9 /* tropics_extra.caf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				02B47ECD1C3ED767001372B7 /* plume.mp4 in Resources */,
+				893F6C041C3EE6E5007CB1F9 /* country_extra.caf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
 				8920EA761C104299001D7A33 /* sound.caf in Resources */,
 				02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */,
-				893F6BC81C3D5B41007CB1F9 /* test21.caf in Resources */,
+				893F6C021C3EE6E5007CB1F9 /* city_voice.caf in Resources */,
 				026AAE0D1BF4DE1400FF9E21 /* OpenSans-Semibold.ttf in Resources */,
 				026AAE0E1BF4DE1400FF9E21 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
-				893F6BD71C3E7F5A007CB1F9 /* test41.caf in Resources */,
 				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
-				893F6BC91C3D5B41007CB1F9 /* test22.caf in Resources */,
 				02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				02B47EC71C3ECD84001372B7 /* tribe.mp4 in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
+				893F6C071C3EE6E5007CB1F9 /* sea_extra.caf in Resources */,
+				893F6C031C3EE6E5007CB1F9 /* country_background.caf in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
-				893F6BD91C3E7F5A007CB1F9 /* test43.caf in Resources */,
+				893F6C081C3EE6E5007CB1F9 /* sea_voice.caf in Resources */,
+				893F6C091C3EE6E5007CB1F9 /* tropics_background.caf in Resources */,
 				893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
-				893F6BD81C3E7F5A007CB1F9 /* test42.caf in Resources */,
-				893F6BBA1C3D4B2D007CB1F9 /* test12.caf in Resources */,
-				893F6BBB1C3D4B2D007CB1F9 /* test13.caf in Resources */,
-				893F6BCC1C3D5B41007CB1F9 /* test32.caf in Resources */,
+				893F6C0B1C3EE6E5007CB1F9 /* tropics_voice.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +905,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inouie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -919,7 +919,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = inoui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inoui;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.henaut.taha.inouie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

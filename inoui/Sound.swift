@@ -15,6 +15,7 @@ class Sound: NSObject {
     var index: NSInteger = 0;
     var name = String();
     var playback = Playback?();
+    var type : String = String();
     
     override init() {
         super.init();
