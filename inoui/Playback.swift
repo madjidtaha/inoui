@@ -162,7 +162,7 @@ class Playback: NSObject {
         self.sounds = NSMutableDictionary();
         
         // Start with our sound source slightly in front of the listener
-        self._sourcePos = CGPointMake(0.0, -15.0)
+        self._sourcePos = CGPointMake(0.0, -50.0)
         
         // Put the listener in the center of the stage
         self._listenerPos = CGPointMake(0.0, 0.0)
@@ -173,10 +173,10 @@ class Playback: NSObject {
         // Setup AVAudioSession
          self.initAVAudioSession()
         
-        //        bgURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("background", ofType: "m4a")!)
-        //        do {
-        //            bgPlayer = try AVAudioPlayer(contentsOfURL: bgURL)
-        //        } catch _ {}
+                bgURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("heartbeat", ofType: "mp3")!)
+                do {
+                    bgPlayer = try AVAudioPlayer(contentsOfURL: bgURL)
+                } catch _ {}
         
         wasInterrupted = false
         
@@ -201,16 +201,32 @@ class Playback: NSObject {
     
     //MARK: AVAudioPlayer
     
-    @IBAction func toggleMusic(sender: UISwitch) {
-        NSLog("toggling music %@", sender.on ? "on" : "off")
+    func playMusic() {
         
         if bgPlayer != nil {
-            
-            if sender.on {
-                bgPlayer?.play()
-            } else {
-                bgPlayer?.stop()
-            }
+            bgPlayer?.play();
+        }
+    }
+    
+    func stopMusic() {
+        
+        if bgPlayer != nil {
+            bgPlayer?.stop();
+        }
+    }
+    
+    func fadeOutMusic() {
+        let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("fadeOutMusic"), userInfo: nil, repeats: false);
+        print(bgPlayer?.volume);
+        if (bgPlayer?.volume > 0.025) {
+            bgPlayer?.volume = (bgPlayer?.volume)! - 0.025;
+        } else {
+            timer.invalidate();
+            // Stop and get the sound ready for playing again
+            bgPlayer?.stop();
+            bgPlayer?.currentTime = 0;
+            bgPlayer?.prepareToPlay();
+            bgPlayer?.volume = 1.0;
         }
     }
     
@@ -402,8 +418,7 @@ class Playback: NSObject {
             self._sourcePos = SOURCEPOS
             let sourcePosAL: [Float] = [Float(self._sourcePos.x), kDefaultDistance, Float(self._sourcePos.y)]
             // Move our audio source coordinates
-            alSourcefv(source[WATER], AL_POSITION, sourcePosAL)
-            alSourcefv(source[1], AL_POSITION, sourcePosAL)
+            alSourcefv(source[0], AL_POSITION, sourcePosAL)
         }
     }
     
