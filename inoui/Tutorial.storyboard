@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="scT-3j-oRi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="scT-3j-oRi">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -31,7 +31,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-zY-CYV">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fbz-zY-CYV" secondAttribute="height" multiplier="1:1" id="37W-OU-bxu"/>
                                 </constraints>
@@ -41,7 +40,6 @@
                             </containerView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3T-zO-ake">
                                 <rect key="frame" x="210" y="148" width="180" height="88"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="4Re-vX-8jD"/>
                                     <constraint firstAttribute="height" constant="88" id="iVl-pO-Chx"/>
@@ -55,10 +53,8 @@ de droite à gauche.</string>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
                                 <rect key="frame" x="287" y="95" width="26" height="44"/>
-                                <animations/>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W3T-zO-ake" firstAttribute="centerX" secondItem="zt6-qq-w7x" secondAttribute="centerX" id="2eV-M5-VCz"/>
@@ -95,22 +91,17 @@ de droite à gauche.</string>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomanBlur" translatesAutoresizingMaskIntoConstraints="NO" id="bj0-nZ-fBW">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <animations/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManBlur" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-nY-giC">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <animations/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WomanComplete" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-99-qIN">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <animations/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ManComplete" translatesAutoresizingMaskIntoConstraints="NO" id="PsW-nw-FaJ">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bj0-nZ-fBW" firstAttribute="leading" secondItem="ss6-59-QrA" secondAttribute="leading" id="60F-S3-tcd"/>
@@ -133,7 +124,6 @@ de droite à gauche.</string>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txu-rp-6Dh" customClass="FingerprintView" customModule="inoui" customModuleProvider="target">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="txu-rp-6Dh" secondAttribute="height" multiplier="1:1" id="ga6-pi-wiw"/>
                                 </constraints>
@@ -143,7 +133,6 @@ de droite à gauche.</string>
                             </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-3J-9TO">
                                 <rect key="frame" x="180" y="28" width="240" height="68"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="Nmd-QK-4lA"/>
                                     <constraint firstAttribute="width" constant="240" id="aMN-30-jUo"/>
@@ -160,34 +149,29 @@ l’expérience.</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 / 2 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piF-OV-3IN">
                                         <rect key="frame" x="99" y="0.0" width="42" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="RELÂCHEZ POUR CONFIRMER" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym2-9B-RX3">
                                         <rect key="frame" x="0.0" y="29" width="240" height="68"/>
-                                        <animations/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Vous êtes une femme" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-Rm-uk3">
                                         <rect key="frame" x="0.0" y="82" width="240" height="50"/>
-                                        <animations/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="147" id="Hhq-O1-YIG"/>
                                     <constraint firstAttribute="width" constant="240" id="mN5-RT-mvf"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oLB-3J-9TO" firstAttribute="top" secondItem="PPd-zq-5SC" secondAttribute="bottom" constant="8" id="A9i-ee-0Iy"/>
@@ -236,7 +220,6 @@ l’expérience.</string>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIf-Dt-Q0v">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NIf-Dt-Q0v" secondAttribute="height" multiplier="1:1" id="KWX-g3-ubO"/>
                                 </constraints>
@@ -246,7 +229,6 @@ l’expérience.</string>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 / 2 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cu-sx-5Zc">
                                 <rect key="frame" x="279" y="41" width="42" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="6SM-1x-52X"/>
                                     <constraint firstAttribute="height" constant="21" id="BYt-Hj-NVM"/>
@@ -257,7 +239,6 @@ l’expérience.</string>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="RELÂCHEZ POUR CONFIRMER" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-0K-KCz">
                                 <rect key="frame" x="180" y="70" width="240" height="68"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="MK8-4w-PGq"/>
                                     <constraint firstAttribute="width" constant="240" id="QrO-Bf-mjK"/>
@@ -268,7 +249,6 @@ l’expérience.</string>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sélectionnez votre âge" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-aN-iTA">
                                 <rect key="frame" x="180" y="123" width="240" height="50"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Nut-CX-nxp"/>
                                     <constraint firstAttribute="width" constant="240" id="cAp-nO-266"/>
@@ -278,7 +258,6 @@ l’expérience.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NIf-Dt-Q0v" secondAttribute="trailing" constant="20" id="4ho-Op-Wlc"/>
@@ -311,7 +290,6 @@ l’expérience.</string>
                 <containerView opaque="NO" contentMode="scaleToFill" id="Lhb-2A-xz7">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <animations/>
                     <color key="backgroundColor" red="1" green="0.071741149340000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Lhb-2A-xz7" secondAttribute="height" multiplier="1:1" id="gE0-BT-Wq5"/>
@@ -334,7 +312,6 @@ l’expérience.</string>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aA9-mu-quf">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aA9-mu-quf" secondAttribute="height" multiplier="1:1" id="mlQ-3r-9fj"/>
                                 </constraints>
@@ -344,7 +321,6 @@ l’expérience.</string>
                             </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Vous allez maintenant pouvoir débuter l'expérience Sisley" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="173-6K-efX">
                                 <rect key="frame" x="159" y="42" width="282" height="123"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="Jhd-y9-7va"/>
                                     <constraint firstAttribute="height" constant="123" id="c1v-Jc-YcI"/>
@@ -354,7 +330,6 @@ l’expérience.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aA9-mu-quf" secondAttribute="trailing" constant="20" id="5cT-GX-zia"/>
@@ -381,6 +356,6 @@ l’expérience.</string>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lGa-Wi-6Cm"/>
+        <segue reference="4lG-EF-5Xa"/>
     </inferredMetricsTieBreakers>
 </document>

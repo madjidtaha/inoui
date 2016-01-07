@@ -1,4 +1,4 @@
-//
+    //
 //  ChoiceThirdViewController.swift
 //  inoui
 //
@@ -13,6 +13,7 @@ import MediaPlayer
 class ChoiceThirdViewController: ChoiceController {
 
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var assetsView: UIView!
     
     var videos = ["tribe", "plume"]
     var player : MPMoviePlayerController?;
@@ -22,6 +23,7 @@ class ChoiceThirdViewController: ChoiceController {
     
         super.viewDidLoad()
         self.locationManager?.choiceNumber = 2;
+        self.backgroundView.backgroundColor = UIColor(red:0.78, green:0.85, blue:0.78, alpha:1);
 
         let path = NSBundle.mainBundle().pathForResource( "plume", ofType: "mp4" )
         let url = NSURL.fileURLWithPath( path! )
@@ -75,6 +77,16 @@ class ChoiceThirdViewController: ChoiceController {
         UIView.animateWithDuration(0.4, animations: { () -> Void in
             self.player?.view.alpha = choice.g
             }, completion: nil)
+        
+        
+        for view in self.assetsView.subviews {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                view.alpha = 0;
+            })
+        }
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.assetsView.subviews[choice].alpha = 1;
+        }
         
         self.lastChoice = choice;
         
