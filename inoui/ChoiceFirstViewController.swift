@@ -8,13 +8,11 @@
 
 import UIKit
 import AVFoundation
-import MediaPlayer
 
 class ChoiceFirstViewController: ChoiceController {
 
     @IBOutlet weak var assetsView: UIView!
     @IBOutlet weak var backgroundView: UIView!
-    var player : MPMoviePlayerController?;
     var color : [UIColor] = [
         UIColor(red:0.98, green:0.92, blue:0.7, alpha:1), // Campagne
         UIColor(red:0.77, green:0.95, blue:0.94, alpha:1), // Mer
@@ -31,36 +29,9 @@ class ChoiceFirstViewController: ChoiceController {
         self.locationManager?.choiceNumber = 4;
         
         print("first Choice");
-        
-//        let path = NSBundle.mainBundle().pathForResource( "cascade", ofType: "mp4" )
-//        print("\(path)")
-//        let url = NSURL.fileURLWithPath( path! )
-//        print("\(url)")
-//        let moviePlayer = MPMoviePlayerController( contentURL: url )
-//        
-//        if let player = moviePlayer {
-//            player.view.frame = CGRectMake( 0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height)
-//            player.prepareToPlay()
-//            player.shouldAutoplay = true
-//            player.scalingMode = .AspectFill
-//            player.controlStyle = .None
-//            player.repeatMode = MPMovieRepeatMode.One
-//            
-//            player.backgroundView.backgroundColor = UIColor.clearColor()
-//            player.view.backgroundColor = UIColor.clearColor()
-//
-//            for subView in moviePlayer!.view.subviews {
-//                subView.backgroundColor = UIColor.clearColor()
-//            }
-////
-//            self.backgroundView.insertSubview(player.view, atIndex: player.view.subviews.count);
-//            self.player = player;
-//        }
+
     }
     
-    override func viewDidAppear(animated: Bool) {
-//        self.player!.play()
-    }
     
     // MARK - FingerPrintViewControllerDelegate
     
@@ -76,10 +47,46 @@ class ChoiceFirstViewController: ChoiceController {
             // TODO Do your thang
             print("LASTCHOICE");
             
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
+            UIView.animateWithDuration(0.7, animations: { () -> Void in
                 (self.assetsView.subviews[self.lastChoice] as! TropicalView).unblurView();
+                self.assetsView.subviews[4].alpha = 1;
                 }, completion: { (finished) -> Void in
                     print("finished");
+                    
+                    
+                    let destStoryboard = UIStoryboard(name: "Choice", bundle: nil);
+                    let vc = destStoryboard.instantiateViewControllerWithIdentifier("Choice"+self.nextStep!);
+                    
+                    
+                    let src = self;
+                    let dst = vc;
+                    src.view.addSubview(dst.view);
+                    
+                    src.view.alpha = 1.0;
+                    
+                    
+                    dst.view.alpha = 0.0;
+                    
+                    UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        
+                        print("ANIMATE");
+                        dst.view.alpha = 1.0;
+                        
+                        
+                        
+                        }, completion: { (finished) -> Void in
+                            print("Complete");
+                            src.view.alpha = 0.0;
+                            
+                            dst.view.removeFromSuperview();
+                            //                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            //                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+                            
+                            self.presentViewController(dst, animated: false, completion: { () -> Void in
+                                // callback here
+                            });
+                    });
+
             });
         }
     }

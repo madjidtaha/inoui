@@ -401,6 +401,153 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-cy-2JS" userLabel="TropicalUnblur">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-6e-fbt">
+                                                <rect key="frame" x="-160" y="-100" width="297" height="416"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="297" id="Udg-rj-O9T"/>
+                                                    <constraint firstAttribute="height" constant="416" id="epJ-lP-msE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_behind" translatesAutoresizingMaskIntoConstraints="NO" id="UdQ-57-fAm">
+                                                <rect key="frame" x="-50" y="397" width="154" height="169"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="169" id="FVW-Bv-agp"/>
+                                                    <constraint firstAttribute="width" constant="504" id="Ie3-v1-L2A"/>
+                                                    <constraint firstAttribute="width" constant="154" id="Yjv-lx-FB4"/>
+                                                    <constraint firstAttribute="height" constant="376" id="u6c-iV-DeU"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Ie3-v1-L2A"/>
+                                                        <exclude reference="u6c-iV-DeU"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" translatesAutoresizingMaskIntoConstraints="NO" id="HoY-Sb-VYt">
+                                                <rect key="frame" x="-73" y="329" width="222" height="210"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="504" id="99H-6q-Pna"/>
+                                                    <constraint firstAttribute="width" constant="222" id="FfY-m2-B8u"/>
+                                                    <constraint firstAttribute="height" constant="376" id="Ve0-Va-KxE"/>
+                                                    <constraint firstAttribute="height" constant="210" id="ijE-h2-OuT"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="99H-6q-Pna"/>
+                                                        <exclude reference="Ve0-Va-KxE"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera_behind" translatesAutoresizingMaskIntoConstraints="NO" id="WRg-t6-gz5">
+                                                <rect key="frame" x="484" y="279" width="310" height="309"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="309" id="4vB-sZ-3nO"/>
+                                                    <constraint firstAttribute="width" constant="310" id="GcK-we-uxs"/>
+                                                    <constraint firstAttribute="width" constant="543" id="YOi-0f-EvS"/>
+                                                    <constraint firstAttribute="height" constant="462" id="xDp-oj-ACx"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="YOi-0f-EvS"/>
+                                                        <exclude reference="xDp-oj-ACx"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera" translatesAutoresizingMaskIntoConstraints="NO" id="AJj-Qs-Yve">
+                                                <rect key="frame" x="411" y="171" width="412" height="368"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="368" id="ErU-jA-3pO"/>
+                                                    <constraint firstAttribute="width" constant="412" id="Tax-bL-vv6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1_behind" translatesAutoresizingMaskIntoConstraints="NO" id="UAe-md-yld">
+                                                <rect key="frame" x="502" y="-19" width="169" height="219"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="504" id="AcO-XE-rv6"/>
+                                                    <constraint firstAttribute="height" constant="219" id="JBY-x9-dnF"/>
+                                                    <constraint firstAttribute="height" constant="376" id="WrM-39-d8c"/>
+                                                    <constraint firstAttribute="width" constant="169" id="nlK-jy-3PA"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="AcO-XE-rv6"/>
+                                                        <exclude reference="WrM-39-d8c"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf1" translatesAutoresizingMaskIntoConstraints="NO" id="mUN-Nl-G4M">
+                                                <rect key="frame" x="461" y="-12" width="171" height="168"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="504" id="63x-N0-UnY"/>
+                                                    <constraint firstAttribute="height" constant="168" id="NPV-NY-rFG"/>
+                                                    <constraint firstAttribute="height" constant="376" id="WWn-v9-ynL"/>
+                                                    <constraint firstAttribute="width" constant="171" id="Z9K-Xa-yvA"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="WWn-v9-ynL"/>
+                                                        <exclude reference="63x-N0-UnY"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf_monstera1" translatesAutoresizingMaskIntoConstraints="NO" id="3pQ-cr-l8a">
+                                                <rect key="frame" x="-290" y="-145" width="504" height="376"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="376" id="Odd-7b-JS9"/>
+                                                    <constraint firstAttribute="width" constant="504" id="bpl-1E-7B6"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nv3-6e-fbt" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-100" id="004-tf-FCc"/>
+                                            <constraint firstAttribute="bottom" secondItem="AJj-Qs-Yve" secondAttribute="bottom" constant="123" id="1gf-7i-Vsr"/>
+                                            <constraint firstAttribute="trailing" secondItem="WRg-t6-gz5" secondAttribute="trailing" constant="-194" id="1qb-2y-rz5"/>
+                                            <constraint firstItem="3pQ-cr-l8a" firstAttribute="leading" secondItem="D4O-cy-2JS" secondAttribute="leading" constant="-290" id="2yA-3Q-sp9"/>
+                                            <constraint firstAttribute="bottom" secondItem="nv3-6e-fbt" secondAttribute="bottom" constant="-200" id="30P-TQ-VAY"/>
+                                            <constraint firstItem="HoY-Sb-VYt" firstAttribute="leading" secondItem="D4O-cy-2JS" secondAttribute="leading" constant="-73" id="3NR-GW-39l"/>
+                                            <constraint firstItem="nv3-6e-fbt" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-100" id="6V6-8s-Tas"/>
+                                            <constraint firstItem="UAe-md-yld" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-19" id="7aS-D5-eEb"/>
+                                            <constraint firstAttribute="bottom" secondItem="UdQ-57-fAm" secondAttribute="bottom" constant="34" id="8OS-RI-WRI"/>
+                                            <constraint firstAttribute="bottom" secondItem="WRg-t6-gz5" secondAttribute="bottom" constant="-62" id="9FM-Ga-u2d"/>
+                                            <constraint firstItem="AJj-Qs-Yve" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-70" id="9Pu-H7-LKL"/>
+                                            <constraint firstItem="nv3-6e-fbt" firstAttribute="leading" secondItem="D4O-cy-2JS" secondAttribute="leading" constant="-80" id="EYa-ot-DLb"/>
+                                            <constraint firstAttribute="bottom" secondItem="AJj-Qs-Yve" secondAttribute="bottom" constant="61" id="M61-bO-SAA"/>
+                                            <constraint firstItem="nv3-6e-fbt" firstAttribute="top" secondItem="3pQ-cr-l8a" secondAttribute="bottom" constant="-100" id="Swv-Hp-mhn"/>
+                                            <constraint firstAttribute="bottom" secondItem="WRg-t6-gz5" secondAttribute="bottom" constant="12" id="TT8-5s-tuW"/>
+                                            <constraint firstItem="WRg-t6-gz5" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="80" id="TUi-JP-Ngw"/>
+                                            <constraint firstItem="nv3-6e-fbt" firstAttribute="leading" secondItem="D4O-cy-2JS" secondAttribute="leading" constant="-160" id="Ubv-ir-HtK"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJj-Qs-Yve" secondAttribute="trailing" constant="-223" id="YFW-sx-Wis"/>
+                                            <constraint firstItem="mUN-Nl-G4M" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-12" id="bfX-zk-NYz"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJj-Qs-Yve" secondAttribute="trailing" constant="-324" id="cTt-Pt-IZr"/>
+                                            <constraint firstItem="UdQ-57-fAm" firstAttribute="leading" secondItem="D4O-cy-2JS" secondAttribute="leading" constant="-50" id="cxv-Au-SFq"/>
+                                            <constraint firstAttribute="bottom" secondItem="HoY-Sb-VYt" secondAttribute="bottom" constant="61" id="eCS-mz-8X5"/>
+                                            <constraint firstAttribute="trailing" secondItem="AJj-Qs-Yve" secondAttribute="trailing" constant="-140" id="gIO-ad-ZNG"/>
+                                            <constraint firstAttribute="trailing" secondItem="mUN-Nl-G4M" secondAttribute="trailing" constant="-32" id="hTz-On-Gwq"/>
+                                            <constraint firstAttribute="trailing" secondItem="WRg-t6-gz5" secondAttribute="trailing" constant="-312" id="ttm-jt-7xo"/>
+                                            <constraint firstAttribute="trailing" secondItem="UAe-md-yld" secondAttribute="trailing" constant="-71" id="vTB-3l-yjL"/>
+                                            <constraint firstItem="3pQ-cr-l8a" firstAttribute="top" secondItem="D4O-cy-2JS" secondAttribute="top" constant="-145" id="viS-TX-elk"/>
+                                            <constraint firstAttribute="trailing" secondItem="WRg-t6-gz5" secondAttribute="trailing" constant="-140" id="viX-pG-BpF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="004-tf-FCc"/>
+                                                <exclude reference="30P-TQ-VAY"/>
+                                                <exclude reference="EYa-ot-DLb"/>
+                                                <exclude reference="Swv-Hp-mhn"/>
+                                                <exclude reference="cTt-Pt-IZr"/>
+                                                <exclude reference="1gf-7i-Vsr"/>
+                                                <exclude reference="9Pu-H7-LKL"/>
+                                                <exclude reference="gIO-ad-ZNG"/>
+                                                <exclude reference="viX-pG-BpF"/>
+                                                <exclude reference="TUi-JP-Ngw"/>
+                                                <exclude reference="9FM-Ga-u2d"/>
+                                                <exclude reference="ttm-jt-7xo"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Hzg-51-6xm" secondAttribute="trailing" id="1sH-p8-VOa"/>
@@ -411,11 +558,15 @@
                                     <constraint firstItem="Hzg-51-6xm" firstAttribute="top" secondItem="Ekf-R6-O9F" secondAttribute="top" id="QJR-BQ-HXi"/>
                                     <constraint firstItem="gfM-Jn-Ugq" firstAttribute="leading" secondItem="Ekf-R6-O9F" secondAttribute="leading" id="RDF-J2-mVf"/>
                                     <constraint firstItem="Hzg-51-6xm" firstAttribute="leading" secondItem="Ekf-R6-O9F" secondAttribute="leading" id="VHM-Gh-IZH"/>
+                                    <constraint firstAttribute="bottom" secondItem="D4O-cy-2JS" secondAttribute="bottom" id="WIE-d4-QIQ"/>
                                     <constraint firstItem="bJY-5r-eWO" firstAttribute="trailing" secondItem="gfM-Jn-Ugq" secondAttribute="trailing" id="a3p-0E-zI0"/>
                                     <constraint firstItem="P5W-BB-uzG" firstAttribute="bottom" secondItem="Hzg-51-6xm" secondAttribute="bottom" id="akP-2J-z5C"/>
                                     <constraint firstItem="P5W-BB-uzG" firstAttribute="top" secondItem="gfM-Jn-Ugq" secondAttribute="top" id="apR-I7-x4H"/>
+                                    <constraint firstItem="D4O-cy-2JS" firstAttribute="top" secondItem="Ekf-R6-O9F" secondAttribute="top" id="bgu-R7-AIx"/>
                                     <constraint firstItem="bJY-5r-eWO" firstAttribute="leading" secondItem="Hzg-51-6xm" secondAttribute="leading" id="cPo-Tq-sDh"/>
+                                    <constraint firstItem="D4O-cy-2JS" firstAttribute="leading" secondItem="Ekf-R6-O9F" secondAttribute="leading" id="erG-UV-RQ9"/>
                                     <constraint firstItem="bJY-5r-eWO" firstAttribute="bottom" secondItem="P5W-BB-uzG" secondAttribute="bottom" id="gcB-h5-Dc5"/>
+                                    <constraint firstAttribute="trailing" secondItem="D4O-cy-2JS" secondAttribute="trailing" id="hzi-bs-b9d"/>
                                     <constraint firstAttribute="bottom" secondItem="gfM-Jn-Ugq" secondAttribute="bottom" id="q0p-4g-ziw"/>
                                     <constraint firstItem="P5W-BB-uzG" firstAttribute="leading" secondItem="Hzg-51-6xm" secondAttribute="leading" id="qGA-kU-ysc"/>
                                     <constraint firstItem="P5W-BB-uzG" firstAttribute="trailing" secondItem="gfM-Jn-Ugq" secondAttribute="trailing" id="tm0-d6-0mP"/>
