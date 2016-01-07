@@ -622,10 +622,10 @@
             </objects>
             <point key="canvasLocation" x="-325" y="285"/>
         </scene>
-        <!--Choice Controller-->
+        <!--Choice Second Controller-->
         <scene sceneID="MCf-00-OXT">
             <objects>
-                <viewController storyboardIdentifier="Choice2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zcl-gf-bxd" customClass="ChoiceController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Choice2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zcl-gf-bxd" customClass="ChoiceSecondController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dai-5k-jpt"/>
                         <viewControllerLayoutGuide type="bottom" id="90c-zo-9UM"/>
@@ -634,6 +634,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0S-Qb-ZwR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4b-Dr-xXt">
                                 <rect key="frame" x="180" y="360" width="240" height="240"/>
                                 <constraints>
@@ -644,7 +647,7 @@
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r3-bj-UUj">
-                                <rect key="frame" x="20" y="100" width="560" height="21"/>
+                                <rect key="frame" x="20" y="100" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -653,12 +656,24 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="z4b-Dr-xXt" secondAttribute="trailing" constant="20" id="24Z-2U-Hsn"/>
+                            <constraint firstAttribute="trailing" secondItem="j0S-Qb-ZwR" secondAttribute="trailing" id="8uC-MN-HDI"/>
                             <constraint firstItem="z4b-Dr-xXt" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leading" constant="20" id="Ijd-Ud-87H"/>
+                            <constraint firstItem="90c-zo-9UM" firstAttribute="top" secondItem="j0S-Qb-ZwR" secondAttribute="bottom" id="JRy-rv-pBM"/>
                             <constraint firstItem="5r3-bj-UUj" firstAttribute="trailing" secondItem="EeN-ky-cSP" secondAttribute="trailingMargin" id="OTm-7k-zlY"/>
+                            <constraint firstItem="j0S-Qb-ZwR" firstAttribute="top" secondItem="5r3-bj-UUj" secondAttribute="bottom" id="cSt-Wi-Ubu"/>
                             <constraint firstItem="5r3-bj-UUj" firstAttribute="top" secondItem="Dai-5k-jpt" secondAttribute="bottom" constant="80" id="dkp-lD-H2f"/>
+                            <constraint firstItem="j0S-Qb-ZwR" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leading" id="gJA-PB-zgZ"/>
                             <constraint firstItem="90c-zo-9UM" firstAttribute="top" secondItem="z4b-Dr-xXt" secondAttribute="bottom" id="oPv-D6-4Ff"/>
                             <constraint firstItem="5r3-bj-UUj" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leadingMargin" id="q2Z-dE-0sE"/>
+                            <constraint firstAttribute="bottom" secondItem="j0S-Qb-ZwR" secondAttribute="bottom" id="vSV-tY-wtL"/>
+                            <constraint firstItem="j0S-Qb-ZwR" firstAttribute="top" secondItem="EeN-ky-cSP" secondAttribute="top" id="wAd-c3-1ss"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cSt-Wi-Ubu"/>
+                                <exclude reference="JRy-rv-pBM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="3"/>
@@ -793,6 +808,6 @@
         <image name="vert" width="148" height="148"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pxz-Ru-a1S"/>
+        <segue reference="7SA-qE-gPr"/>
     </inferredMetricsTieBreakers>
 </document>
