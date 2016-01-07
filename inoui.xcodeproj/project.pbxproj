@@ -29,6 +29,9 @@
 		026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */; };
 		026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */; };
 		02B47EC51C3E9675001372B7 /* TropicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B47EC41C3E9675001372B7 /* TropicalView.swift */; };
+		02B47EC71C3ECD84001372B7 /* tribe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 02B47EC61C3ECD84001372B7 /* tribe.mp4 */; };
+		02B47EC91C3ECDB1001372B7 /* ChoiceThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B47EC81C3ECDB1001372B7 /* ChoiceThirdViewController.swift */; };
+		02B47ECD1C3ED767001372B7 /* plume.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 02B47ECC1C3ED767001372B7 /* plume.mp4 */; };
 		02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCEF371C34B6EA00186654 /* ChoiceView.swift */; };
 		02C4A4DD1C3ABA4B009E0CFA /* Results.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */; };
 		02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */; };
@@ -116,6 +119,9 @@
 		026BF8BE1C0DD7EC00601876 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		026BF8C41C0DF49800601876 /* UnblurAnimationSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnblurAnimationSegue.swift; sourceTree = "<group>"; };
 		02B47EC41C3E9675001372B7 /* TropicalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TropicalView.swift; sourceTree = "<group>"; };
+		02B47EC61C3ECD84001372B7 /* tribe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tribe.mp4; sourceTree = "<group>"; };
+		02B47EC81C3ECDB1001372B7 /* ChoiceThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceThirdViewController.swift; sourceTree = "<group>"; };
+		02B47ECC1C3ED767001372B7 /* plume.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = plume.mp4; sourceTree = "<group>"; };
 		02BCEF371C34B6EA00186654 /* ChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Results.storyboard; sourceTree = "<group>"; };
 		02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +248,8 @@
 		026AADFA1BF4DDA800FF9E21 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				02B47EC61C3ECD84001372B7 /* tribe.mp4 */,
+				02B47ECC1C3ED767001372B7 /* plume.mp4 */,
 				02D0C6E41C3D7D120060A134 /* cascade.mp4 */,
 				026AADFB1BF4DDBC00FF9E21 /* OpenSans-Bold.ttf */,
 				026AADFC1BF4DDBC00FF9E21 /* OpenSans-BoldItalic.ttf */,
@@ -552,6 +560,7 @@
 				8920EA9A1C11E4AA001D7A33 /* ChoiceController.swift */,
 				02D0C6E21C3D7C240060A134 /* ChoiceFirstViewController.swift */,
 				02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */,
+				02B47EC81C3ECDB1001372B7 /* ChoiceThirdViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -676,6 +685,7 @@
 				026AAE091BF4DE1400FF9E21 /* OpenSans-Italic.ttf in Resources */,
 				026AAE0A1BF4DE1400FF9E21 /* OpenSans-Light.ttf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
+				02B47ECD1C3ED767001372B7 /* plume.mp4 in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
 				8920EA761C104299001D7A33 /* sound.caf in Resources */,
@@ -689,6 +699,7 @@
 				893F6BC91C3D5B41007CB1F9 /* test22.caf in Resources */,
 				02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
+				02B47EC71C3ECD84001372B7 /* tribe.mp4 in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
 				893F6BD91C3E7F5A007CB1F9 /* test43.caf in Resources */,
@@ -726,6 +737,7 @@
 				8920EA6A1C103899001D7A33 /* Playback.swift in Sources */,
 				026BF8C51C0DF49800601876 /* UnblurAnimationSegue.swift in Sources */,
 				8920EA891C11CE73001D7A33 /* IntroView.swift in Sources */,
+				02B47EC91C3ECDB1001372B7 /* ChoiceThirdViewController.swift in Sources */,
 				02D0C6E31C3D7C240060A134 /* ChoiceFirstViewController.swift in Sources */,
 				02C4A4E11C3ABA87009E0CFA /* ResultsViewController.swift in Sources */,
 				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
