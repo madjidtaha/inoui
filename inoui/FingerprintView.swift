@@ -65,7 +65,7 @@ class FingerprintView: UIView, LocationManagerDelegate {
         
         CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMidY(rect));
         
-        CGContextRotateCTM(context, angle);
+        CGContextRotateCTM(context, -angle);
 //        CGContextRotateCTM(context, CGFloat((M_PI * angle) / 180));
 
         

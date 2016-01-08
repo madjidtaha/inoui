@@ -544,7 +544,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1F0-1i-GIY">
-                                <rect key="frame" x="180" y="70" width="240" height="128"/>
+                                <rect key="frame" x="180" y="105" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="1PE-gv-vnY"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="As2-ZC-eRo"/>
@@ -553,9 +553,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="eYM-pp-SlZ"/>
                                     <constraint firstAttribute="width" constant="240" id="tW9-2h-THu"/>
                                 </constraints>
-                                <string key="text">Vous êtes entouréed’univers distincts,lequel choisissez-vous ?</string>
+                                <string key="text">Vous êtes entourée
+d’univers distincts,
+lequel choisissez-vous ?</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -590,7 +592,7 @@
                             <constraint firstAttribute="trailing" secondItem="hMH-of-Rqo" secondAttribute="trailing" id="bb6-gB-20C"/>
                             <constraint firstItem="GF3-Zp-YeZ" firstAttribute="top" secondItem="F5u-Nb-Zz2" secondAttribute="top" id="bhV-2z-vaR"/>
                             <constraint firstItem="hMH-of-Rqo" firstAttribute="top" secondItem="F5u-Nb-Zz2" secondAttribute="top" id="dHs-qs-ZXi"/>
-                            <constraint firstItem="1F0-1i-GIY" firstAttribute="top" secondItem="dE5-1L-J3O" secondAttribute="bottom" constant="50" id="dcW-4C-a1S"/>
+                            <constraint firstItem="1F0-1i-GIY" firstAttribute="top" secondItem="dE5-1L-J3O" secondAttribute="bottom" constant="85" id="dcW-4C-a1S"/>
                             <constraint firstItem="dcO-Pl-Pu5" firstAttribute="top" secondItem="F5u-Nb-Zz2" secondAttribute="top" id="e0h-5Q-cmo"/>
                             <constraint firstItem="Fst-US-5Wh" firstAttribute="leading" secondItem="F5u-Nb-Zz2" secondAttribute="leading" constant="20" id="edm-bB-Peo"/>
                             <constraint firstItem="8vd-SI-wWa" firstAttribute="top" secondItem="Fst-US-5Wh" secondAttribute="bottom" id="lH4-l2-sdy"/>
@@ -957,17 +959,25 @@
                                 </connections>
                             </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-d0-jsO">
-                                <rect key="frame" x="180" y="70" width="240" height="128"/>
+                                <rect key="frame" x="180" y="105" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="8FR-AC-cs2"/>
                                     <constraint firstAttribute="height" constant="128" id="Jp9-Yq-l2P"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="htv-nX-LnR"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="wCa-bm-YI8"/>
                                 </constraints>
-                                <string key="text">Vous êtes entouréed’univers distincts,lequel choisissez-vous ?</string>
+                                <string key="text">Vous êtes entourée
+d’univers distincts,
+lequel choisissez-vous ?</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="htv-nX-LnR"/>
+                                        <exclude reference="wCa-bm-YI8"/>
+                                    </mask>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -978,7 +988,7 @@
                             <constraint firstItem="90c-zo-9UM" firstAttribute="top" secondItem="8Yd-FY-gpc" secondAttribute="bottom" id="8Wa-7o-ojK"/>
                             <constraint firstAttribute="trailing" secondItem="j0S-Qb-ZwR" secondAttribute="trailing" id="8uC-MN-HDI"/>
                             <constraint firstItem="F53-wM-N18" firstAttribute="top" secondItem="EeN-ky-cSP" secondAttribute="top" id="A7i-uS-mYJ"/>
-                            <constraint firstItem="8Fc-d0-jsO" firstAttribute="top" secondItem="Dai-5k-jpt" secondAttribute="bottom" constant="50" id="BX9-rF-pf9"/>
+                            <constraint firstItem="8Fc-d0-jsO" firstAttribute="top" secondItem="Dai-5k-jpt" secondAttribute="bottom" constant="85" id="BX9-rF-pf9"/>
                             <constraint firstItem="z4b-Dr-xXt" firstAttribute="leading" secondItem="EeN-ky-cSP" secondAttribute="leading" constant="20" id="Ijd-Ud-87H"/>
                             <constraint firstItem="90c-zo-9UM" firstAttribute="top" secondItem="j0S-Qb-ZwR" secondAttribute="bottom" id="JRy-rv-pBM"/>
                             <constraint firstItem="8Fc-d0-jsO" firstAttribute="centerX" secondItem="EeN-ky-cSP" secondAttribute="centerX" id="LsS-I7-SSC"/>
@@ -1130,16 +1140,18 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mab-TP-Wee">
-                                <rect key="frame" x="180" y="70" width="240" height="128"/>
+                                <rect key="frame" x="180" y="105" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="OVW-qG-aiF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="aKk-rZ-d9r"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="nrF-bk-O6I"/>
                                     <constraint firstAttribute="height" constant="128" id="sb3-N0-9vw"/>
                                 </constraints>
-                                <string key="text">Vous êtes entouréed’univers distincts,lequel choisissez-vous ?</string>
+                                <string key="text">Vous êtes entourée
+d’univers distincts,
+lequel choisissez-vous ?</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -1166,7 +1178,7 @@
                             <constraint firstItem="nBK-no-aDg" firstAttribute="top" secondItem="WkD-62-428" secondAttribute="bottom" id="8ij-KB-a71"/>
                             <constraint firstItem="nBK-no-aDg" firstAttribute="top" secondItem="WhE-uh-kqE" secondAttribute="bottom" id="Afm-l5-G3e"/>
                             <constraint firstItem="xMv-Jb-Pvw" firstAttribute="leading" secondItem="Da6-s5-t2a" secondAttribute="leading" id="Bc1-zf-24x"/>
-                            <constraint firstItem="Mab-TP-Wee" firstAttribute="top" secondItem="dIH-NO-8QT" secondAttribute="bottom" constant="50" id="Flf-WU-kPR"/>
+                            <constraint firstItem="Mab-TP-Wee" firstAttribute="top" secondItem="dIH-NO-8QT" secondAttribute="bottom" constant="85" id="Flf-WU-kPR"/>
                             <constraint firstAttribute="trailing" secondItem="LQz-up-3sC" secondAttribute="trailing" id="HWR-v5-iHP"/>
                             <constraint firstItem="LQz-up-3sC" firstAttribute="top" secondItem="Da6-s5-t2a" secondAttribute="top" id="KWe-qA-TgK"/>
                             <constraint firstItem="nBK-no-aDg" firstAttribute="top" secondItem="LQz-up-3sC" secondAttribute="bottom" id="Nj3-Sx-O7z"/>
@@ -1272,6 +1284,6 @@
         <image name="vert" width="148" height="148"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R2Q-hM-tMq"/>
+        <segue reference="pxz-Ru-a1S"/>
     </inferredMetricsTieBreakers>
 </document>
