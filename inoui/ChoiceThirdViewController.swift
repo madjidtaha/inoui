@@ -59,10 +59,25 @@ class ChoiceThirdViewController: ChoiceController {
     
     }
     
+    override func initChoices() {
+        self.soundsNames = ["tribe", "animals"];
+        print("INITCHOICE---------");
+        for var index = 0; index < self.soundsNames.count; index++ {
+            self.sounds[index] = index;
+            
+        }
+        self.locationManager?.choiceNumber = self.sounds.count;
+        
+        self.locationManager?.choices.addObjectsFromArray(sounds as [AnyObject]);
+        
+        
+    }
+    
     // MARK - FingerPrintDelegate
     
     override func onButtonDown(sender: AnyObject) {
-        self.locationManager?.toggleGyro()
+        super.onButtonDown(sender);
+        //self.locationManager?.toggleGyro()
     }
     override func onButtonUp(sender: AnyObject) {
         self.locationManager?.toggleGyro()
@@ -111,13 +126,24 @@ class ChoiceThirdViewController: ChoiceController {
                     });
                     
             });
-            
+        
+        }
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).stop();
         }
     }
     
     // MARK - LocationManagerDelegate
     
     override func onChoiceChange(choice: Int) {
+        super.onChoiceChange(choice);
         
         print("ONCHOICECHANGE \(choice)");
         
@@ -142,5 +168,4 @@ class ChoiceThirdViewController: ChoiceController {
 //            }, completion: nil)
         
     }
-    
 }
