@@ -51,7 +51,7 @@ de droite à gauche.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
                                 <rect key="frame" x="287" y="95" width="26" height="44"/>
                             </imageView>
                         </subviews>
@@ -122,15 +122,6 @@ de droite à gauche.</string>
                                     <constraint firstItem="bj0-nZ-fBW" firstAttribute="top" secondItem="ss6-59-QrA" secondAttribute="top" id="vgR-za-EjO"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txu-rp-6Dh" customClass="FingerprintView" customModule="inoui" customModuleProvider="target">
-                                <rect key="frame" x="180" y="360" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="txu-rp-6Dh" secondAttribute="height" multiplier="1:1" id="ga6-pi-wiw"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="T61-lE-wLC" kind="embed" id="7VP-gO-hzd"/>
-                                </connections>
-                            </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oLB-3J-9TO">
                                 <rect key="frame" x="180" y="28" width="240" height="68"/>
                                 <constraints>
@@ -171,6 +162,15 @@ l’expérience.</string>
                                     <constraint firstAttribute="width" constant="240" id="mN5-RT-mvf"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txu-rp-6Dh">
+                                <rect key="frame" x="180" y="360" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="txu-rp-6Dh" secondAttribute="height" multiplier="1:1" id="ga6-pi-wiw"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="T61-lE-wLC" kind="embed" id="7VP-gO-hzd"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -356,6 +356,6 @@ l’expérience.</string>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4lG-EF-5Xa"/>
+        <segue reference="7VP-gO-hzd"/>
     </inferredMetricsTieBreakers>
 </document>

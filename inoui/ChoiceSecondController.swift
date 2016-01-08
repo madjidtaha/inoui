@@ -18,7 +18,6 @@ class ChoiceSecondController: ChoiceController {
     var lastChoice : Int?;
    
     var player : MPMoviePlayerController?;
-    var videos = ["cascade"]
 
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -65,8 +64,6 @@ class ChoiceSecondController: ChoiceController {
     override func onButtonUp(sender: AnyObject) {
 //        super.onButtonUp(sender);
         self.locationManager?.toggleGyro();
-
-        print("\(self.locationManager?.tilt)")
         
         if self.lastChoice == 1 {
             
@@ -78,11 +75,11 @@ class ChoiceSecondController: ChoiceController {
                     
                     
                     let destStoryboard = UIStoryboard(name: "Choice", bundle: nil);
-                    let vc = destStoryboard.instantiateViewControllerWithIdentifier("Choice"+self.nextStep!);
+                    let dst = destStoryboard.instantiateViewControllerWithIdentifier("Choice3");
                     
                     
                     let src = self;
-                    let dst = vc;
+                    
                     src.view.addSubview(dst.view);
                     
                     src.view.alpha = 1.0;
@@ -120,7 +117,7 @@ class ChoiceSecondController: ChoiceController {
     // MARK - LocationManagerDelegate
     
     override func onChoiceChange(choice: Int) {
-        super.onChoiceChange(choice);
+//        super.onChoiceChange(choice);
         
         print("location \(choice)");
         
@@ -130,11 +127,6 @@ class ChoiceSecondController: ChoiceController {
         
         
         self.lastChoice = choice;
-        
-        
-        
-        
-        
         
     }
     

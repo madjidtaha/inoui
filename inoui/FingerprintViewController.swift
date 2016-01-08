@@ -21,12 +21,15 @@ class FingerprintViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        print("Fingerprint ViewController");
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated);
+    }
+    
     override func didMoveToParentViewController(parent: UIViewController?) {
-        print(self.parentViewController);
+//        print(self.parentViewController);
         
         if let sourceViewController = (self.parentViewController as? FingerprintViewControllerDelegate) {
             self.delegate = sourceViewController;
@@ -40,7 +43,7 @@ class FingerprintViewController: UIViewController {
     
     @IBAction func onButtonDown(sender: AnyObject) {
         self.delegate?.onButtonDown(sender);
-        print("WOUHOU FINGERPRINT ");
+//        print("WOUHOU FINGERPRINT ");
         // TODO, cancel buttonup if touch too fast
         self.lastTouch = NSDate().timeIntervalSince1970;
         
