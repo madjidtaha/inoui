@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 class TutorialViewController: UIViewController, FingerprintViewControllerDelegate, LocationManagerDelegate {
-
+    
+    @IBOutlet weak var phoneView: UIImageView!
     @IBOutlet weak var ageView: UITextView?
     var currentChoice: Int = -1;
     var nextStep : String?;
@@ -54,6 +55,51 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         }
         //self.playback?.playMusic();
 
+        if self.restorationIdentifier == "tutorialStep1" {
+            
+            
+            let animation = CAKeyframeAnimation(keyPath: "transform")
+            animation.values = [
+                NSValue(CATransform3D: CATransform3DConcat(
+                    CATransform3DMakeRotation(-10 * CGFloat(M_PI/180.0), 0, 0, 1),
+                    CATransform3DMakeTranslation(-50, 0, 0)
+                    )),
+                NSValue(CATransform3D: CATransform3DConcat(
+                    CATransform3DMakeRotation(0, 0, 0, 1),
+                    CATransform3DMakeTranslation(0, 0, 0)
+                    )),
+                NSValue(CATransform3D: CATransform3DConcat(
+                    CATransform3DMakeRotation(10 * CGFloat(M_PI/180.0), 0, 0, 1),
+                    CATransform3DMakeTranslation(50, 0, 0)
+                    )),
+                NSValue(CATransform3D: CATransform3DConcat(
+                    CATransform3DMakeRotation(0, 0, 0, 1),
+                    CATransform3DMakeTranslation(0, 0, 0)
+                    )),
+                NSValue(CATransform3D: CATransform3DConcat(
+                    CATransform3DMakeRotation(-10 * CGFloat(M_PI/180.0), 0, 0, 1),
+                    CATransform3DMakeTranslation(-50, 0, 0)
+                    ))
+                
+            ]
+            animation.timingFunctions = [
+                CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),
+                CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
+                CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn),
+                CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
+                CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            ]
+            animation.keyTimes = [ 0.0, 0.25, 0.5, 0.75, 1.0 ]
+            animation.duration = 2
+            animation.repeatCount = Float.infinity
+            animation.removedOnCompletion = false
+            animation.fillMode = kCAFillModeBoth
+            
+            
+            self.phoneView.layoutIfNeeded()
+            self.phoneView.layer.addAnimation(animation, forKey: "transform")
+            
+        }
         
     }
 

@@ -69,6 +69,9 @@ de droite à gauche.</string>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="2"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="phoneView" destination="n6K-Af-vBL" id="k3g-9h-pwK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLh-kz-Gqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,7 +278,9 @@ l’expérience.</string>
                         <userDefinedRuntimeAttribute type="string" keyPath="nextStep" value="4"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="ageView" destination="Xeq-aN-iTA" id="O5Y-dR-30i"/>
+                        <outlet property="ageView" destination="Xeq-aN-iTA" id="VUd-9b-xZW"/>
+                        <outlet property="labelView" destination="6Cu-sx-5Zc" id="8Cb-8S-RA1"/>
+                        <outlet property="textView" destination="gBd-0K-KCz" id="B1R-wS-QW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xuV-71-fMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,6 +361,6 @@ l’expérience.</string>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lGa-Wi-6Cm"/>
+        <segue reference="4lG-EF-5Xa"/>
     </inferredMetricsTieBreakers>
 </document>

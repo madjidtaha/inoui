@@ -109,18 +109,15 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         let dst = UIStoryboard(name: storyboard, bundle: nil).instantiateInitialViewController();
         
         src.view.addSubview(dst!.view);
-        src.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
-        dst!.view.transform = CGAffineTransformMakeTranslation(dst!.view.bounds.size.width * 1.0, 0.0);
+        src.view.alpha = 1.0;
         
-        let originalCenter : CGPoint = src.view.center;
+        dst!.view.alpha = 0.0;
         
         UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
             
             print("ANIMATE");
             
-            src.view.transform = CGAffineTransformMakeTranslation(src.view.bounds.size.width * -1.0, 0.0);
-            // dst!.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
-            dst!.view.center = originalCenter;
+            dst!.view.alpha = 1.0;
             
             }, completion: { (finished) -> Void in
                 print("Complete");
@@ -129,6 +126,8 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
                 appDelegate.navigationController?.pushViewController(dst!, animated: false);
         });
 
+     
+        
     }
 
     
