@@ -55,7 +55,7 @@ class ChoiceFirstViewController: ChoiceController {
                 let string : String = (self.soundsNames[i] as! String) + "_" + self.subNames[j];
                 print(string);
                 sound.addSound(string, ext: "caf");
-//                ((self.sounds[self.sounds.count - 1] as! SoundsComposition).sounds[j] as! Sound).type = self.subNames[j];
+                (sound.sounds[j] as! Sound).type = self.subNames[j];
             }
             print(sound.index);
             sound.choiceNumber = self.sounds.count;

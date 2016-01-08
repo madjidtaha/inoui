@@ -69,10 +69,10 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
                 print("headphone plugged in");
-                self.playback?.playMusic();
+                //self.playback?.playMusic();
             } else {
                 print("headphone pulled out")
-                self.playback?.stopMusic();
+                //self.playback?.stopMusic();
                 
                 if let topController = (UIApplication.sharedApplication().delegate as! AppDelegate).navigationController {
  
@@ -102,7 +102,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         self.locationManager?.toggleGyro();
         
         self.playback?.playSound("WIND");
-        self.playback?.fadeOutMusic();
+        //self.playback?.fadeOutMusic();
 
     }
 
@@ -111,7 +111,7 @@ class TutorialViewController: UIViewController, FingerprintViewControllerDelegat
         self.locationManager?.toggleGyro();
         
         self.playback?.stopSound("WIND");
-        self.playback?.playMusic();
+        //self.playback?.playMusic();
         
         print(self.nextStep);
         if self.nextStep != nil {

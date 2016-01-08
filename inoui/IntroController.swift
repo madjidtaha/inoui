@@ -93,6 +93,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
     func onButtonUp(sender: AnyObject) {
 
         print("onButtonUp");
+        self.playback?.fadeOutMusic();
         
         // TODO Read the value from persistant storage
         let tutorialDone = true;

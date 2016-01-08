@@ -15,7 +15,6 @@ class Sound: NSObject {
     var index: NSInteger = 0;
     var name = String();
     var playback = Playback?();
-    var type : String = String();
     
     override init() {
         super.init();
@@ -43,4 +42,20 @@ class Sound: NSObject {
         self.playback?.stopSound(self.name);
     }
     
+    //MARK: Setters / Getters
+    
+    // The coordinates of the sound source
+    private var _type: String = String()
+    dynamic var type: String {
+        get {
+            return self._type;
+        }
+        
+        set(TYPE) {
+            self._type = TYPE;
+            print(self._type);
+        }
+    }
+    
+
 }

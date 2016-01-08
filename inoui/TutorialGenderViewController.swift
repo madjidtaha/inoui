@@ -64,7 +64,7 @@ class TutorialGenderViewController: TutorialViewController {
         self.locationManager?.toggleGyro();
         
         self.playback?.playSound("WIND");
-        self.playback?.fadeOutMusic();
+        //self.playback?.fadeOutMusic();
    
         if !questionVisible {
             
@@ -102,7 +102,7 @@ class TutorialGenderViewController: TutorialViewController {
         self.locationManager?.toggleGyro();
         
         self.playback?.stopSound("WIND");
-        self.playback?.playMusic();
+        //self.playback?.playMusic();
         
         var backgroundUnblured = self.manView;
         
