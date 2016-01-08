@@ -66,7 +66,6 @@
 		893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */; };
 		893F6BD31C3E65FD007CB1F9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */; };
 		893F6C001C3EE6E5007CB1F9 /* city_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF41C3EE6E5007CB1F9 /* city_background.caf */; };
-		893F6C011C3EE6E5007CB1F9 /* city_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */; };
 		893F6C021C3EE6E5007CB1F9 /* city_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */; };
 		893F6C031C3EE6E5007CB1F9 /* country_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF71C3EE6E5007CB1F9 /* country_background.caf */; };
 		893F6C041C3EE6E5007CB1F9 /* country_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */; };
@@ -83,6 +82,13 @@
 		893F6C151C3F3F62007CB1F9 /* forest_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C0F1C3F3F62007CB1F9 /* forest_background.caf */; };
 		893F6C161C3F3F62007CB1F9 /* forest_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C101C3F3F62007CB1F9 /* forest_extra.caf */; };
 		893F6C171C3F3F62007CB1F9 /* forest_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C111C3F3F62007CB1F9 /* forest_voice.caf */; };
+		893F6C191C3F4488007CB1F9 /* city_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C181C3F4488007CB1F9 /* city_extra.caf */; };
+		893F6C201C3F4599007CB1F9 /* animals_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1A1C3F4599007CB1F9 /* animals_background.caf */; };
+		893F6C211C3F4599007CB1F9 /* animals_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1B1C3F4599007CB1F9 /* animals_extra.caf */; };
+		893F6C221C3F4599007CB1F9 /* animals_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1C1C3F4599007CB1F9 /* animals_voice.caf */; };
+		893F6C231C3F4599007CB1F9 /* tribe_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1D1C3F4599007CB1F9 /* tribe_background.caf */; };
+		893F6C241C3F4599007CB1F9 /* tribe_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1E1C3F4599007CB1F9 /* tribe_extra.caf */; };
+		893F6C251C3F4599007CB1F9 /* tribe_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1F1C3F4599007CB1F9 /* tribe_voice.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +174,6 @@
 		893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = heartbeat.mp3; path = sounds/heartbeat.mp3; sourceTree = "<group>"; };
 		893F6BD21C3E65FD007CB1F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		893F6BF41C3EE6E5007CB1F9 /* city_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_background.caf; path = sounds/city_background.caf; sourceTree = "<group>"; };
-		893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_extra.caf; path = sounds/city_extra.caf; sourceTree = "<group>"; };
 		893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_voice.caf; path = sounds/city_voice.caf; sourceTree = "<group>"; };
 		893F6BF71C3EE6E5007CB1F9 /* country_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = country_background.caf; path = sounds/country_background.caf; sourceTree = "<group>"; };
 		893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = country_extra.caf; path = sounds/country_extra.caf; sourceTree = "<group>"; };
@@ -185,6 +190,13 @@
 		893F6C0F1C3F3F62007CB1F9 /* forest_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = forest_background.caf; path = sounds/forest_background.caf; sourceTree = "<group>"; };
 		893F6C101C3F3F62007CB1F9 /* forest_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = forest_extra.caf; path = sounds/forest_extra.caf; sourceTree = "<group>"; };
 		893F6C111C3F3F62007CB1F9 /* forest_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = forest_voice.caf; path = sounds/forest_voice.caf; sourceTree = "<group>"; };
+		893F6C181C3F4488007CB1F9 /* city_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = city_extra.caf; path = sounds/city_extra.caf; sourceTree = "<group>"; };
+		893F6C1A1C3F4599007CB1F9 /* animals_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = animals_background.caf; path = sounds/animals_background.caf; sourceTree = "<group>"; };
+		893F6C1B1C3F4599007CB1F9 /* animals_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = animals_extra.caf; path = sounds/animals_extra.caf; sourceTree = "<group>"; };
+		893F6C1C1C3F4599007CB1F9 /* animals_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = animals_voice.caf; path = sounds/animals_voice.caf; sourceTree = "<group>"; };
+		893F6C1D1C3F4599007CB1F9 /* tribe_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_background.caf; path = sounds/tribe_background.caf; sourceTree = "<group>"; };
+		893F6C1E1C3F4599007CB1F9 /* tribe_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_extra.caf; path = sounds/tribe_extra.caf; sourceTree = "<group>"; };
+		893F6C1F1C3F4599007CB1F9 /* tribe_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_voice.caf; path = sounds/tribe_voice.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,8 +462,14 @@
 				893F6BD01C3E6221007CB1F9 /* heartbeat.mp3 */,
 				893F6BCE1C3D93EE007CB1F9 /* wind.caf */,
 				893F6BF41C3EE6E5007CB1F9 /* city_background.caf */,
-				893F6BF51C3EE6E5007CB1F9 /* city_extra.caf */,
+				893F6C181C3F4488007CB1F9 /* city_extra.caf */,
 				893F6BF61C3EE6E5007CB1F9 /* city_voice.caf */,
+				893F6C1A1C3F4599007CB1F9 /* animals_background.caf */,
+				893F6C1B1C3F4599007CB1F9 /* animals_extra.caf */,
+				893F6C1C1C3F4599007CB1F9 /* animals_voice.caf */,
+				893F6C1D1C3F4599007CB1F9 /* tribe_background.caf */,
+				893F6C1E1C3F4599007CB1F9 /* tribe_extra.caf */,
+				893F6C1F1C3F4599007CB1F9 /* tribe_voice.caf */,
 				893F6BF71C3EE6E5007CB1F9 /* country_background.caf */,
 				893F6BF81C3EE6E5007CB1F9 /* country_extra.caf */,
 				893F6BF91C3EE6E5007CB1F9 /* country_voice.caf */,
@@ -690,9 +708,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893F6C241C3F4599007CB1F9 /* tribe_extra.caf in Resources */,
 				026AAE051BF4DE1400FF9E21 /* OpenSans-Bold.ttf in Resources */,
-				893F6C011C3EE6E5007CB1F9 /* city_extra.caf in Resources */,
+				893F6C211C3F4599007CB1F9 /* animals_extra.caf in Resources */,
 				893F6C061C3EE6E5007CB1F9 /* sea_background.caf in Resources */,
+				893F6C201C3F4599007CB1F9 /* animals_background.caf in Resources */,
 				893F6C151C3F3F62007CB1F9 /* forest_background.caf in Resources */,
 				026AAE061BF4DE1400FF9E21 /* OpenSans-BoldItalic.ttf in Resources */,
 				026AAE071BF4DE1400FF9E21 /* OpenSans-ExtraBold.ttf in Resources */,
@@ -708,6 +728,7 @@
 				893F6C0A1C3EE6E5007CB1F9 /* tropics_extra.caf in Resources */,
 				026AAE0B1BF4DE1400FF9E21 /* OpenSans-LightItalic.ttf in Resources */,
 				02B47ECD1C3ED767001372B7 /* plume.mp4 in Resources */,
+				893F6C231C3F4599007CB1F9 /* tribe_background.caf in Resources */,
 				893F6C041C3EE6E5007CB1F9 /* country_extra.caf in Resources */,
 				026AAE0C1BF4DE1400FF9E21 /* OpenSans-Regular.ttf in Resources */,
 				026BF8BF1C0DD7EC00601876 /* Tutorial.storyboard in Resources */,
@@ -722,8 +743,11 @@
 				893F6C141C3F3F62007CB1F9 /* cascade_voice.caf in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				02B47EC71C3ECD84001372B7 /* tribe.mp4 in Resources */,
+				893F6C221C3F4599007CB1F9 /* animals_voice.caf in Resources */,
 				893F6C131C3F3F62007CB1F9 /* cascade_extra.caf in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
+				893F6C191C3F4488007CB1F9 /* city_extra.caf in Resources */,
+				893F6C251C3F4599007CB1F9 /* tribe_voice.caf in Resources */,
 				893F6C071C3EE6E5007CB1F9 /* sea_extra.caf in Resources */,
 				893F6C031C3EE6E5007CB1F9 /* country_background.caf in Resources */,
 				893F6C121C3F3F62007CB1F9 /* cascade_background.caf in Resources */,
