@@ -19,6 +19,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
     @IBOutlet weak var fingerprintView: FingerprintView!
     
     var playback: Playback?;
+    var heartbeat: Bool = true;
 
     
     override func viewDidLoad() {
@@ -69,13 +70,17 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         
         for description in currentRoute.outputs {
             if description.portType == AVAudioSessionPortHeadphones {
-                self.playback?.playMusic();
+                if (self.heartbeat) {
+                    self.playback?.playMusic();
+                    self.heartbeat = false;
+                }
+                
 
                 // Shame on me... Really need time but release is so close...
                 (fingerprintView.subviews.first?.subviews.first?.subviews.first?.subviews.first as! UIButton).enabled = true;
 //                button.enabled = true;
             } else {
-                self.playback?.stopMusic();
+                //self.playback?.stopMusic();
                 (fingerprintView.subviews.first?.subviews.first?.subviews.first?.subviews.first as! UIButton).enabled = false;
             }
         }
