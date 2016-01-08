@@ -217,7 +217,7 @@ class Playback: NSObject {
     
     func fadeOutMusic() {
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("fadeOutMusic"), userInfo: nil, repeats: false);
-        print(bgPlayer?.volume);
+//        print(bgPlayer?.volume);
         if (bgPlayer?.volume > 0.025) {
             bgPlayer?.volume = (bgPlayer?.volume)! - 0.025;
         } else {
@@ -243,7 +243,7 @@ class Playback: NSObject {
             self.counter++;
         }
         
-        print("sounds \(self.sounds)");
+//        print("sounds \(self.sounds)");
     }
     
     private func initBuffer(name: String, ext:String) {
@@ -298,7 +298,7 @@ class Playback: NSObject {
         
         // attach OpenAL Buffer to OpenAL Source
         alSourcei(source[self.counter], AL_BUFFER, ALint(buffer[self.counter]))
-        print(self.counter);
+//        print(self.counter);
         error = alGetError()
         if error != AL_NO_ERROR {
             fatalError("Error attaching buffer to source: \(error)\n")
@@ -364,7 +364,7 @@ class Playback: NSObject {
         NSLog("Start!\n")
         // Begin playing our source file
         alSourcePlay(source[index])
-        print("source \(source[index])");
+//        print("source \(source[index])");
         error = alGetError()
         if error != AL_NO_ERROR {
             NSLog("error starting source: %x\n", error)

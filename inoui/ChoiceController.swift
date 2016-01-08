@@ -52,7 +52,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     }
     
     func initChoices() {
-        print("INITCHOICE---------");
+//        print("INITCHOICE---------");
         for var index = 0; index < self.soundsNames.count; index++ {
             self.sounds[index] = index;
             
@@ -199,6 +199,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
             let soundi = ((self.sounds[i]) as! SoundsComposition);
             if(soundi.isPlaying) {
                 soundi.fadeOut();
+                soundi.stopAnimate();
             }
         }
         let sound = ((self.sounds[choice]) as! SoundsComposition);

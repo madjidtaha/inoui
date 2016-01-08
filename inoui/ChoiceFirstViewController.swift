@@ -36,7 +36,7 @@ class ChoiceFirstViewController: ChoiceController {
     
     override func initChoices() {
         self.soundsNames = ["country", "sea", "city", "tropics"];
-        print("INITCHOICE---------");
+//        print("INITCHOICE---------");
         for var index = 0; index < self.soundsNames.count; index++ {
             self.sounds[index] = index;
             

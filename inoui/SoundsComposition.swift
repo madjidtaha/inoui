@@ -18,6 +18,7 @@ class SoundsComposition: NSObject {
     var index: NSInteger = NSInteger();
     var isPlaying: Bool = false;
     var choiceNumber: NSInteger = 4;
+    var isAnimated: Bool = false;
     
     override init() {
         super.init();
@@ -30,7 +31,6 @@ class SoundsComposition: NSObject {
         let sound = Sound();
         sound.initSound(name, ext: ext);
         self.sounds[sounds.count] = sound;
-        print(self.sounds);
     }
     
     func setPos() {
@@ -46,8 +46,8 @@ class SoundsComposition: NSObject {
         self.pos.x =  cos(((i * M_PI.g) / n.g) + (M_PI.g / (2.0 * n.g))) * -(diameter / 2.0);
         self.pos.y = sin(((i * M_PI.g) / n.g) + (M_PI.g / (2.0 * n.g)))  * -(diameter / 2.0);
         
-        print("Sound pos x : \(self.pos.x)");
-        print("Sound pos y : \(self.pos.y)");
+//        print("Sound pos x : \(self.pos.x)");
+//        print("Sound pos y : \(self.pos.y)");
         
         for var index = 0; index < self.sounds.count; index++ {
             (self.sounds[index]as! Sound).placeSound(self.pos.x, y: self.pos.y);
@@ -75,6 +75,26 @@ class SoundsComposition: NSObject {
             
             if(abs(newY) > abs(endY) + 0.1 || abs(newY) < abs(endY) - 0.1) {
                 self.goToEndPos(newX, y: newY, endY: endY, a:a, b:b);
+            } else {
+                self.animate();
+            }
+        }
+    }
+    
+    func animate() {
+        if (!self.isAnimated) {
+            self.isAnimated = true;
+            for var index = 0; index < self.sounds.count; index++ {
+                (self.sounds[index]as! Sound).animate();
+            }
+        }
+    }
+    
+    func stopAnimate() {
+        if (self.isAnimated) {
+            self.isAnimated = false;
+            for var index = 0; index < self.sounds.count; index++ {
+                (self.sounds[index]as! Sound).stopAnimate();
             }
         }
     }
