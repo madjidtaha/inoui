@@ -22,7 +22,7 @@ class ChoiceSecondController: ChoiceController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        self.locationManager?.choiceNumber = 2;
+        //self.locationManager?.choiceNumber = 2;
         
         self.backgroundView.backgroundColor = UIColor(red:0.12, green:0.14, blue:0.14, alpha:1);
         
@@ -53,13 +53,26 @@ class ChoiceSecondController: ChoiceController {
          self.player!.play();
     }
     
+    override func initChoices() {
+        self.soundsNames = ["forest", "cascade"];
+        print("INITCHOICE---------");
+        for var index = 0; index < self.soundsNames.count; index++ {
+            self.sounds[index] = index;
+            
+        }
+        self.locationManager?.choiceNumber = self.sounds.count;
+        
+        self.locationManager?.choices.addObjectsFromArray(sounds as [AnyObject]);
+
+        
+    }
     
     // MARK - FingerPrintDelegate
     override func onButtonDown(sender: AnyObject) {
-//        super.onButtonDown(sender);
-        self.locationManager?.toggleGyro();
-
-        print("\(self.locationManager?.tilt)")
+        super.onButtonDown(sender);
+//        self.locationManager?.toggleGyro();
+//
+//        print("\(self.locationManager?.tilt)")
     }
     override func onButtonUp(sender: AnyObject) {
 //        super.onButtonUp(sender);
@@ -110,6 +123,19 @@ class ChoiceSecondController: ChoiceController {
 
         }
         
+        for var i = 0; i < self.sounds.count; i++ {
+            let soundi = ((self.sounds[i]) as! SoundsComposition);
+            if(soundi.isPlaying) {
+                soundi.fadeOut();
+            }
+        }
+        
+        for var index = 0; index < self.sounds.count; index++ {
+            (self.sounds[index] as! SoundsComposition).stop();
+        }
+        
+
+        
         
         
     }
@@ -117,7 +143,7 @@ class ChoiceSecondController: ChoiceController {
     // MARK - LocationManagerDelegate
     
     override func onChoiceChange(choice: Int) {
-//        super.onChoiceChange(choice);
+        super.onChoiceChange(choice);
         
         print("location \(choice)");
         

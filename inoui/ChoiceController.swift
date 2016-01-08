@@ -71,13 +71,14 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
                 let string : String = (self.soundsNames[i] as! String) + "_" + self.subNames[j];
                 print(string);
                 sound.addSound(string, ext: "caf");
+                (sound.sounds[j] as! Sound).type = self.subNames[j];
             }
             print(sound.index);
             sound.choiceNumber = self.sounds.count;
             sound.setPos();
         }
     }
-    
+
 
     
     // MARK: - FingerprintViewControllerDelegate
