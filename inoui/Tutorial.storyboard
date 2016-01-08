@@ -51,7 +51,7 @@ de droite à gauche.</string>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-Af-vBL">
                                 <rect key="frame" x="287" y="95" width="26" height="44"/>
                             </imageView>
                         </subviews>
@@ -356,6 +356,6 @@ l’expérience.</string>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7VP-gO-hzd"/>
+        <segue reference="lGa-Wi-6Cm"/>
     </inferredMetricsTieBreakers>
 </document>
