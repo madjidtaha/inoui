@@ -204,6 +204,7 @@ class Playback: NSObject {
     func playMusic() {
         
         if bgPlayer != nil {
+            bgPlayer?.volume = 0.5;
             bgPlayer?.play();
         }
     }
@@ -226,7 +227,7 @@ class Playback: NSObject {
             bgPlayer?.stop();
             bgPlayer?.currentTime = 0;
             bgPlayer?.prepareToPlay();
-            bgPlayer?.volume = 1.0;
+            bgPlayer?.volume = 0.5;
         }
     }
     

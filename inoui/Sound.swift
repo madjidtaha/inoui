@@ -12,10 +12,14 @@ import AVFoundation
 class Sound: NSObject {
     var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
     var pos: CGPoint = CGPoint();
+    var oldPos: CGPoint = CGPoint();
     var index: NSInteger = 0;
     var name = String();
     var playback = Playback?();
     var backgroundTimer = NSTimer();
+    var voiceTimer = NSTimer();
+    var extraTimer = NSTimer();
+    var number = -1;
     
     override init() {
         super.init();
@@ -35,6 +39,7 @@ class Sound: NSObject {
         self.pos.x = x;
         self.pos.y = y;
         appDelegate.playback?.changePos(self.index, SOURCEPOS: self.pos);
+        
     }
     
     func play(){
@@ -46,14 +51,16 @@ class Sound: NSObject {
     }
     
     func animate() {
-        
+        self.oldPos = self.pos;
         switch(self.type){
             case "background":
-//                self.backgroundTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("backgroundAnimate"), userInfo: nil, repeats: true);
+                self.backgroundTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("backgroundAnimate"), userInfo: nil, repeats: true);
                 break;
             case "voice":
+                self.voiceTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("voiceAnimate"), userInfo: nil, repeats: true);
                 break;
             case "extra":
+                self.extraTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector:  Selector("extraAnimate"), userInfo: nil, repeats: true);
                 break;
             default:
                 break;
@@ -62,17 +69,30 @@ class Sound: NSObject {
     
     func stopAnimate() {
         self.backgroundTimer.invalidate();
+        self.voiceTimer.invalidate();
+        self.extraTimer.invalidate();
+        self.placeSound(self.oldPos.x, y: self.oldPos.y)
     }
     
     func backgroundAnimate() {
-        if (self.pos.x > -100) {
-            self.placeSound(self.pos.x - 1, y: self.pos.y);
-        } else if (self.pos.x < 100){
-            self.placeSound(self.pos.x - 1, y: self.pos.y);
-        } else {
-            self.placeSound(self.pos.x - 1, y: self.pos.y);
+        
+    }
+    
+    func voiceAnimate() {
+        
+        if (self.pos.x <= self.oldPos.x - 60.5) {
+            number = 1;
+        } else if (self.pos.x >= self.oldPos.x + 60.5){
+            number = -1;
         }
+        self.placeSound(self.pos.x + number.g * 4, y: self.pos.y);
         print(self.pos.x);
+        print(self.pos.y);
+        print(self.name);
+    }
+    
+    func extraAnimate() {
+        
     }
     
     

@@ -19,7 +19,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var _locationManager: CLLocationManager!;
     private var _choiceNumber: Int = 0;
     private var _sections: CGFloat = 0;
-    private var _currentChoice: Int = 0;
+    private var _currentChoice: Int = -1;
     var choiceNumber: NSInteger? {
         get {
             return self._choiceNumber;

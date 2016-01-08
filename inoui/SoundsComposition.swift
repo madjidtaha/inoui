@@ -76,7 +76,9 @@ class SoundsComposition: NSObject {
             if(abs(newY) > abs(endY) + 0.1 || abs(newY) < abs(endY) - 0.1) {
                 self.goToEndPos(newX, y: newY, endY: endY, a:a, b:b);
             } else {
-                self.animate();
+                if ((self.sounds[0]as! Sound).pos.y > endY - 1 && (self.sounds[0]as! Sound).pos.y < endY + 1 && self.isPlaying) {
+                    self.animate();
+                }
             }
         }
     }
@@ -111,6 +113,7 @@ class SoundsComposition: NSObject {
     }
     
     func fadeOut() {
+        self.stopAnimate();
         self.isPlaying = false;
         let listenerPos = appDelegate.playback?.listenerPos;
         let a = (self.pos.y - listenerPos!.y) / (self.pos.x - listenerPos!.x);

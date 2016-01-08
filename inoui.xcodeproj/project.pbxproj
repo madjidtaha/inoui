@@ -76,7 +76,6 @@
 		893F6C061C3EE6E5007CB1F9 /* sea_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */; };
 		893F6C071C3EE6E5007CB1F9 /* sea_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */; };
 		893F6C081C3EE6E5007CB1F9 /* sea_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */; };
-		893F6C091C3EE6E5007CB1F9 /* tropics_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */; };
 		893F6C0A1C3EE6E5007CB1F9 /* tropics_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */; };
 		893F6C0B1C3EE6E5007CB1F9 /* tropics_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */; };
 		893F6C121C3F3F62007CB1F9 /* cascade_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C0C1C3F3F62007CB1F9 /* cascade_background.caf */; };
@@ -92,6 +91,7 @@
 		893F6C231C3F4599007CB1F9 /* tribe_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1D1C3F4599007CB1F9 /* tribe_background.caf */; };
 		893F6C241C3F4599007CB1F9 /* tribe_extra.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1E1C3F4599007CB1F9 /* tribe_extra.caf */; };
 		893F6C251C3F4599007CB1F9 /* tribe_voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C1F1C3F4599007CB1F9 /* tribe_voice.caf */; };
+		893F6C271C3FBEDE007CB1F9 /* tropics_background.caf in Resources */ = {isa = PBXBuildFile; fileRef = 893F6C261C3FBEDE007CB1F9 /* tropics_background.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,7 +187,6 @@
 		893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_background.caf; path = sounds/sea_background.caf; sourceTree = "<group>"; };
 		893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_extra.caf; path = sounds/sea_extra.caf; sourceTree = "<group>"; };
 		893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sea_voice.caf; path = sounds/sea_voice.caf; sourceTree = "<group>"; };
-		893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_background.caf; path = sounds/tropics_background.caf; sourceTree = "<group>"; };
 		893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_extra.caf; path = sounds/tropics_extra.caf; sourceTree = "<group>"; };
 		893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_voice.caf; path = sounds/tropics_voice.caf; sourceTree = "<group>"; };
 		893F6C0C1C3F3F62007CB1F9 /* cascade_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = cascade_background.caf; path = sounds/cascade_background.caf; sourceTree = "<group>"; };
@@ -203,6 +202,7 @@
 		893F6C1D1C3F4599007CB1F9 /* tribe_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_background.caf; path = sounds/tribe_background.caf; sourceTree = "<group>"; };
 		893F6C1E1C3F4599007CB1F9 /* tribe_extra.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_extra.caf; path = sounds/tribe_extra.caf; sourceTree = "<group>"; };
 		893F6C1F1C3F4599007CB1F9 /* tribe_voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tribe_voice.caf; path = sounds/tribe_voice.caf; sourceTree = "<group>"; };
+		893F6C261C3FBEDE007CB1F9 /* tropics_background.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tropics_background.caf; path = sounds/tropics_background.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,8 +483,8 @@
 				893F6BF91C3EE6E5007CB1F9 /* country_voice.caf */,
 				893F6BFA1C3EE6E5007CB1F9 /* sea_background.caf */,
 				893F6BFB1C3EE6E5007CB1F9 /* sea_extra.caf */,
+				893F6C261C3FBEDE007CB1F9 /* tropics_background.caf */,
 				893F6BFC1C3EE6E5007CB1F9 /* sea_voice.caf */,
-				893F6BFD1C3EE6E5007CB1F9 /* tropics_background.caf */,
 				893F6BFE1C3EE6E5007CB1F9 /* tropics_extra.caf */,
 				893F6BFF1C3EE6E5007CB1F9 /* tropics_voice.caf */,
 				8920EA751C104299001D7A33 /* sound.caf */,
@@ -724,6 +724,7 @@
 				893F6C201C3F4599007CB1F9 /* animals_background.caf in Resources */,
 				893F6C151C3F3F62007CB1F9 /* forest_background.caf in Resources */,
 				026AAE061BF4DE1400FF9E21 /* OpenSans-BoldItalic.ttf in Resources */,
+				893F6C271C3FBEDE007CB1F9 /* tropics_background.caf in Resources */,
 				026AAE071BF4DE1400FF9E21 /* OpenSans-ExtraBold.ttf in Resources */,
 				893F6C161C3F3F62007CB1F9 /* forest_extra.caf in Resources */,
 				893F6C051C3EE6E5007CB1F9 /* country_voice.caf in Resources */,
@@ -763,7 +764,6 @@
 				893F6C121C3F3F62007CB1F9 /* cascade_background.caf in Resources */,
 				02C5B06F1BF4DB9200DA3CD1 /* Assets.xcassets in Resources */,
 				893F6C081C3EE6E5007CB1F9 /* sea_voice.caf in Resources */,
-				893F6C091C3EE6E5007CB1F9 /* tropics_background.caf in Resources */,
 				893F6BD11C3E6221007CB1F9 /* heartbeat.mp3 in Resources */,
 				02C5B06D1BF4DB9200DA3CD1 /* Main.storyboard in Resources */,
 				893F6C0B1C3EE6E5007CB1F9 /* tropics_voice.caf in Resources */,
