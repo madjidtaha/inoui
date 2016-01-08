@@ -134,7 +134,7 @@ class FingerprintView: UIView, LocationManagerDelegate {
 //        print(" Fingerprint \(newAngle)");
         
         angle = newAngle;
-        
+                
         self.setNeedsDisplay();
     }
     

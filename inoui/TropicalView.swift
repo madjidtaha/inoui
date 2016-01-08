@@ -32,7 +32,7 @@ class TropicalView: UIView {
             let imageToBlur : CIImage = CIImage(image: imageView.image!)!;
             let blurFilter = CIFilter(name: "CIGaussianBlur");
             blurFilter?.setValue(imageToBlur, forKey: "inputImage");
-            blurFilter?.setValue(NSNumber(float: 20), forKey: "inputRadius");
+            blurFilter?.setValue(NSNumber(float: 5), forKey: "inputRadius");
             
             let resultImage : CIImage = blurFilter?.valueForKey("outputImage") as! CIImage;
             let blurredImage = UIImage(CIImage: resultImage);

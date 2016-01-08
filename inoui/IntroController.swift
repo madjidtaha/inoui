@@ -96,7 +96,7 @@ class IntroController: UIViewController, FingerprintViewControllerDelegate {
         self.playback?.fadeOutMusic();
         
         // TODO Read the value from persistant storage
-        let tutorialDone = true;
+        let tutorialDone = false;
         
         var storyboard = "Choice";
         
