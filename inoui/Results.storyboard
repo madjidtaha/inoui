@@ -20,14 +20,64 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-y6-TGp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lou-DB-Mua">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zj1-sb-6dV">
+                                        <rect key="frame" x="198" y="20" width="203" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="203" id="T9V-Rf-6Pb"/>
+                                            <constraint firstAttribute="height" constant="55" id="spJ-Ot-Ea8"/>
+                                        </constraints>
+                                        <state key="normal" image="echantillons_btn"/>
+                                        <state key="disabled" title="Échantillons"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5he-hQ-zYx">
+                                        <rect key="frame" x="526" y="20" width="54" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="dz3-dk-fsC"/>
+                                            <constraint firstAttribute="width" constant="54" id="k7R-8i-x4C"/>
+                                        </constraints>
+                                        <state key="normal" image="share_btn"/>
+                                        <state key="disabled" title="share"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Be-ar-e0Z">
+                                        <rect key="frame" x="20" y="20" width="54" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="qwC-vX-AmK"/>
+                                            <constraint firstAttribute="height" constant="55" id="ytV-IZ-lkr"/>
+                                        </constraints>
+                                        <state key="normal" image="play_again_btn"/>
+                                        <state key="disabled" title="Back"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zj1-sb-6dV" firstAttribute="centerX" secondItem="Lou-DB-Mua" secondAttribute="centerX" id="EYe-Gt-brI"/>
+                                    <constraint firstAttribute="bottom" secondItem="5he-hQ-zYx" secondAttribute="bottom" constant="25" id="KNZ-Zk-Dgw"/>
+                                    <constraint firstAttribute="height" constant="100" id="M1V-cB-J96"/>
+                                    <constraint firstItem="5Be-ar-e0Z" firstAttribute="leading" secondItem="Lou-DB-Mua" secondAttribute="leading" constant="20" id="Yze-GF-SjF"/>
+                                    <constraint firstAttribute="trailing" secondItem="5he-hQ-zYx" secondAttribute="trailing" constant="20" id="iO8-Px-oNP"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Be-ar-e0Z" secondAttribute="bottom" constant="25" id="voQ-Sh-7i0"/>
+                                    <constraint firstAttribute="bottom" secondItem="zj1-sb-6dV" secondAttribute="bottom" constant="25" id="zEz-GQ-kEV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eFX-ii-XB6" firstAttribute="top" secondItem="lR8-y6-TGp" secondAttribute="bottom" id="0E7-o5-qG3"/>
+                            <constraint firstItem="eFX-ii-XB6" firstAttribute="top" secondItem="Lou-DB-Mua" secondAttribute="bottom" id="43j-SZ-snn"/>
                             <constraint firstAttribute="trailing" secondItem="lR8-y6-TGp" secondAttribute="trailing" id="BRX-Sx-TJ2"/>
                             <constraint firstItem="lR8-y6-TGp" firstAttribute="leading" secondItem="Ir1-a2-w51" secondAttribute="leading" id="EsC-vm-CGR"/>
                             <constraint firstItem="lR8-y6-TGp" firstAttribute="top" secondItem="Ir1-a2-w51" secondAttribute="top" id="N1P-jV-OG4"/>
+                            <constraint firstItem="Lou-DB-Mua" firstAttribute="leading" secondItem="Ir1-a2-w51" secondAttribute="leading" id="UD8-vc-iWh"/>
+                            <constraint firstAttribute="trailing" secondItem="Lou-DB-Mua" secondAttribute="trailing" id="aHF-Gr-2Kx"/>
+                            <constraint firstItem="Lou-DB-Mua" firstAttribute="top" secondItem="9n4-zm-tOh" secondAttribute="bottom" id="nmF-he-rpt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nmF-he-rpt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="lR8-y6-TGp" id="kGP-n1-hfp"/>
@@ -38,4 +88,9 @@
             <point key="canvasLocation" x="218" y="379"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="echantillons_btn" width="203" height="55"/>
+        <image name="play_again_btn" width="54" height="55"/>
+        <image name="share_btn" width="53" height="55"/>
+    </resources>
 </document>

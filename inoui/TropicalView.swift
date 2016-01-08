@@ -51,10 +51,11 @@ class TropicalView: UIView {
         let animation = CAKeyframeAnimation(keyPath: "transform")
         animation.values = [
             NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 1)),
-            NSValue(CATransform3D: CATransform3DMakeRotation(3 * CGFloat(M_PI/180.0), 0, 0, 1)),
+            NSValue(CATransform3D: CATransform3DMakeRotation(7 * CGFloat(M_PI/180.0), 0, 0, 1)),
+            NSValue(CATransform3D: CATransform3DMakeRotation(-3 * CGFloat(M_PI/180.0), 0, 0, 1)),
             NSValue(CATransform3D: CATransform3DMakeRotation(0, 0, 0, 1))
         ]
-        animation.keyTimes = [ 0.0, 0.3, 1.0 ]
+        animation.keyTimes = [ 0.0, 0.3, 0.7, 1.0 ]
         animation.duration = 7
         animation.repeatCount = Float.infinity
         animation.removedOnCompletion = false

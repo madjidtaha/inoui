@@ -19,9 +19,10 @@ class TownView: TropicalView {
             animation.values = [
                 NSValue(CATransform3D: CATransform3DMakeTranslation(0, 0, 1)),
                 NSValue(CATransform3D: CATransform3DMakeTranslation(CGFloat(Int(arc4random_uniform(3)) - 1), CGFloat(Int(arc4random_uniform(3)) - 1), 1)  ),
+                NSValue(CATransform3D: CATransform3DMakeTranslation(CGFloat(Int(arc4random_uniform(3)) - 1), CGFloat(Int(arc4random_uniform(3)) - 1), 1)  ),
                 NSValue(CATransform3D: CATransform3DMakeTranslation(0, 0, 1))
             ]
-            animation.keyTimes = [ 0.0, 0.3, 1.0 ]
+            animation.keyTimes = [ 0.0, 0.3, 0.7, 1.0 ]
             animation.duration = 3
             animation.repeatCount = Float.infinity
             animation.removedOnCompletion = false
