@@ -325,13 +325,13 @@ l’expérience.</string>
                                 </connections>
                             </containerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Vous allez maintenant pouvoir débuter l'expérience Sisley" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="173-6K-efX">
-                                <rect key="frame" x="159" y="42" width="282" height="123"/>
+                                <rect key="frame" x="162.5" y="90" width="275" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="282" id="Jhd-y9-7va"/>
+                                    <constraint firstAttribute="width" constant="275" id="Jhd-y9-7va"/>
                                     <constraint firstAttribute="height" constant="123" id="c1v-Jc-YcI"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -339,7 +339,7 @@ l’expérience.</string>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aA9-mu-quf" secondAttribute="trailing" constant="20" id="5cT-GX-zia"/>
                             <constraint firstItem="173-6K-efX" firstAttribute="centerX" secondItem="Mzn-zX-Une" secondAttribute="centerX" id="SST-bG-2oH"/>
-                            <constraint firstItem="173-6K-efX" firstAttribute="top" secondItem="ijJ-24-o25" secondAttribute="bottom" constant="22" id="XTS-0C-0vZ"/>
+                            <constraint firstItem="173-6K-efX" firstAttribute="top" secondItem="ijJ-24-o25" secondAttribute="bottom" constant="70" id="XTS-0C-0vZ"/>
                             <constraint firstItem="aA9-mu-quf" firstAttribute="leading" secondItem="Mzn-zX-Une" secondAttribute="leading" constant="20" id="b9J-E3-8wh"/>
                             <constraint firstItem="P9L-Lm-pZR" firstAttribute="top" secondItem="aA9-mu-quf" secondAttribute="bottom" id="ifB-FQ-nnA"/>
                         </constraints>
@@ -361,6 +361,6 @@ l’expérience.</string>
         <image name="phone" width="26" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lGa-Wi-6Cm"/>
+        <segue reference="liq-rC-Bg0"/>
     </inferredMetricsTieBreakers>
 </document>
