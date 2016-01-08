@@ -30,7 +30,15 @@ class ChoiceFirstViewController: ChoiceController {
         
         print("first Choice");
         
-
+        print("Choice Here \(self.view.alpha)");
+        print("\(self.view.subviews[0].alpha)");
+        
+        self.view.subviews[0].alpha = 0.0;
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.view.alpha = 1.0;
+            self.view.subviews[0].alpha = 1.0;
+        });
 
     }
     
@@ -79,8 +87,9 @@ class ChoiceFirstViewController: ChoiceController {
             print("LASTCHOICE");
             
             UIView.animateWithDuration(0.7, animations: { () -> Void in
-                (self.assetsView.subviews[self.lastChoice] as! TropicalView).unblurView();
-                self.assetsView.subviews[4].alpha = 1;
+//                (self.assetsView.subviews[self.lastChoice] as! TropicalView).unblurView();
+//                self.assetsView.subviews[4].alpha = 1;
+                
                 }, completion: { (finished) -> Void in
                     print("finished");
                     

@@ -66,6 +66,53 @@ class ChoiceThirdViewController: ChoiceController {
     }
     override func onButtonUp(sender: AnyObject) {
         self.locationManager?.toggleGyro()
+        
+        
+        if self.lastChoice == 1 {
+            
+            UIView.animateWithDuration(0.7, animations: { () -> Void in
+                //                (self.assetsView.subviews[0] as! TropicalView).unblurView();
+                //                self.assetsView.subviews[1].alpha = 1;
+                self.view.alpha = 0;
+                }, completion: { (finished) -> Void in
+                    print("finished");
+                    
+                    
+                    let destStoryboard = UIStoryboard(name: "Results", bundle: nil);
+                    let dst = destStoryboard.instantiateViewControllerWithIdentifier("Results");
+                    
+                    
+                    let src = self;
+                    
+                    src.view.addSubview(dst.view);
+                    
+                    src.view.alpha = 1.0;
+                    
+                    dst.view.alpha = 0.0;
+                    
+                    UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+                        
+                        print("ANIMATE");
+                        dst.view.alpha = 1.0;
+                        
+                        
+                        
+                        }, completion: { (finished) -> Void in
+                            print("Complete");
+                            src.view.alpha = 0.0;
+                            
+                            dst.view.removeFromSuperview();
+                            //                    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            //                    appDelegate.navigationController?.pushViewController(dst, animated: false);
+                            
+                            self.presentViewController(dst, animated: false, completion: { () -> Void in
+                                // callback here
+                            });
+                    });
+                    
+            });
+            
+        }
     }
     
     // MARK - LocationManagerDelegate

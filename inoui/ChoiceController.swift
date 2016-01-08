@@ -21,19 +21,7 @@ class ChoiceController: UIViewController, FingerprintViewControllerDelegate, Loc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        if self.restorationIdentifier == "Choice1" {
-            print("Choice Here \(self.view.alpha)");
-            print("\(self.view.subviews[0].alpha)");
-            
-            self.view.subviews[0].alpha = 0.0;
-            
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.view.alpha = 1.0;
-                self.view.subviews[0].alpha = 1.0;
-            });
-            
-        }
+     
         print("Choice Here \(self.view.alpha)");
         
         

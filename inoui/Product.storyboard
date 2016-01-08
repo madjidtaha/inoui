@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7qj-rf-OUq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="X9G-YX-8Ci">
+            <objects>
+                <viewController id="7qj-rf-OUq" customClass="ProductViewController" customModule="inoui" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d98-Re-vtq"/>
+                        <viewControllerLayoutGuide type="bottom" id="KSm-Sa-UfQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q6k-6e-A48">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03_product" translatesAutoresizingMaskIntoConstraints="NO" id="CRt-PU-Kh1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-IR-kVQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <action selector="onTouchUpInside:" destination="7qj-rf-OUq" eventType="touchUpInside" id="QP9-3M-mvQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KSm-Sa-UfQ" firstAttribute="top" secondItem="CRt-PU-Kh1" secondAttribute="bottom" id="C1E-YQ-xDT"/>
+                            <constraint firstAttribute="trailing" secondItem="CRt-PU-Kh1" secondAttribute="trailing" id="CiC-Gj-AIy"/>
+                            <constraint firstAttribute="trailing" secondItem="i5A-IR-kVQ" secondAttribute="trailing" id="DDe-Zt-hGN"/>
+                            <constraint firstItem="i5A-IR-kVQ" firstAttribute="top" secondItem="q6k-6e-A48" secondAttribute="top" id="EYM-yb-qbf"/>
+                            <constraint firstItem="CRt-PU-Kh1" firstAttribute="leading" secondItem="q6k-6e-A48" secondAttribute="leading" id="PbE-g2-E72"/>
+                            <constraint firstItem="i5A-IR-kVQ" firstAttribute="leading" secondItem="q6k-6e-A48" secondAttribute="leading" id="V9h-7C-D7y"/>
+                            <constraint firstItem="CRt-PU-Kh1" firstAttribute="top" secondItem="q6k-6e-A48" secondAttribute="topMargin" id="dFA-Tm-w6t"/>
+                            <constraint firstItem="KSm-Sa-UfQ" firstAttribute="top" secondItem="i5A-IR-kVQ" secondAttribute="bottom" id="ojx-Fo-EBz"/>
+                            <constraint firstItem="CRt-PU-Kh1" firstAttribute="top" secondItem="d98-Re-vtq" secondAttribute="bottom" id="vpI-eQ-Ld1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vpI-eQ-Ld1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CRt-PU-Kh1" id="8kM-F2-m2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY0-gg-9HZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="03_product" width="375" height="667"/>
+    </resources>
+</document>

@@ -47,6 +47,8 @@
 		02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 02D0C6E41C3D7D120060A134 /* cascade.mp4 */; };
 		02D0C6E71C3D8A2A0060A134 /* ChoiceSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */; };
 		02FC0E5C1C3F48FC0088C5BC /* TownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0E5B1C3F48FC0088C5BC /* TownView.swift */; };
+		02FC0E5E1C3F5D0F0088C5BC /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FC0E5D1C3F5D0F0088C5BC /* ProductViewController.swift */; };
+		02FC0E601C3F5D1B0088C5BC /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FC0E5F1C3F5D1B0088C5BC /* Product.storyboard */; };
 		8920EA6A1C103899001D7A33 /* Playback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA691C103899001D7A33 /* Playback.swift */; };
 		8920EA6C1C10390D001D7A33 /* MyOpenALSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */; };
 		8920EA6E1C1039D4001D7A33 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8920EA6D1C1039D4001D7A33 /* OpenAL.framework */; };
@@ -144,6 +146,8 @@
 		02D0C6E41C3D7D120060A134 /* cascade.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cascade.mp4; sourceTree = "<group>"; };
 		02D0C6E61C3D8A2A0060A134 /* ChoiceSecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceSecondController.swift; sourceTree = "<group>"; };
 		02FC0E5B1C3F48FC0088C5BC /* TownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TownView.swift; sourceTree = "<group>"; };
+		02FC0E5D1C3F5D0F0088C5BC /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		02FC0E5F1C3F5D1B0088C5BC /* Product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
 		8920EA691C103899001D7A33 /* Playback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playback.swift; sourceTree = "<group>"; };
 		8920EA6B1C10390D001D7A33 /* MyOpenALSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOpenALSupport.swift; sourceTree = "<group>"; };
 		8920EA6D1C1039D4001D7A33 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -328,6 +332,8 @@
 			children = (
 				02C4A4DC1C3ABA4B009E0CFA /* Results.storyboard */,
 				02C4A4E01C3ABA87009E0CFA /* ResultsViewController.swift */,
+				02FC0E5D1C3F5D0F0088C5BC /* ProductViewController.swift */,
+				02FC0E5F1C3F5D1B0088C5BC /* Product.storyboard */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -701,6 +707,7 @@
 				02C5B0721BF4DB9200DA3CD1 /* LaunchScreen.storyboard in Resources */,
 				8920EA991C11E4A0001D7A33 /* Choice.storyboard in Resources */,
 				02D0C6E51C3D7FA70060A134 /* cascade.mp4 in Resources */,
+				02FC0E601C3F5D1B0088C5BC /* Product.storyboard in Resources */,
 				8920EA781C105C26001D7A33 /* test.wav in Resources */,
 				02B47EC71C3ECD84001372B7 /* tribe.mp4 in Resources */,
 				8920EA931C11CF54001D7A33 /* Pause.storyboard in Resources */,
@@ -747,6 +754,7 @@
 				8920EA8F1C11CEFC001D7A33 /* PauseView.swift in Sources */,
 				8920EA711C103E6F001D7A33 /* NumTypes+Conversion.swift in Sources */,
 				024622A61C0F3789000175DD /* FingerprintViewController.swift in Sources */,
+				02FC0E5E1C3F5D0F0088C5BC /* ProductViewController.swift in Sources */,
 				02BCEF381C34B6EA00186654 /* ChoiceView.swift in Sources */,
 				8920EA9B1C11E4AA001D7A33 /* ChoiceController.swift in Sources */,
 				026BF8B71C0DD6E100601876 /* TutorialView.swift in Sources */,

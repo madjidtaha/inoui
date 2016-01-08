@@ -68,8 +68,8 @@ class ChoiceSecondController: ChoiceController {
         if self.lastChoice == 1 {
             
             UIView.animateWithDuration(0.7, animations: { () -> Void in
-                (self.assetsView.subviews[0] as! TropicalView).unblurView();
-                self.assetsView.subviews[1].alpha = 1;
+//                (self.assetsView.subviews[0] as! TropicalView).unblurView();
+//                self.assetsView.subviews[1].alpha = 1;
                 }, completion: { (finished) -> Void in
                     print("finished");
                     

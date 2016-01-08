@@ -82,8 +82,36 @@ class ResultsViewController: UIViewController {
     
     func buttonAction(sender: UIButton!) {
         
-        print("buttonAction \(sender.frame) \(sender.titleForState(.Disabled))");
-    
+        print("buttonAction \(sender.frame) \(sender.titleForState(.Disabled)) \(self.navigationController)");
+        if sender.titleForState(.Disabled) == "button3" {
+//            if let topController = self.navigationController {
+            
+            let pauseStoryboard = UIStoryboard(name: "Product", bundle: nil)
+            let pauseViewController = pauseStoryboard.instantiateInitialViewController();
+            
+            pauseViewController!.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
+            pauseViewController!.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+            
+            self.presentViewController(pauseViewController!, animated: true, completion: { () -> Void in
+                print("oker");
+            })
+            
+            if let topController = (UIApplication.sharedApplication().delegate as! AppDelegate).navigationController {
+            
+                print("LAAA")
+                
+                let pauseStoryboard = UIStoryboard(name: "Product", bundle: nil)
+                let pauseViewController = pauseStoryboard.instantiateInitialViewController();
+                
+                pauseViewController!.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
+                pauseViewController!.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+                
+                topController.presentViewController(pauseViewController!, animated: true, completion: nil);
+                
+            }
+            
+        }
+   
     }
     
 }
